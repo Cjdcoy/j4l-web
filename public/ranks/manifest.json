@@ -1,0 +1,387 @@
+[
+  {
+    "source": "rank_core_01.png",
+    "path": "/ranks/rank-core-01.avif",
+    "width": 360,
+    "height": 360,
+    "bytes": 24301,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "rank_core_02.png",
+    "path": "/ranks/rank-core-02.avif",
+    "width": 360,
+    "height": 360,
+    "bytes": 22226,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "rank_core_03.png",
+    "path": "/ranks/rank-core-03.avif",
+    "width": 360,
+    "height": 360,
+    "bytes": 31499,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "rank_core_04.png",
+    "path": "/ranks/rank-core-04.avif",
+    "width": 360,
+    "height": 360,
+    "bytes": 34838,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "rank_core_05.png",
+    "path": "/ranks/rank-core-05.avif",
+    "width": 360,
+    "height": 360,
+    "bytes": 40048,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "rank_core_06.png",
+    "path": "/ranks/rank-core-06.avif",
+    "width": 360,
+    "height": 360,
+    "bytes": 41354,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "rank_core_07.png",
+    "path": "/ranks/rank-core-07.avif",
+    "width": 360,
+    "height": 360,
+    "bytes": 32983,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "rank_core_08.png",
+    "path": "/ranks/rank-core-08.avif",
+    "width": 360,
+    "height": 360,
+    "bytes": 62049,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "mythic_01.png",
+    "path": "/ranks/rank-mythic-01.avif",
+    "width": 360,
+    "height": 360,
+    "bytes": 36204,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "mythic_02.png",
+    "path": "/ranks/rank-mythic-02.avif",
+    "width": 360,
+    "height": 360,
+    "bytes": 42963,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "mythic_03.png",
+    "path": "/ranks/rank-mythic-03.avif",
+    "width": 360,
+    "height": 360,
+    "bytes": 52494,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "mythic_04.png",
+    "path": "/ranks/rank-mythic-04.avif",
+    "width": 360,
+    "height": 360,
+    "bytes": 49253,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "mythic_05.png",
+    "path": "/ranks/rank-mythic-05.avif",
+    "width": 360,
+    "height": 360,
+    "bytes": 37765,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "mythic_06.png",
+    "path": "/ranks/rank-mythic-06.avif",
+    "width": 360,
+    "height": 360,
+    "bytes": 50403,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "mythic_07.png",
+    "path": "/ranks/rank-mythic-07.avif",
+    "width": 360,
+    "height": 360,
+    "bytes": 84052,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "p1.png",
+    "path": "/ranks/rank-prestige-01.avif",
+    "width": 640,
+    "height": 320,
+    "bytes": 19300,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "p2.png",
+    "path": "/ranks/rank-prestige-02.avif",
+    "width": 640,
+    "height": 320,
+    "bytes": 34177,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "p3.png",
+    "path": "/ranks/rank-prestige-03.avif",
+    "width": 640,
+    "height": 320,
+    "bytes": 37216,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "p4.png",
+    "path": "/ranks/rank-prestige-04.avif",
+    "width": 640,
+    "height": 320,
+    "bytes": 103901,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "p5.png",
+    "path": "/ranks/rank-prestige-05.avif",
+    "width": 640,
+    "height": 320,
+    "bytes": 73353,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "p6.png",
+    "path": "/ranks/rank-prestige-06.avif",
+    "width": 640,
+    "height": 320,
+    "bytes": 73420,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "p7.png",
+    "path": "/ranks/rank-prestige-07.avif",
+    "width": 640,
+    "height": 320,
+    "bytes": 89198,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "p8.png",
+    "path": "/ranks/rank-prestige-08.avif",
+    "width": 640,
+    "height": 320,
+    "bytes": 123143,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "p9.png",
+    "path": "/ranks/rank-prestige-09.avif",
+    "width": 640,
+    "height": 320,
+    "bytes": 123155,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "p10.png",
+    "path": "/ranks/rank-prestige-10.avif",
+    "width": 640,
+    "height": 320,
+    "bytes": 122712,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "p1.png",
+    "path": "/ranks/rank-prestige-01-compact.avif",
+    "width": 192,
+    "height": 96,
+    "bytes": 11898,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "p2.png",
+    "path": "/ranks/rank-prestige-02-compact.avif",
+    "width": 192,
+    "height": 96,
+    "bytes": 15465,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "p3.png",
+    "path": "/ranks/rank-prestige-03-compact.avif",
+    "width": 192,
+    "height": 96,
+    "bytes": 14188,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "p4.png",
+    "path": "/ranks/rank-prestige-04-compact.avif",
+    "width": 192,
+    "height": 96,
+    "bytes": 19041,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "p5.png",
+    "path": "/ranks/rank-prestige-05-compact.avif",
+    "width": 192,
+    "height": 96,
+    "bytes": 15274,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "p6.png",
+    "path": "/ranks/rank-prestige-06-compact.avif",
+    "width": 192,
+    "height": 96,
+    "bytes": 16260,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "p7.png",
+    "path": "/ranks/rank-prestige-07-compact.avif",
+    "width": 192,
+    "height": 96,
+    "bytes": 17318,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "p8.png",
+    "path": "/ranks/rank-prestige-08-compact.avif",
+    "width": 192,
+    "height": 96,
+    "bytes": 19622,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "p9.png",
+    "path": "/ranks/rank-prestige-09-compact.avif",
+    "width": 192,
+    "height": 96,
+    "bytes": 19375,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  },
+  {
+    "source": "p10.png",
+    "path": "/ranks/rank-prestige-10-compact.avif",
+    "width": 192,
+    "height": 96,
+    "bytes": 19180,
+    "alpha": {
+      "min": 0,
+      "max": 255
+    }
+  }
+]

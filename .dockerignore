@@ -1,0 +1,8 @@
+node_modules
+dist
+*.log
+.git
+.codebase-memory
+.env*
+cod2
+cod2.zip

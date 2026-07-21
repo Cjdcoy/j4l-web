@@ -1,0 +1,4916 @@
+[
+  {
+    "key": "00_jump",
+    "source": "00_jump.png",
+    "source_bytes": 3057195,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/00_jump.avif",
+        "bytes": 11175,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "10_x_242",
+    "source": "10_x_242.png",
+    "source_bytes": 4717386,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/10_x_242.avif",
+        "bytes": 27417,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "10_x_246",
+    "source": "10_x_246.png",
+    "source_bytes": 5223420,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/10_x_246.avif",
+        "bytes": 51689,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "1st_easy",
+    "source": "1st_easy.png",
+    "source_bytes": 4887281,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/1st_easy.avif",
+        "bytes": 19329,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "1st_hard",
+    "source": "1st_hard.png",
+    "source_bytes": 4992060,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/1st_hard.avif",
+        "bytes": 17078,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "240",
+    "source": "240.png",
+    "source_bytes": 3924567,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/240.avif",
+        "bytes": 10314,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "4dmaze",
+    "source": "4dmaze.png",
+    "source_bytes": 921720,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/4dmaze.avif",
+        "bytes": 25450,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "5jump",
+    "source": "5jump.png",
+    "source_bytes": 2058331,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/5jump.avif",
+        "bytes": 3650,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "7th_jump",
+    "source": "7th_jump.png",
+    "source_bytes": 3879018,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/7th_jump.avif",
+        "bytes": 25416,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "840",
+    "source": "840.png",
+    "source_bytes": 2405201,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/840.avif",
+        "bytes": 7869,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "a_cup_of_spicy_indian_chai_tea_hard",
+    "source": "a_cup_of_spicy_indian_chai_tea_hard.png",
+    "source_bytes": 2775015,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/a_cup_of_spicy_indian_chai_tea_hard.avif",
+        "bytes": 17471,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "a_cup_of_spicy_indian_chai_tea",
+    "source": "a_cup_of_spicy_indian_chai_tea.png",
+    "source_bytes": 3771937,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/a_cup_of_spicy_indian_chai_tea.avif",
+        "bytes": 16861,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "basem",
+    "source": "basem.png",
+    "source_bytes": 3514974,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/basem.avif",
+        "bytes": 11513,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "big_money",
+    "source": "big_money.png",
+    "source_bytes": 4426988,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/big_money.avif",
+        "bytes": 54334,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "bigmaze",
+    "source": "bigmaze.png",
+    "source_bytes": 2209207,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/bigmaze.avif",
+        "bytes": 45832,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "bigmaze2",
+    "source": "bigmaze2.png",
+    "source_bytes": 3607680,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/bigmaze2.avif",
+        "bytes": 38879,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "bigmaze3",
+    "source": "bigmaze3.png",
+    "source_bytes": 2021117,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/bigmaze3.avif",
+        "bytes": 78603,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "bitch",
+    "source": "bitch.png",
+    "source_bytes": 4546472,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/bitch.avif",
+        "bytes": 30358,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "cor27_intoxication",
+    "source": "cor27_intoxication.png",
+    "source_bytes": 4851842,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/cor27_intoxication.avif",
+        "bytes": 27961,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "cor27_joint",
+    "source": "cor27_joint.png",
+    "source_bytes": 1156756,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/cor27_joint.avif",
+        "bytes": 4402,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "cor27_kinetic",
+    "source": "cor27_kinetic.png",
+    "source_bytes": 3260081,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/cor27_kinetic.avif",
+        "bytes": 11054,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "cor27_monoton",
+    "source": "cor27_monoton.png",
+    "source_bytes": 4101077,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/cor27_monoton.avif",
+        "bytes": 21086,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "cor27_ngu",
+    "source": "cor27_ngu.png",
+    "source_bytes": 3657722,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/cor27_ngu.avif",
+        "bytes": 16539,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "cor27_shapes",
+    "source": "cor27_shapes.png",
+    "source_bytes": 5291852,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/cor27_shapes.avif",
+        "bytes": 35081,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "cor27_synesthesia",
+    "source": "cor27_synesthesia.png",
+    "source_bytes": 4241640,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/cor27_synesthesia.avif",
+        "bytes": 8679,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "cor27_trelacanfinish",
+    "source": "cor27_trelacanfinish.png",
+    "source_bytes": 3317545,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/cor27_trelacanfinish.avif",
+        "bytes": 27925,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "de_straf",
+    "source": "de_straf.png",
+    "source_bytes": 1020603,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/de_straf.avif",
+        "bytes": 13878,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "defrag_base",
+    "source": "defrag_base.png",
+    "source_bytes": 3551375,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/defrag_base.avif",
+        "bytes": 6672,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "defrag_blue_hard",
+    "source": "defrag_blue_hard.png",
+    "source_bytes": 1125806,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/defrag_blue_hard.avif",
+        "bytes": 5279,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "defrag_city",
+    "source": "defrag_city.png",
+    "source_bytes": 3265943,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/defrag_city.avif",
+        "bytes": 32119,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "defrag_crystal",
+    "source": "defrag_crystal.png",
+    "source_bytes": 632633,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/defrag_crystal.avif",
+        "bytes": 11581,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "defrag_defrag_v2",
+    "source": "defrag_defrag_v2.png",
+    "source_bytes": 2158906,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/defrag_defrag_v2.avif",
+        "bytes": 7762,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "defrag_defrag",
+    "source": "defrag_defrag.png",
+    "source_bytes": 2813532,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/defrag_defrag.avif",
+        "bytes": 20804,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "defrag_deport",
+    "source": "defrag_deport.png",
+    "source_bytes": 2381364,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/defrag_deport.avif",
+        "bytes": 16441,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "defrag_hell",
+    "source": "defrag_hell.png",
+    "source_bytes": 4067148,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/defrag_hell.avif",
+        "bytes": 23077,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "defrag_jumpy",
+    "source": "defrag_jumpy.png",
+    "source_bytes": 1864614,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/defrag_jumpy.avif",
+        "bytes": 29280,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "defrag_metal",
+    "source": "defrag_metal.png",
+    "source_bytes": 254011,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/defrag_metal.avif",
+        "bytes": 4238,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "defrag_movement",
+    "source": "defrag_movement.png",
+    "source_bytes": 1403476,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/defrag_movement.avif",
+        "bytes": 11362,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "defrag_portal",
+    "source": "defrag_portal.png",
+    "source_bytes": 511504,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/defrag_portal.avif",
+        "bytes": 11334,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "defrag_pyramith",
+    "source": "defrag_pyramith.png",
+    "source_bytes": 2989556,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/defrag_pyramith.avif",
+        "bytes": 10661,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "defrag_skyplatform",
+    "source": "defrag_skyplatform.png",
+    "source_bytes": 576900,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/defrag_skyplatform.avif",
+        "bytes": 1688,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "defrag_tutorial",
+    "source": "defrag_tutorial.png",
+    "source_bytes": 3280430,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/defrag_tutorial.avif",
+        "bytes": 32572,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "defrag_twintowers",
+    "source": "defrag_twintowers.png",
+    "source_bytes": 3876768,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/defrag_twintowers.avif",
+        "bytes": 6286,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "df_zotyi",
+    "source": "df_zotyi.png",
+    "source_bytes": 2885167,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/df_zotyi.avif",
+        "bytes": 24368,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "egz_greenapple",
+    "source": "egz_greenapple.png",
+    "source_bytes": 733552,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/egz_greenapple.avif",
+        "bytes": 6924,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "egz_hoppa",
+    "source": "egz_hoppa.png",
+    "source_bytes": 2854750,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/egz_hoppa.avif",
+        "bytes": 89517,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "egz_krixkrax",
+    "source": "egz_krixkrax.png",
+    "source_bytes": 588885,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/egz_krixkrax.avif",
+        "bytes": 10047,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "egz_teme_easy",
+    "source": "egz_teme_easy.png",
+    "source_bytes": 2371431,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/egz_teme_easy.avif",
+        "bytes": 37347,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "egz_teme_ultra",
+    "source": "egz_teme_ultra.png",
+    "source_bytes": 2301759,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/egz_teme_ultra.avif",
+        "bytes": 37130,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "egz_troll",
+    "source": "egz_troll.png",
+    "source_bytes": 1421161,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/egz_troll.avif",
+        "bytes": 50050,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "egz_xxx",
+    "source": "egz_xxx.png",
+    "source_bytes": 1701942,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/egz_xxx.avif",
+        "bytes": 11149,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "eplay_house",
+    "source": "eplay_house.png",
+    "source_bytes": 4509950,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/eplay_house.avif",
+        "bytes": 22017,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "first_jumpmap",
+    "source": "first_jumpmap.png",
+    "source_bytes": 2249555,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/first_jumpmap.avif",
+        "bytes": 4819,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "fun_playhouse",
+    "source": "fun_playhouse.png",
+    "source_bytes": 4498770,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/fun_playhouse.avif",
+        "bytes": 26177,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "g5",
+    "source": "g5.png",
+    "source_bytes": 3959256,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/g5.avif",
+        "bytes": 5990,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "g7",
+    "source": "g7.png",
+    "source_bytes": 2563160,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/g7.avif",
+        "bytes": 14644,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "gaap",
+    "source": "gaap.png",
+    "source_bytes": 3601090,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/gaap.avif",
+        "bytes": 18059,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "gr_jump",
+    "source": "gr_jump.png",
+    "source_bytes": 2796154,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/gr_jump.avif",
+        "bytes": 14106,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "hal",
+    "source": "hal.png",
+    "source_bytes": 4971441,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/hal.avif",
+        "bytes": 22411,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "j4l_baseton",
+    "source": "j4l_baseton.png",
+    "source_bytes": 4261061,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/j4l_baseton.avif",
+        "bytes": 7798,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "j4l_crazyjump_noob",
+    "source": "j4l_crazyjump_noob.png",
+    "source_bytes": 2033002,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/j4l_crazyjump_noob.avif",
+        "bytes": 32583,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "j4l_crazyjump_space",
+    "source": "j4l_crazyjump_space.png",
+    "source_bytes": 2129208,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/j4l_crazyjump_space.avif",
+        "bytes": 21467,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "j4l_raceland",
+    "source": "j4l_raceland.png",
+    "source_bytes": 2409847,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/j4l_raceland.avif",
+        "bytes": 14793,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_alexandria_easy",
+    "source": "jm_alexandria_easy.png",
+    "source_bytes": 3846079,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_alexandria_easy.avif",
+        "bytes": 27444,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_alexandria_hard",
+    "source": "jm_alexandria_hard.png",
+    "source_bytes": 4274418,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_alexandria_hard.avif",
+        "bytes": 24232,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_alexandria",
+    "source": "jm_alexandria.png",
+    "source_bytes": 3697208,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_alexandria.avif",
+        "bytes": 27986,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_amtichenburr",
+    "source": "jm_amtichenburr.png",
+    "source_bytes": 1459098,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_amtichenburr.avif",
+        "bytes": 33775,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_antichamber_test",
+    "source": "jm_antichamber_test.png",
+    "source_bytes": 5387292,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_antichamber_test.avif",
+        "bytes": 136491,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_antichamber",
+    "source": "jm_antichamber.png",
+    "source_bytes": 97658,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_antichamber.avif",
+        "bytes": 3346,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_antichamber2",
+    "source": "jm_antichamber2.png",
+    "source_bytes": 3667578,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_antichamber2.avif",
+        "bytes": 19870,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_apartments",
+    "source": "jm_apartments.png",
+    "source_bytes": 2289818,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_apartments.avif",
+        "bytes": 30709,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_bamboozled",
+    "source": "jm_bamboozled.png",
+    "source_bytes": 3894683,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_bamboozled.avif",
+        "bytes": 25273,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_base",
+    "source": "jm_base.png",
+    "source_bytes": 4077754,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_base.avif",
+        "bytes": 17619,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_besmelleh",
+    "source": "jm_besmelleh.png",
+    "source_bytes": 4782469,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_besmelleh.avif",
+        "bytes": 22457,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_bigescape",
+    "source": "jm_bigescape.png",
+    "source_bytes": 4879389,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_bigescape.avif",
+        "bytes": 29176,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_blocked",
+    "source": "jm_blocked.png",
+    "source_bytes": 3402007,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_blocked.avif",
+        "bytes": 6032,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_blocked2",
+    "source": "jm_blocked2.png",
+    "source_bytes": 5433400,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_blocked2.avif",
+        "bytes": 73639,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_boat_sort_of",
+    "source": "jm_boat_sort_of.png",
+    "source_bytes": 3499053,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_boat_sort_of.avif",
+        "bytes": 8725,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_boost_v1.1",
+    "source": "jm_boost_v1.1.png",
+    "source_bytes": 210976,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_boost_v1.1.avif",
+        "bytes": 4422,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_bootcamp",
+    "source": "jm_bootcamp.png",
+    "source_bytes": 4611114,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_bootcamp.avif",
+        "bytes": 57075,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_bouncejump_easy",
+    "source": "jm_bouncejump_easy.png",
+    "source_bytes": 2296300,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_bouncejump_easy.avif",
+        "bytes": 22534,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_bouncejump_hard",
+    "source": "jm_bouncejump_hard.png",
+    "source_bytes": 2553195,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_bouncejump_hard.avif",
+        "bytes": 23522,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_bouncejump_pro",
+    "source": "jm_bouncejump_pro.png",
+    "source_bytes": 2278314,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_bouncejump_pro.avif",
+        "bytes": 8446,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_box",
+    "source": "jm_box.png",
+    "source_bytes": 3961452,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_box.avif",
+        "bytes": 4904,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_bozic_2015",
+    "source": "jm_bozic_2015.png",
+    "source_bytes": 2167525,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_bozic_2015.avif",
+        "bytes": 23508,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_bubblebobble",
+    "source": "jm_bubblebobble.png",
+    "source_bytes": 2237546,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_bubblebobble.avif",
+        "bytes": 10084,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_builder",
+    "source": "jm_builder.png",
+    "source_bytes": 241811,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_builder.avif",
+        "bytes": 6178,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_bunchofjumps",
+    "source": "jm_bunchofjumps.png",
+    "source_bytes": 3276063,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_bunchofjumps.avif",
+        "bytes": 45681,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_castle_easy",
+    "source": "jm_castle_easy.png",
+    "source_bytes": 3367088,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_castle_easy.avif",
+        "bytes": 18771,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_castle_hard",
+    "source": "jm_castle_hard.png",
+    "source_bytes": 3798698,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_castle_hard.avif",
+        "bytes": 10117,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_cave",
+    "source": "jm_cave.png",
+    "source_bytes": 3303563,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_cave.avif",
+        "bytes": 26805,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_contrast_2_dc",
+    "source": "jm_contrast_2_dc.png",
+    "source_bytes": 530593,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_contrast_2_dc.avif",
+        "bytes": 10880,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_contrast_2",
+    "source": "jm_contrast_2.png",
+    "source_bytes": 4243929,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_contrast_2.avif",
+        "bytes": 8048,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_contrast",
+    "source": "jm_contrast.png",
+    "source_bytes": 4323154,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_contrast.avif",
+        "bytes": 22126,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_crash",
+    "source": "jm_crash.png",
+    "source_bytes": 3731565,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_crash.avif",
+        "bytes": 20929,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_creep",
+    "source": "jm_creep.png",
+    "source_bytes": 3408868,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_creep.avif",
+        "bytes": 20142,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_cruise",
+    "source": "jm_cruise.png",
+    "source_bytes": 3027532,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_cruise.avif",
+        "bytes": 10594,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_descend_full",
+    "source": "jm_descend_full.png",
+    "source_bytes": 2455256,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_descend_full.avif",
+        "bytes": 15480,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_descend",
+    "source": "jm_descend.png",
+    "source_bytes": 623438,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_descend.avif",
+        "bytes": 15827,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_dunnoifposs",
+    "source": "jm_dunnoifposs.png",
+    "source_bytes": 2106320,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_dunnoifposs.avif",
+        "bytes": 54378,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_escape_from_alcatraz",
+    "source": "jm_escape_from_alcatraz.png",
+    "source_bytes": 2573466,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_escape_from_alcatraz.avif",
+        "bytes": 19863,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_fire",
+    "source": "jm_fire.png",
+    "source_bytes": 4411270,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_fire.avif",
+        "bytes": 49809,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_flee",
+    "source": "jm_flee.png",
+    "source_bytes": 3112829,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_flee.avif",
+        "bytes": 12067,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_garden",
+    "source": "jm_garden.png",
+    "source_bytes": 4375307,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_garden.avif",
+        "bytes": 51521,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_gardenv2",
+    "source": "jm_gardenv2.png",
+    "source_bytes": 4366299,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_gardenv2.avif",
+        "bytes": 17170,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_giantbeam",
+    "source": "jm_giantbeam.png",
+    "source_bytes": 1981544,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_giantbeam.avif",
+        "bytes": 7695,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_glass",
+    "source": "jm_glass.png",
+    "source_bytes": 3961308,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_glass.avif",
+        "bytes": 11966,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_glassy",
+    "source": "jm_glassy.png",
+    "source_bytes": 2952189,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_glassy.avif",
+        "bytes": 10258,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_glovebox",
+    "source": "jm_glovebox.png",
+    "source_bytes": 2476798,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_glovebox.avif",
+        "bytes": 9386,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_gottagofast",
+    "source": "jm_gottagofast.png",
+    "source_bytes": 4654093,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_gottagofast.avif",
+        "bytes": 18414,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_graey",
+    "source": "jm_graey.png",
+    "source_bytes": 2964622,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_graey.avif",
+        "bytes": 15460,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_hellrun_easy",
+    "source": "jm_hellrun_easy.png",
+    "source_bytes": 2890937,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_hellrun_easy.avif",
+        "bytes": 54539,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_hellrun",
+    "source": "jm_hellrun.png",
+    "source_bytes": 4465031,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_hellrun.avif",
+        "bytes": 17569,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_highways",
+    "source": "jm_highways.png",
+    "source_bytes": 3961489,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_highways.avif",
+        "bytes": 35236,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_highways2",
+    "source": "jm_highways2.png",
+    "source_bytes": 3177717,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_highways2.avif",
+        "bytes": 59350,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_janet",
+    "source": "jm_janet.png",
+    "source_bytes": 4427956,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_janet.avif",
+        "bytes": 10161,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_jumpers_heaven",
+    "source": "jm_jumpers_heaven.png",
+    "source_bytes": 2345314,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_jumpers_heaven.avif",
+        "bytes": 11278,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_jumpymcjumpface",
+    "source": "jm_jumpymcjumpface.png",
+    "source_bytes": 2692409,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_jumpymcjumpface.avif",
+        "bytes": 7379,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_komonyi",
+    "source": "jm_komonyi.png",
+    "source_bytes": 4923924,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_komonyi.avif",
+        "bytes": 16481,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_kuwehr",
+    "source": "jm_kuwehr.png",
+    "source_bytes": 4214327,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_kuwehr.avif",
+        "bytes": 19623,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_kuwehr2",
+    "source": "jm_kuwehr2.png",
+    "source_bytes": 4683141,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_kuwehr2.avif",
+        "bytes": 38714,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_lamea",
+    "source": "jm_lamea.png",
+    "source_bytes": 4430201,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_lamea.avif",
+        "bytes": 16197,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_lazlo",
+    "source": "jm_lazlo.png",
+    "source_bytes": 2849634,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_lazlo.avif",
+        "bytes": 31527,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_lego_castle",
+    "source": "jm_lego_castle.png",
+    "source_bytes": 3561732,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_lego_castle.avif",
+        "bytes": 13074,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_lighthouse_beta",
+    "source": "jm_lighthouse_beta.png",
+    "source_bytes": 1972842,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_lighthouse_beta.avif",
+        "bytes": 6795,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_lost_easy",
+    "source": "jm_lost_easy.png",
+    "source_bytes": 5263500,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_lost_easy.avif",
+        "bytes": 33270,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_lost",
+    "source": "jm_lost.png",
+    "source_bytes": 4671177,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_lost.avif",
+        "bytes": 38167,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_maniacmansion_easy",
+    "source": "jm_maniacmansion_easy.png",
+    "source_bytes": 4146311,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_maniacmansion_easy.avif",
+        "bytes": 31261,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_maniacmansion",
+    "source": "jm_maniacmansion.png",
+    "source_bytes": 4040430,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_maniacmansion.avif",
+        "bytes": 50184,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_matmata",
+    "source": "jm_matmata.png",
+    "source_bytes": 4912593,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_matmata.avif",
+        "bytes": 31016,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_meh",
+    "source": "jm_meh.png",
+    "source_bytes": 1877563,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_meh.avif",
+        "bytes": 3760,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_milestone_pro",
+    "source": "jm_milestone_pro.png",
+    "source_bytes": 4017655,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_milestone_pro.avif",
+        "bytes": 24345,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_milestone",
+    "source": "jm_milestone.png",
+    "source_bytes": 4667321,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_milestone.avif",
+        "bytes": 41706,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_museum",
+    "source": "jm_museum.png",
+    "source_bytes": 4342945,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_museum.avif",
+        "bytes": 23286,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_neutron",
+    "source": "jm_neutron.png",
+    "source_bytes": 3965944,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_neutron.avif",
+        "bytes": 11820,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_nothing",
+    "source": "jm_nothing.png",
+    "source_bytes": 2931957,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_nothing.avif",
+        "bytes": 15899,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_offices",
+    "source": "jm_offices.png",
+    "source_bytes": 4081578,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_offices.avif",
+        "bytes": 9165,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_officespace_easy",
+    "source": "jm_officespace_easy.png",
+    "source_bytes": 3328735,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_officespace_easy.avif",
+        "bytes": 22909,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_officespace_hard",
+    "source": "jm_officespace_hard.png",
+    "source_bytes": 3936326,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_officespace_hard.avif",
+        "bytes": 23004,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_officespace_ultra",
+    "source": "jm_officespace_ultra.png",
+    "source_bytes": 3974333,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_officespace_ultra.avif",
+        "bytes": 33858,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_pele_easy",
+    "source": "jm_pele_easy.png",
+    "source_bytes": 2285299,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_pele_easy.avif",
+        "bytes": 4761,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_pier_2_easy",
+    "source": "jm_pier_2_easy.png",
+    "source_bytes": 3608972,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_pier_2_easy.avif",
+        "bytes": 22202,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_pier_2_mix",
+    "source": "jm_pier_2_mix.png",
+    "source_bytes": 3978696,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_pier_2_mix.avif",
+        "bytes": 17475,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_pier_2_pro",
+    "source": "jm_pier_2_pro.png",
+    "source_bytes": 2837907,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_pier_2_pro.avif",
+        "bytes": 14892,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_pier_2",
+    "source": "jm_pier_2.png",
+    "source_bytes": 4235459,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_pier_2.avif",
+        "bytes": 11045,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_pier_easy",
+    "source": "jm_pier_easy.png",
+    "source_bytes": 2301090,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_pier_easy.avif",
+        "bytes": 14708,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_pier_hard",
+    "source": "jm_pier_hard.png",
+    "source_bytes": 2318675,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_pier_hard.avif",
+        "bytes": 10873,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_pillzv2",
+    "source": "jm_pillzv2.png",
+    "source_bytes": 2827945,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_pillzv2.avif",
+        "bytes": 32772,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_pipeline",
+    "source": "jm_pipeline.png",
+    "source_bytes": 3179449,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_pipeline.avif",
+        "bytes": 9833,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_plazma",
+    "source": "jm_plazma.png",
+    "source_bytes": 3889112,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_plazma.avif",
+        "bytes": 27266,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_portal",
+    "source": "jm_portal.png",
+    "source_bytes": 4817197,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_portal.avif",
+        "bytes": 10116,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_qubed",
+    "source": "jm_qubed.png",
+    "source_bytes": 3634912,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_qubed.avif",
+        "bytes": 11988,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_race_easy",
+    "source": "jm_race_easy.png",
+    "source_bytes": 3819082,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_race_easy.avif",
+        "bytes": 16483,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_race_hard",
+    "source": "jm_race_hard.png",
+    "source_bytes": 3105798,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_race_hard.avif",
+        "bytes": 13889,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_razervillage",
+    "source": "jm_razervillage.png",
+    "source_bytes": 4405984,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_razervillage.avif",
+        "bytes": 37116,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_renaissance_easy",
+    "source": "jm_renaissance_easy.png",
+    "source_bytes": 3970399,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_renaissance_easy.avif",
+        "bytes": 40416,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_renaissance_fix2",
+    "source": "jm_renaissance_fix2.png",
+    "source_bytes": 5008569,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_renaissance_fix2.avif",
+        "bytes": 23110,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_renaissance",
+    "source": "jm_renaissance.png",
+    "source_bytes": 4370174,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_renaissance.avif",
+        "bytes": 42494,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_rod_easy",
+    "source": "jm_rod_easy.png",
+    "source_bytes": 4662922,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_rod_easy.avif",
+        "bytes": 10680,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_rod_hard",
+    "source": "jm_rod_hard.png",
+    "source_bytes": 3892905,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_rod_hard.avif",
+        "bytes": 18320,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_rotate",
+    "source": "jm_rotate.png",
+    "source_bytes": 2172809,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_rotate.avif",
+        "bytes": 101814,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_school_hard",
+    "source": "jm_school_hard.png",
+    "source_bytes": 3835113,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_school_hard.avif",
+        "bytes": 22214,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_scu_legend",
+    "source": "jm_scu_legend.png",
+    "source_bytes": 4745420,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_scu_legend.avif",
+        "bytes": 21408,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_separated_world_easy",
+    "source": "jm_separated_world_easy.png",
+    "source_bytes": 3906141,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_separated_world_easy.avif",
+        "bytes": 27681,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_separated_world",
+    "source": "jm_separated_world.png",
+    "source_bytes": 2291767,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_separated_world.avif",
+        "bytes": 31081,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_silence",
+    "source": "jm_silence.png",
+    "source_bytes": 2094632,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_silence.avif",
+        "bytes": 23586,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_skate",
+    "source": "jm_skate.png",
+    "source_bytes": 4122009,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_skate.avif",
+        "bytes": 18823,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_sky_revisited_easy",
+    "source": "jm_sky_revisited_easy.png",
+    "source_bytes": 2045005,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_sky_revisited_easy.avif",
+        "bytes": 24066,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_sky_revisited_pro",
+    "source": "jm_sky_revisited_pro.png",
+    "source_bytes": 3462584,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_sky_revisited_pro.avif",
+        "bytes": 22549,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_sky_revisited",
+    "source": "jm_sky_revisited.png",
+    "source_bytes": 2512736,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_sky_revisited.avif",
+        "bytes": 15757,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_slide",
+    "source": "jm_slide.png",
+    "source_bytes": 2629276,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_slide.avif",
+        "bytes": 66360,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_slippery_alexandria_hard",
+    "source": "jm_slippery_alexandria_hard.png",
+    "source_bytes": 3605065,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_slippery_alexandria_hard.avif",
+        "bytes": 29534,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_snake",
+    "source": "jm_snake.png",
+    "source_bytes": 2675813,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_snake.avif",
+        "bytes": 61569,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_something",
+    "source": "jm_something.png",
+    "source_bytes": 2769780,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_something.avif",
+        "bytes": 27649,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_ssirhc_easy",
+    "source": "jm_ssirhc_easy.png",
+    "source_bytes": 4248681,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_ssirhc_easy.avif",
+        "bytes": 11345,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_ssirhc_hard",
+    "source": "jm_ssirhc_hard.png",
+    "source_bytes": 3008932,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_ssirhc_hard.avif",
+        "bytes": 10935,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_stacked",
+    "source": "jm_stacked.png",
+    "source_bytes": 1003397,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_stacked.avif",
+        "bytes": 10376,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_state",
+    "source": "jm_state.png",
+    "source_bytes": 4442590,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_state.avif",
+        "bytes": 11055,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_strange_ways",
+    "source": "jm_strange_ways.png",
+    "source_bytes": 2442362,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_strange_ways.avif",
+        "bytes": 14355,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_swagstika",
+    "source": "jm_swagstika.png",
+    "source_bytes": 3600368,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_swagstika.avif",
+        "bytes": 4977,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_tech",
+    "source": "jm_tech.png",
+    "source_bytes": 2540511,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_tech.avif",
+        "bytes": 16470,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_test1",
+    "source": "jm_test1.png",
+    "source_bytes": 297879,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_test1.avif",
+        "bytes": 17214,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_test2",
+    "source": "jm_test2.png",
+    "source_bytes": 1574405,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_test2.avif",
+        "bytes": 37713,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_test3",
+    "source": "jm_test3.png",
+    "source_bytes": 1628755,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_test3.avif",
+        "bytes": 47621,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_test4",
+    "source": "jm_test4.png",
+    "source_bytes": 959174,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_test4.avif",
+        "bytes": 63231,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_test5",
+    "source": "jm_test5.png",
+    "source_bytes": 1107848,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_test5.avif",
+        "bytes": 7669,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_test6",
+    "source": "jm_test6.png",
+    "source_bytes": 340586,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_test6.avif",
+        "bytes": 16134,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_thereandback",
+    "source": "jm_thereandback.png",
+    "source_bytes": 4725382,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_thereandback.avif",
+        "bytes": 16898,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_tower_of_hate",
+    "source": "jm_tower_of_hate.png",
+    "source_bytes": 1970438,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_tower_of_hate.avif",
+        "bytes": 17198,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_toybox",
+    "source": "jm_toybox.png",
+    "source_bytes": 3910924,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_toybox.avif",
+        "bytes": 19177,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_triglav",
+    "source": "jm_triglav.png",
+    "source_bytes": 2754963,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_triglav.avif",
+        "bytes": 7469,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_unified_easy",
+    "source": "jm_unified_easy.png",
+    "source_bytes": 1564508,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_unified_easy.avif",
+        "bytes": 7812,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_unified",
+    "source": "jm_unified.png",
+    "source_bytes": 1530431,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_unified.avif",
+        "bytes": 7310,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_urban",
+    "source": "jm_urban.png",
+    "source_bytes": 3871291,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_urban.avif",
+        "bytes": 12206,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_vertigo",
+    "source": "jm_vertigo.png",
+    "source_bytes": 3290040,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_vertigo.avif",
+        "bytes": 11914,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_viktoriy",
+    "source": "jm_viktoriy.png",
+    "source_bytes": 3281098,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_viktoriy.avif",
+        "bytes": 40881,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_virtual",
+    "source": "jm_virtual.png",
+    "source_bytes": 3625634,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_virtual.avif",
+        "bytes": 3613,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_vista",
+    "source": "jm_vista.png",
+    "source_bytes": 4581113,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_vista.avif",
+        "bytes": 33855,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_warehouse",
+    "source": "jm_warehouse.png",
+    "source_bytes": 4367053,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_warehouse.avif",
+        "bytes": 8920,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "jm_world",
+    "source": "jm_world.png",
+    "source_bytes": 3525450,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/jm_world.avif",
+        "bytes": 17764,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "kanyewest",
+    "source": "kanyewest.png",
+    "source_bytes": 3035994,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/kanyewest.avif",
+        "bytes": 9599,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "kd_gloom",
+    "source": "kd_gloom.png",
+    "source_bytes": 3131276,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/kd_gloom.avif",
+        "bytes": 13140,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "kubitest",
+    "source": "kubitest.png",
+    "source_bytes": 3536667,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/kubitest.avif",
+        "bytes": 20481,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "like_a_g6",
+    "source": "like_a_g6.png",
+    "source_bytes": 3572701,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/like_a_g6.avif",
+        "bytes": 29667,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "little_money",
+    "source": "little_money.png",
+    "source_bytes": 4316813,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/little_money.avif",
+        "bytes": 43978,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "m_power",
+    "source": "m_power.png",
+    "source_bytes": 3679362,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/m_power.avif",
+        "bytes": 9456,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "maze",
+    "source": "maze.png",
+    "source_bytes": 2989403,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/maze.avif",
+        "bytes": 68624,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "maze200gaps",
+    "source": "maze200gaps.png",
+    "source_bytes": 4172577,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/maze200gaps.avif",
+        "bytes": 101183,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "maze230gaps",
+    "source": "maze230gaps.png",
+    "source_bytes": 4069660,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/maze230gaps.avif",
+        "bytes": 113641,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "maze280gapsdiagonal",
+    "source": "maze280gapsdiagonal.png",
+    "source_bytes": 4483716,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/maze280gapsdiagonal.avif",
+        "bytes": 91548,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mazeshotportal",
+    "source": "mazeshotportal.png",
+    "source_bytes": 4107399,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mazeshotportal.avif",
+        "bytes": 24746,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_3dmazekruskal",
+    "source": "mp_3dmazekruskal.png",
+    "source_bytes": 3085221,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_3dmazekruskal.avif",
+        "bytes": 79659,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_3dmazekruskalbig",
+    "source": "mp_3dmazekruskalbig.png",
+    "source_bytes": 4114974,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_3dmazekruskalbig.avif",
+        "bytes": 46732,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_6jump",
+    "source": "mp_6jump.png",
+    "source_bytes": 3477649,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_6jump.avif",
+        "bytes": 9783,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_arthas",
+    "source": "mp_arthas.png",
+    "source_bytes": 1162038,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_arthas.avif",
+        "bytes": 49668,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_asmodeus",
+    "source": "mp_asmodeus.png",
+    "source_bytes": 1115110,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_asmodeus.avif",
+        "bytes": 47790,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_atamtam",
+    "source": "mp_atamtam.png",
+    "source_bytes": 2966911,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_atamtam.avif",
+        "bytes": 16008,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_bath",
+    "source": "mp_bath.png",
+    "source_bytes": 3958762,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_bath.avif",
+        "bytes": 31827,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_beaudin",
+    "source": "mp_beaudin.png",
+    "source_bytes": 4976332,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_beaudin.avif",
+        "bytes": 65828,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_blackout",
+    "source": "mp_blackout.png",
+    "source_bytes": 3984358,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_blackout.avif",
+        "bytes": 15022,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_blowed_easy",
+    "source": "mp_blowed_easy.png",
+    "source_bytes": 4553080,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_blowed_easy.avif",
+        "bytes": 30341,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_blowed",
+    "source": "mp_blowed.png",
+    "source_bytes": 4756354,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_blowed.avif",
+        "bytes": 32024,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_boktower_easy",
+    "source": "mp_boktower_easy.png",
+    "source_bytes": 2892648,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_boktower_easy.avif",
+        "bytes": 25134,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_breakout",
+    "source": "mp_breakout.png",
+    "source_bytes": 4270081,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_breakout.avif",
+        "bytes": 39566,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_brecourt",
+    "source": "mp_brecourt.png",
+    "source_bytes": 3899891,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_brecourt.avif",
+        "bytes": 44009,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_building",
+    "source": "mp_building.png",
+    "source_bytes": 3786926,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_building.avif",
+        "bytes": 10893,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_burgundy",
+    "source": "mp_burgundy.png",
+    "source_bytes": 4288407,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_burgundy.avif",
+        "bytes": 48942,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_carentan_ville",
+    "source": "mp_carentan_ville.png",
+    "source_bytes": 3964755,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_carentan_ville.avif",
+        "bytes": 39426,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_carentan",
+    "source": "mp_carentan.png",
+    "source_bytes": 4274160,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_carentan.avif",
+        "bytes": 72198,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_carrots",
+    "source": "mp_carrots.png",
+    "source_bytes": 3624578,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_carrots.avif",
+        "bytes": 22523,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_city",
+    "source": "mp_city.png",
+    "source_bytes": 3302834,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_city.avif",
+        "bytes": 35377,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_clockjump",
+    "source": "mp_clockjump.png",
+    "source_bytes": 954831,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_clockjump.avif",
+        "bytes": 6289,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_crazymaze",
+    "source": "mp_crazymaze.png",
+    "source_bytes": 3455003,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_crazymaze.avif",
+        "bytes": 4974,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_d-cow_v2",
+    "source": "mp_d-cow_v2.png",
+    "source_bytes": 3486967,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_d-cow_v2.avif",
+        "bytes": 65205,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_d-jump",
+    "source": "mp_d-jump.png",
+    "source_bytes": 2643454,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_d-jump.avif",
+        "bytes": 17725,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_dawnville",
+    "source": "mp_dawnville.png",
+    "source_bytes": 3343046,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_dawnville.avif",
+        "bytes": 35622,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_decoy",
+    "source": "mp_decoy.png",
+    "source_bytes": 2558496,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_decoy.avif",
+        "bytes": 12774,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_defrag",
+    "source": "mp_defrag.png",
+    "source_bytes": 2867978,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_defrag.avif",
+        "bytes": 12856,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_deluxe",
+    "source": "mp_deluxe.png",
+    "source_bytes": 5169206,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_deluxe.avif",
+        "bytes": 101199,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_desertville",
+    "source": "mp_desertville.png",
+    "source_bytes": 3194429,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_desertville.avif",
+        "bytes": 19962,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_developer",
+    "source": "mp_developer.png",
+    "source_bytes": 4158261,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_developer.avif",
+        "bytes": 29816,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_dgy_golden2",
+    "source": "mp_dgy_golden2.png",
+    "source_bytes": 4040681,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_dgy_golden2.avif",
+        "bytes": 12180,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_downtown",
+    "source": "mp_downtown.png",
+    "source_bytes": 4012728,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_downtown.avif",
+        "bytes": 29875,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_dustville_pro",
+    "source": "mp_dustville_pro.png",
+    "source_bytes": 2257853,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_dustville_pro.avif",
+        "bytes": 8200,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_dustville",
+    "source": "mp_dustville.png",
+    "source_bytes": 3392968,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_dustville.avif",
+        "bytes": 25073,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_escape_from_hell",
+    "source": "mp_escape_from_hell.png",
+    "source_bytes": 3991176,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_escape_from_hell.avif",
+        "bytes": 32465,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_fabaxe_easy",
+    "source": "mp_fabaxe_easy.png",
+    "source_bytes": 3640457,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_fabaxe_easy.avif",
+        "bytes": 30200,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_fabaxe_hard",
+    "source": "mp_fabaxe_hard.png",
+    "source_bytes": 3221985,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_fabaxe_hard.avif",
+        "bytes": 74417,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_farmhouse",
+    "source": "mp_farmhouse.png",
+    "source_bytes": 3774520,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_farmhouse.avif",
+        "bytes": 38586,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_fastend",
+    "source": "mp_fastend.png",
+    "source_bytes": 4570210,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_fastend.avif",
+        "bytes": 25866,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_free_fall",
+    "source": "mp_free_fall.png",
+    "source_bytes": 4109867,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_free_fall.avif",
+        "bytes": 53331,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_gold_snowman",
+    "source": "mp_gold_snowman.png",
+    "source_bytes": 3677350,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_gold_snowman.avif",
+        "bytes": 18470,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_grey_very_hard",
+    "source": "mp_grey_very_hard.png",
+    "source_bytes": 3280279,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_grey_very_hard.avif",
+        "bytes": 60854,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_greynight_jump",
+    "source": "mp_greynight_jump.png",
+    "source_bytes": 2831821,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_greynight_jump.avif",
+        "bytes": 7963,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_harbor",
+    "source": "mp_harbor.png",
+    "source_bytes": 3068096,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_harbor.avif",
+        "bytes": 41021,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_hell",
+    "source": "mp_hell.png",
+    "source_bytes": 3299721,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_hell.avif",
+        "bytes": 58540,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_henry",
+    "source": "mp_henry.png",
+    "source_bytes": 2455073,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_henry.avif",
+        "bytes": 36299,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_high",
+    "source": "mp_high.png",
+    "source_bytes": 3710202,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_high.avif",
+        "bytes": 36001,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_highgrass",
+    "source": "mp_highgrass.png",
+    "source_bytes": 3910222,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_highgrass.avif",
+        "bytes": 22805,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_industry",
+    "source": "mp_industry.png",
+    "source_bytes": 4080427,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_industry.avif",
+        "bytes": 24914,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_island_jump",
+    "source": "mp_island_jump.png",
+    "source_bytes": 2790565,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_island_jump.avif",
+        "bytes": 27537,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_izno7",
+    "source": "mp_izno7.png",
+    "source_bytes": 644212,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_izno7.avif",
+        "bytes": 23565,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_jimbojump",
+    "source": "mp_jimbojump.png",
+    "source_bytes": 2832104,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_jimbojump.avif",
+        "bytes": 12161,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_jump_arena",
+    "source": "mp_jump_arena.png",
+    "source_bytes": 4110076,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_jump_arena.avif",
+        "bytes": 22354,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_jump_sector",
+    "source": "mp_jump_sector.png",
+    "source_bytes": 587137,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_jump_sector.avif",
+        "bytes": 10927,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_jump_tower",
+    "source": "mp_jump_tower.png",
+    "source_bytes": 2546590,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_jump_tower.avif",
+        "bytes": 28905,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_jump",
+    "source": "mp_jump.png",
+    "source_bytes": 4607043,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_jump.avif",
+        "bytes": 34084,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_jumpfantasy",
+    "source": "mp_jumpfantasy.png",
+    "source_bytes": 3946476,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_jumpfantasy.avif",
+        "bytes": 46346,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_jumpfantasy2",
+    "source": "mp_jumpfantasy2.png",
+    "source_bytes": 3904257,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_jumpfantasy2.avif",
+        "bytes": 22218,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_jumpy",
+    "source": "mp_jumpy.png",
+    "source_bytes": 2185435,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_jumpy.avif",
+        "bytes": 7282,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_klerscape_v1",
+    "source": "mp_klerscape_v1.png",
+    "source_bytes": 5295132,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_klerscape_v1.avif",
+        "bytes": 26915,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_koko",
+    "source": "mp_koko.png",
+    "source_bytes": 1213388,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_koko.avif",
+        "bytes": 8004,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_kryptest",
+    "source": "mp_kryptest.png",
+    "source_bytes": 1388304,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_kryptest.avif",
+        "bytes": 2559,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_kryptest2",
+    "source": "mp_kryptest2.png",
+    "source_bytes": 869472,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_kryptest2.avif",
+        "bytes": 3332,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_lava_jump",
+    "source": "mp_lava_jump.png",
+    "source_bytes": 1726432,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_lava_jump.avif",
+        "bytes": 40075,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_lego1",
+    "source": "mp_lego1.png",
+    "source_bytes": 2756497,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_lego1.avif",
+        "bytes": 23732,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_leningrad",
+    "source": "mp_leningrad.png",
+    "source_bytes": 3648676,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_leningrad.avif",
+        "bytes": 38770,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_lev_facilities_noob",
+    "source": "mp_lev_facilities_noob.png",
+    "source_bytes": 4067056,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_lev_facilities_noob.avif",
+        "bytes": 14751,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_lev_facilities",
+    "source": "mp_lev_facilities.png",
+    "source_bytes": 4577354,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_lev_facilities.avif",
+        "bytes": 13931,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_lost_valley",
+    "source": "mp_lost_valley.png",
+    "source_bytes": 2388389,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_lost_valley.avif",
+        "bytes": 10855,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_mania",
+    "source": "mp_mania.png",
+    "source_bytes": 3813783,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_mania.avif",
+        "bytes": 13280,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_mariov2",
+    "source": "mp_mariov2.png",
+    "source_bytes": 1586181,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_mariov2.avif",
+        "bytes": 21424,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_matmata",
+    "source": "mp_matmata.png",
+    "source_bytes": 3513177,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_matmata.avif",
+        "bytes": 30430,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_mbtraining",
+    "source": "mp_mbtraining.png",
+    "source_bytes": 3930711,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_mbtraining.avif",
+        "bytes": 33739,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_metal",
+    "source": "mp_metal.png",
+    "source_bytes": 468535,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_metal.avif",
+        "bytes": 19147,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_mine",
+    "source": "mp_mine.png",
+    "source_bytes": 3677300,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_mine.avif",
+        "bytes": 21704,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_noname",
+    "source": "mp_noname.png",
+    "source_bytes": 2567387,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_noname.avif",
+        "bytes": 25175,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_ontherocks_v1.0",
+    "source": "mp_ontherocks_v1.0.png",
+    "source_bytes": 4734764,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_ontherocks_v1.0.avif",
+        "bytes": 34144,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_organic_peppermint_refreshing_infusion",
+    "source": "mp_organic_peppermint_refreshing_infusion.png",
+    "source_bytes": 3228665,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_organic_peppermint_refreshing_infusion.avif",
+        "bytes": 35773,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_organic_white_tea_with_vanilla",
+    "source": "mp_organic_white_tea_with_vanilla.png",
+    "source_bytes": 2547767,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_organic_white_tea_with_vanilla.avif",
+        "bytes": 13362,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_papadopulus",
+    "source": "mp_papadopulus.png",
+    "source_bytes": 4988399,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_papadopulus.avif",
+        "bytes": 31168,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_paprika",
+    "source": "mp_paprika.png",
+    "source_bytes": 191106,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_paprika.avif",
+        "bytes": 11580,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_parking_easy",
+    "source": "mp_parking_easy.png",
+    "source_bytes": 3431043,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_parking_easy.avif",
+        "bytes": 27108,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_parking",
+    "source": "mp_parking.png",
+    "source_bytes": 4782856,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_parking.avif",
+        "bytes": 15080,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_penis",
+    "source": "mp_penis.png",
+    "source_bytes": 2820424,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_penis.avif",
+        "bytes": 11104,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_plaincrazy",
+    "source": "mp_plaincrazy.png",
+    "source_bytes": 4372989,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_plaincrazy.avif",
+        "bytes": 46098,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_police",
+    "source": "mp_police.png",
+    "source_bytes": 3363398,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_police.avif",
+        "bytes": 36361,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_prisonbreak",
+    "source": "mp_prisonbreak.png",
+    "source_bytes": 4069629,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_prisonbreak.avif",
+        "bytes": 36567,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_purplehaze",
+    "source": "mp_purplehaze.png",
+    "source_bytes": 5419387,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_purplehaze.avif",
+        "bytes": 27962,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_pyramid",
+    "source": "mp_pyramid.png",
+    "source_bytes": 2302845,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_pyramid.avif",
+        "bytes": 6071,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_r8_jump_arena",
+    "source": "mp_r8_jump_arena.png",
+    "source_bytes": 3300677,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_r8_jump_arena.avif",
+        "bytes": 48518,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_railyard",
+    "source": "mp_railyard.png",
+    "source_bytes": 3331308,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_railyard.avif",
+        "bytes": 33694,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_rhine",
+    "source": "mp_rhine.png",
+    "source_bytes": 4149240,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_rhine.avif",
+        "bytes": 48033,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_river",
+    "source": "mp_river.png",
+    "source_bytes": 4114296,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_river.avif",
+        "bytes": 90898,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_roncs_jump_v2",
+    "source": "mp_roncs_jump_v2.png",
+    "source_bytes": 4031280,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_roncs_jump_v2.avif",
+        "bytes": 75666,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_rotate",
+    "source": "mp_rotate.png",
+    "source_bytes": 2430952,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_rotate.avif",
+        "bytes": 7017,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_scjump",
+    "source": "mp_scjump.png",
+    "source_bytes": 3987799,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_scjump.avif",
+        "bytes": 16830,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_scmega",
+    "source": "mp_scmega.png",
+    "source_bytes": 3258195,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_scmega.avif",
+        "bytes": 16349,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_sctowers",
+    "source": "mp_sctowers.png",
+    "source_bytes": 3655490,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_sctowers.avif",
+        "bytes": 58524,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_scultra",
+    "source": "mp_scultra.png",
+    "source_bytes": 4469603,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_scultra.avif",
+        "bytes": 28734,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_shiningstar",
+    "source": "mp_shiningstar.png",
+    "source_bytes": 4123258,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_shiningstar.avif",
+        "bytes": 8727,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_simply_mistaken",
+    "source": "mp_simply_mistaken.png",
+    "source_bytes": 4067379,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_simply_mistaken.avif",
+        "bytes": 33861,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_sky_cc",
+    "source": "mp_sky_cc.png",
+    "source_bytes": 1181314,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_sky_cc.avif",
+        "bytes": 13886,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_sky",
+    "source": "mp_sky.png",
+    "source_bytes": 3927475,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_sky.avif",
+        "bytes": 12148,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_sky2",
+    "source": "mp_sky2.png",
+    "source_bytes": 4437676,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_sky2.avif",
+        "bytes": 50795,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_slab",
+    "source": "mp_slab.png",
+    "source_bytes": 3680108,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_slab.avif",
+        "bytes": 24101,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_smokey",
+    "source": "mp_smokey.png",
+    "source_bytes": 3709575,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_smokey.avif",
+        "bytes": 10758,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_son_of_bitch_average",
+    "source": "mp_son_of_bitch_average.png",
+    "source_bytes": 4809090,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_son_of_bitch_average.avif",
+        "bytes": 5781,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_son_of_bitch_easy",
+    "source": "mp_son_of_bitch_easy.png",
+    "source_bytes": 4481950,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_son_of_bitch_easy.avif",
+        "bytes": 12364,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_son_of_bitch_nightmare",
+    "source": "mp_son_of_bitch_nightmare.png",
+    "source_bytes": 4280824,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_son_of_bitch_nightmare.avif",
+        "bytes": 11395,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_son_of_bitch_noob",
+    "source": "mp_son_of_bitch_noob.png",
+    "source_bytes": 4773807,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_son_of_bitch_noob.avif",
+        "bytes": 6047,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_special",
+    "source": "mp_special.png",
+    "source_bytes": 749614,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_special.avif",
+        "bytes": 38669,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_suffer",
+    "source": "mp_suffer.png",
+    "source_bytes": 553902,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_suffer.avif",
+        "bytes": 22448,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_sunshine_state",
+    "source": "mp_sunshine_state.png",
+    "source_bytes": 3993256,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_sunshine_state.avif",
+        "bytes": 63221,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_sux",
+    "source": "mp_sux.png",
+    "source_bytes": 611370,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_sux.avif",
+        "bytes": 6699,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_tele",
+    "source": "mp_tele.png",
+    "source_bytes": 2884707,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_tele.avif",
+        "bytes": 8412,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_tevy",
+    "source": "mp_tevy.png",
+    "source_bytes": 3028978,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_tevy.avif",
+        "bytes": 25573,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_tobruk",
+    "source": "mp_tobruk.png",
+    "source_bytes": 3998416,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_tobruk.avif",
+        "bytes": 22595,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_toilet",
+    "source": "mp_toilet.png",
+    "source_bytes": 2669836,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_toilet.avif",
+        "bytes": 9141,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_toujane",
+    "source": "mp_toujane.png",
+    "source_bytes": 3606923,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_toujane.avif",
+        "bytes": 32854,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_trainstation",
+    "source": "mp_trainstation.png",
+    "source_bytes": 3964368,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_trainstation.avif",
+        "bytes": 77659,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_trainstation000",
+    "source": "mp_trainstation000.png",
+    "source_bytes": 3930148,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_trainstation000.avif",
+        "bytes": 75441,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_unique",
+    "source": "mp_unique.png",
+    "source_bytes": 3457817,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_unique.avif",
+        "bytes": 14130,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_vista",
+    "source": "mp_vista.png",
+    "source_bytes": 3968965,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_vista.avif",
+        "bytes": 30418,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_warsaw",
+    "source": "mp_warsaw.png",
+    "source_bytes": 4125979,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_warsaw.avif",
+        "bytes": 29034,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_wat",
+    "source": "mp_wat.png",
+    "source_bytes": 2288293,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_wat.avif",
+        "bytes": 27338,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_western",
+    "source": "mp_western.png",
+    "source_bytes": 4424475,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_western.avif",
+        "bytes": 22041,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_wk",
+    "source": "mp_wk.png",
+    "source_bytes": 2296487,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_wk.avif",
+        "bytes": 15167,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_x3m_training_3",
+    "source": "mp_x3m_training_3.png",
+    "source_bytes": 3388560,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_x3m_training_3.avif",
+        "bytes": 11846,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "mp_yka",
+    "source": "mp_yka.png",
+    "source_bytes": 4136826,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/mp_yka.avif",
+        "bytes": 14008,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "nm_toybox_easy",
+    "source": "nm_toybox_easy.png",
+    "source_bytes": 3477165,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/nm_toybox_easy.avif",
+        "bytes": 36430,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "nm_toybox_hard",
+    "source": "nm_toybox_hard.png",
+    "source_bytes": 4523099,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/nm_toybox_hard.avif",
+        "bytes": 30391,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "pacman_worldv2_out",
+    "source": "pacman_worldv2_out.png",
+    "source_bytes": 709922,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/pacman_worldv2_out.avif",
+        "bytes": 7657,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "pl_jm_icejump",
+    "source": "pl_jm_icejump.png",
+    "source_bytes": 3728442,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/pl_jm_icejump.avif",
+        "bytes": 10253,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "pl_jm_ine",
+    "source": "pl_jm_ine.png",
+    "source_bytes": 5867532,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/pl_jm_ine.avif",
+        "bytes": 55486,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "pl_jm_jump",
+    "source": "pl_jm_jump.png",
+    "source_bytes": 1464888,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/pl_jm_jump.avif",
+        "bytes": 14388,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "railyard_jump_hard",
+    "source": "railyard_jump_hard.png",
+    "source_bytes": 3795229,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/railyard_jump_hard.avif",
+        "bytes": 38185,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "railyard_jump_light",
+    "source": "railyard_jump_light.png",
+    "source_bytes": 4154503,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/railyard_jump_light.avif",
+        "bytes": 13317,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "railyard_jump_ultra_250",
+    "source": "railyard_jump_ultra_250.png",
+    "source_bytes": 3973070,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/railyard_jump_ultra_250.avif",
+        "bytes": 40115,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "railyard_jump_ultra",
+    "source": "railyard_jump_ultra.png",
+    "source_bytes": 3549055,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/railyard_jump_ultra.avif",
+        "bytes": 21426,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "ramp",
+    "source": "ramp.png",
+    "source_bytes": 206515,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/ramp.avif",
+        "bytes": 5570,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "rnr_neuville_beta2",
+    "source": "rnr_neuville_beta2.png",
+    "source_bytes": 3847245,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/rnr_neuville_beta2.avif",
+        "bytes": 17066,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "sc_telijump",
+    "source": "sc_telijump.png",
+    "source_bytes": 2617165,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/sc_telijump.avif",
+        "bytes": 30433,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "soviet_stronghold",
+    "source": "soviet_stronghold.png",
+    "source_bytes": 4761980,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/soviet_stronghold.avif",
+        "bytes": 32088,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "surf_ag",
+    "source": "surf_ag.png",
+    "source_bytes": 2112578,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/surf_ag.avif",
+        "bytes": 27327,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "surf_akai",
+    "source": "surf_akai.png",
+    "source_bytes": 4854290,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/surf_akai.avif",
+        "bytes": 19681,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "surf_beginner",
+    "source": "surf_beginner.png",
+    "source_bytes": 3632382,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/surf_beginner.avif",
+        "bytes": 38124,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "surf_concept",
+    "source": "surf_concept.png",
+    "source_bytes": 4406930,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/surf_concept.avif",
+        "bytes": 57890,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "surf_crazyfrog",
+    "source": "surf_crazyfrog.png",
+    "source_bytes": 4361149,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/surf_crazyfrog.avif",
+        "bytes": 13075,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "surf_derpis",
+    "source": "surf_derpis.png",
+    "source_bytes": 450683,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/surf_derpis.avif",
+        "bytes": 30886,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "surf_forbidden_ways",
+    "source": "surf_forbidden_ways.png",
+    "source_bytes": 2883188,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/surf_forbidden_ways.avif",
+        "bytes": 8455,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "surf_gforce",
+    "source": "surf_gforce.png",
+    "source_bytes": 4284840,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/surf_gforce.avif",
+        "bytes": 80837,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "surf_lasci",
+    "source": "surf_lasci.png",
+    "source_bytes": 1693634,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/surf_lasci.avif",
+        "bytes": 18224,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "surf_legends",
+    "source": "surf_legends.png",
+    "source_bytes": 3194559,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/surf_legends.avif",
+        "bytes": 33994,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "surf_reload",
+    "source": "surf_reload.png",
+    "source_bytes": 2246107,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/surf_reload.avif",
+        "bytes": 49743,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "surf_snowarena",
+    "source": "surf_snowarena.png",
+    "source_bytes": 1023092,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/surf_snowarena.avif",
+        "bytes": 13082,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "surf_toast",
+    "source": "surf_toast.png",
+    "source_bytes": 4367954,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/surf_toast.avif",
+        "bytes": 64620,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "surf_utopia",
+    "source": "surf_utopia.png",
+    "source_bytes": 3817653,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/surf_utopia.avif",
+        "bytes": 5135,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "svt_stronghold_easy",
+    "source": "svt_stronghold_easy.png",
+    "source_bytes": 4476527,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/svt_stronghold_easy.avif",
+        "bytes": 34769,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "svt_stronghold_pro",
+    "source": "svt_stronghold_pro.png",
+    "source_bytes": 5243165,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/svt_stronghold_pro.avif",
+        "bytes": 33262,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "svt_stronghold_v2",
+    "source": "svt_stronghold_v2.png",
+    "source_bytes": 3392291,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/svt_stronghold_v2.avif",
+        "bytes": 18761,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "thunder_jump_beta",
+    "source": "thunder_jump_beta.png",
+    "source_bytes": 4091781,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/thunder_jump_beta.avif",
+        "bytes": 41247,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "uj_defrag_01",
+    "source": "uj_defrag_01.png",
+    "source_bytes": 1838466,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/uj_defrag_01.avif",
+        "bytes": 42243,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "uj_defrag_03",
+    "source": "uj_defrag_03.png",
+    "source_bytes": 809449,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/uj_defrag_03.avif",
+        "bytes": 16464,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "uj_reznin",
+    "source": "uj_reznin.png",
+    "source_bytes": 4212258,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/uj_reznin.avif",
+        "bytes": 21929,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "ultra_gap_training",
+    "source": "ultra_gap_training.png",
+    "source_bytes": 4598930,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/ultra_gap_training.avif",
+        "bytes": 36141,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "uw_aftermath",
+    "source": "uw_aftermath.png",
+    "source_bytes": 4300001,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/uw_aftermath.avif",
+        "bytes": 24884,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  },
+  {
+    "key": "zp_supreme",
+    "source": "zp_supreme.png",
+    "source_bytes": 4027237,
+    "outputs": {
+      "cards": {
+        "path": "/maps/cards/zp_supreme.avif",
+        "bytes": 39488,
+        "width": 960,
+        "quality": 78
+      }
+    }
+  }
+]

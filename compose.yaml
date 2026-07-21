@@ -1,0 +1,18 @@
+services:
+  frontend:
+    build:
+      context: .
+      target: dev
+    ports:
+      - "5173:5173"
+    environment:
+      VITE_API_BASE_URL: ${VITE_API_BASE_URL:-https://jhstats.fly.dev}
+      VITE_API_SOURCE: ${VITE_API_SOURCE:-j4l}
+      VITE_MAP_DIFFICULTY_SOURCE: ${VITE_MAP_DIFFICULTY_SOURCE:-jh}
+      VITE_DISCORD_URL: ${VITE_DISCORD_URL:-}
+    volumes:
+      - .:/app
+      - frontend_node_modules:/app/node_modules
+
+volumes:
+  frontend_node_modules:

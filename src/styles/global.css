@@ -90,7 +90,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 10;
-  border-bottom: 1px solid rgba(216, 231, 222, 0.09);
+  border-bottom: 1px solid rgba(216, 231, 222, 0.6);
   background: rgba(8, 11, 9, 0.78);
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.18);
   backdrop-filter: blur(22px) saturate(130%);

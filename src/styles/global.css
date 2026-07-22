@@ -97,12 +97,12 @@ a {
 }
 
 .header-inner {
-  width: min(1480px, calc(100% - 48px));
+  width: min(1320px, calc(100% - 48px));
   min-height: 72px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: auto minmax(520px, 1fr) auto;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 18px;
 }
 

@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
-import { Activity, BookOpen, Compass, Crown, Map, MessageSquare, Server, ShieldCheck, Terminal, Trophy, Wrench } from "lucide-react";
+import { useCallback, useEffect, useState } from "react";
+import { BookOpen, Crown, Map, MessageSquare, Server, ShieldCheck, Terminal, Trophy, Wrench } from "lucide-react";
 import { fetchMaps, fetchServers } from "./lib/api";
 import { fallbackMaps, fallbackServerStatus } from "./lib/fallbackData";
 import { usePolling } from "./lib/usePolling";
@@ -66,11 +66,6 @@ export function App() {
     return () => window.removeEventListener("hashchange", onHashChange);
   }, []);
 
-  const onlineSummary = useMemo(() => {
-    const status = serverState.data;
-    return `${status.online_servers}/${status.servers.length} online`;
-  }, [serverState.data]);
-
   function selectTab(tab: TabID) {
     setActiveTab(tab);
     window.history.replaceState(null, "", `#${tab}`);
@@ -108,21 +103,6 @@ export function App() {
               );
             })}
           </nav>
-
-          <div className="header-status" aria-label="Live status summary">
-            <span className="live-summary">
-              <Activity size={15} aria-hidden="true" />
-              {onlineSummary}
-            </span>
-            <span>
-              <Compass size={15} aria-hidden="true" />
-              {serverState.data.total_players} players
-            </span>
-            <span>
-              <Map size={15} aria-hidden="true" />
-              {maps.length} maps
-            </span>
-          </div>
         </div>
       </header>
 

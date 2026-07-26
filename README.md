@@ -38,7 +38,7 @@ The supported settings are:
 
 Run the production build with either `mise run verify` or `npm run build`. The generated static site is written to `dist/`.
 
-GitHub Actions runs the generated-data checks and production build for every pull request and push to `main`. A separate workflow publishes `dist/` to Cloudflare Pages after changes land on `main`.
+GitHub Actions installs the locked dependencies and runs the production build for every pull request and push to `main`. A separate workflow publishes `dist/` to Cloudflare Pages after changes land on `main`.
 
 Configure the deployment workflow with:
 

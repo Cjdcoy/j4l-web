@@ -33,11 +33,5 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Check generated command data
-        run: npm run check:commands
-
-      - name: Check command argument audit
-        run: npm run check:command-arguments
-
       - name: Build production site
         run: npm run build

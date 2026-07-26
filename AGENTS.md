@@ -2,7 +2,7 @@
 
 ## Validation
 
-- Use Node.js 22 and install locked dependencies with `npm ci`.
+- Use Node.js 26 and install locked dependencies with `npm ci`.
 - Before handing off changes, run `npm run build`. This performs both TypeScript checks and the Vite production build.
 - Keep CI and deployment self-contained. They must not depend on the private sibling `jump4life` repository.
 - Commands that regenerate data or assets may use the sibling repository locally, but only when the task explicitly requires regeneration.

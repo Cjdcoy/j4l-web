@@ -38,6 +38,17 @@ The supported settings are:
 
 Run the production build with either `mise run verify` or `npm run build`. The generated static site is written to `dist/`.
 
+GitHub Actions runs the generated-data checks and production build for every pull request and push to `main`. A separate workflow publishes `dist/` to Cloudflare Pages after changes land on `main`.
+
+Configure the deployment workflow with:
+
+- Repository secret `CLOUDFLARE_API_TOKEN`: a token scoped to the account with `Cloudflare Pages: Edit`.
+- Repository secret `CLOUDFLARE_ACCOUNT_ID`: the Cloudflare account that owns the Pages project.
+- Repository variable `CLOUDFLARE_PAGES_PROJECT`: the existing Pages project name.
+- Repository variable `CLOUDFLARE_DEPLOY_ENABLED`: set to `true` after the other values are configured.
+
+If the Pages project uses Cloudflare's Git integration, disable its automatic production and preview branch deployments before enabling the GitHub Actions deploy workflow. This prevents the same commit from being deployed twice.
+
 The `static` Docker target builds the app and serves it with nginx:
 
 ```sh

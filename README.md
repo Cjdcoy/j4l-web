@@ -38,6 +38,16 @@ The supported settings are:
 
 Run the production build with either `mise run verify` or `npm run build`. The generated static site is written to `dist/`.
 
+GitHub Actions installs the locked dependencies and runs the production build for every pull request and push to `main`. A separate workflow publishes `dist/` as the `jump4life` Cloudflare Worker after changes land on `main`.
+
+Configure the deployment workflow with:
+
+- Production environment secret `CLOUDFLARE_API_TOKEN`: a token scoped to the account with the `Edit Cloudflare Workers` policy.
+- Production environment secret `CLOUDFLARE_ACCOUNT_ID`: the Cloudflare account that owns the Worker.
+- Repository variable `CLOUDFLARE_DEPLOY_ENABLED`: set to `true` after the other values are configured.
+
+The Worker serves `jump4life.org` and `www.jump4life.org` through domains managed in the Cloudflare dashboard. `wrangler.jsonc` intentionally omits route keys and disables `workers.dev` and preview URLs so deployments do not replace those dashboard-managed routing settings.
+
 The `static` Docker target builds the app and serves it with nginx:
 
 ```sh

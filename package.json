@@ -9,6 +9,8 @@
     "preview": "vite preview --host 0.0.0.0",
     "sync:commands": "node scripts/sync-commands.mjs",
     "check:commands": "node scripts/sync-commands.mjs --check",
+    "audit:command-arguments": "node scripts/audit-command-arguments.mjs",
+    "check:command-arguments": "node scripts/audit-command-arguments.mjs --check",
     "optimize:maps": "node scripts/optimize-maps.mjs",
     "optimize:ranks": "node scripts/optimize-ranks.mjs"
   },

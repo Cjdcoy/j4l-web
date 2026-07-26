@@ -1,7 +1,9 @@
 import { useMemo, useState } from "react";
 import type { CSSProperties } from "react";
-import { EyeOff, Search, Terminal, X } from "lucide-react";
+import { BookOpen, ChevronDown, EyeOff, Search, Terminal, X } from "lucide-react";
+import { commandGuides } from "../data/commandGuides";
 import { gameCommands } from "../data/commands";
+import type { GameCommand } from "../data/commands";
 
 type AccessBand = "all" | "player" | "trusted" | "moderator" | "admin" | "owner";
 type SortMode = "alphabetical" | "level-asc" | "level-desc";
@@ -47,10 +49,115 @@ function levelBadgeStyle(level: number): CSSProperties {
   };
 }
 
+function normalizeHelpLine(value: string) {
+  return value.toLowerCase().replace(/^usage:\s*/, "").replace(/[^a-z0-9]+/g, " ").trim();
+}
+
+function additionalHelp(command: GameCommand) {
+  const summaryLines = new Set([command.usage, command.description].map(normalizeHelpLine));
+  return command.help.filter((line, index) => {
+    const normalizedLine = normalizeHelpLine(line);
+    return normalizedLine && !summaryLines.has(normalizedLine) && command.help.indexOf(line) === index;
+  });
+}
+
+function CommandDocumentation({ command, id }: { command: GameCommand; id: string }) {
+  const guide = commandGuides[command.name];
+  const help = additionalHelp(command);
+
+  return (
+    <div className="command-documentation" id={id} role="region" aria-label={`Documentation for !${command.name}`}>
+      <div className="command-guide-body">
+        <div className="command-guide-header">
+          <div>
+            <p className="command-guide-kicker">
+              <BookOpen size={14} aria-hidden="true" />
+              Command guide
+            </p>
+            <h3><code>!{command.name}</code></h3>
+            <p className="command-guide-introduction">{guide?.introduction ?? command.description}</p>
+          </div>
+          <dl className="command-guide-meta">
+            <div className="command-guide-meta-syntax">
+              <dt>Syntax</dt>
+              <dd><code>{command.usage}</code></dd>
+            </div>
+            <div>
+              <dt>Access</dt>
+              <dd>Level {command.levels.join(" / ")}</dd>
+            </div>
+            <div>
+              <dt>Aliases</dt>
+              <dd>{command.aliases.length > 0 ? command.aliases.map((alias) => `!${alias}`).join(", ") : "None"}</dd>
+            </div>
+            <div>
+              <dt>Chat input</dt>
+              <dd>{command.hidden ? "Hidden from public chat" : "Visible in public chat"}</dd>
+            </div>
+          </dl>
+        </div>
+
+        {guide ? (
+          <div className="command-guide-sections">
+            {guide.sections.map((section) => (
+              <section key={section.title}>
+                <h3>{section.title}</h3>
+                {section.introduction ? <p>{section.introduction}</p> : null}
+                {section.syntax ? <code className="command-guide-syntax">{section.syntax}</code> : null}
+                <ul className="command-guide-items">
+                  {section.items.map((item) => (
+                    <li key={item.command}>
+                      <code>{item.command}</code>
+                      <p>{item.description}</p>
+                      {item.options ? (
+                        <ul className="command-guide-options">
+                          {item.options.map((option) => (
+                            <li key={option.name}>
+                              <code>{option.name}</code>
+                              <span>{option.description}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : null}
+                    </li>
+                  ))}
+                </ul>
+                {section.examples ? (
+                  <div className="command-guide-examples">
+                    <h4>Examples</h4>
+                    {section.examples.map((example) => (
+                      <code key={example}>{example}</code>
+                    ))}
+                  </div>
+                ) : null}
+                {section.note ? <p className="command-guide-note">{section.note}</p> : null}
+              </section>
+            ))}
+          </div>
+        ) : (
+          <section className="command-help-section">
+            <h3>In-game guidance</h3>
+            {help.length > 0 ? (
+              <ul className="command-help-lines">
+                {help.map((line) => (
+                  <li key={line}>{line}</li>
+                ))}
+              </ul>
+            ) : (
+              <p>Use the syntax shown above. The in-game help does not list any additional options for this command.</p>
+            )}
+          </section>
+        )}
+      </div>
+    </div>
+  );
+}
+
 export function CommandDirectory() {
   const [query, setQuery] = useState("");
   const [access, setAccess] = useState<AccessBand>("all");
   const [sort, setSort] = useState<SortMode>("level-asc");
+  const [expandedCommand, setExpandedCommand] = useState<string | null>(null);
 
   const playerCount = useMemo(() => gameCommands.filter((command) => command.minLevel <= 40).length, []);
   const results = useMemo(() => {
@@ -65,6 +172,8 @@ export function CommandDirectory() {
         ...command.aliases,
         command.usage,
         command.description,
+        ...command.help,
+        commandGuides[command.name] ? JSON.stringify(commandGuides[command.name]) : "",
         String(command.minLevel),
       ]
         .join(" ")
@@ -176,7 +285,7 @@ export function CommandDirectory() {
             <Terminal size={16} aria-hidden="true" />
             <p>
               Replace labels such as <code>[player]</code> with a value; choices are separated by a slash, such as
-              <code> [on/off]</code>.
+              <code> [on/off]</code>. Select a command row to open its complete documentation.
             </p>
           </div>
           <div>
@@ -186,39 +295,56 @@ export function CommandDirectory() {
         </div>
 
         {results.length > 0 ? (
-          <div className="command-table" role="table" aria-label="In-game commands">
-            <div className="command-row command-row-head" role="row">
-              <span role="columnheader">Command</span>
-              <span role="columnheader">Access</span>
-              <span role="columnheader">Usage &amp; arguments</span>
-              <span role="columnheader">What it does</span>
+          <div className="command-table" aria-label="In-game commands">
+            <div className="command-row command-row-head" aria-hidden="true">
+              <span>Command</span>
+              <span>Access</span>
+              <span>Usage &amp; arguments</span>
+              <span>What it does</span>
+              <span />
             </div>
             {results.map((command) => {
+              const isExpanded = expandedCommand === command.name;
+              const guideId = `command-documentation-${command.name}`;
+
               return (
-                <article className="command-row" role="row" key={command.name}>
-                  <div className="command-name-cell" role="cell" data-label="Command">
-                    <code>!{command.name}</code>
-                    {command.aliases.length > 0 ? (
-                      <span className="command-aliases">Aliases: {command.aliases.map((alias) => `!${alias}`).join(", ")}</span>
-                    ) : null}
-                  </div>
-                  <div className="command-access-cell" role="cell" data-label="Access">
-                    <span className="access-badge" style={levelBadgeStyle(command.minLevel)}>
-                      Level {command.levels.join(" / ")}
+                <article className={`command-entry${isExpanded ? " is-expanded" : ""}`} key={command.name}>
+                  <button
+                    className="command-row command-row-button"
+                    type="button"
+                    aria-expanded={isExpanded}
+                    aria-controls={guideId}
+                    onClick={() => setExpandedCommand(isExpanded ? null : command.name)}
+                  >
+                    <span className="command-name-cell" data-label="Command">
+                      <code>!{command.name}</code>
+                      {command.aliases.length > 0 ? (
+                        <span className="command-aliases">Aliases: {command.aliases.map((alias) => `!${alias}`).join(", ")}</span>
+                      ) : null}
                     </span>
-                  </div>
-                  <div className="command-usage-cell" role="cell" data-label="Usage & arguments">
-                    <code>{command.usage}</code>
-                    {command.hidden ? (
-                      <span className="command-hidden" title="Input is not broadcast in public chat">
-                        <EyeOff size={13} aria-hidden="true" />
-                        <span className="sr-only">Input is not broadcast in public chat</span>
+                    <span className="command-access-cell" data-label="Access">
+                      <span className="access-badge" style={levelBadgeStyle(command.minLevel)}>
+                        Level {command.levels.join(" / ")}
                       </span>
-                    ) : null}
-                  </div>
-                  <div className="command-description-cell" role="cell" data-label="What it does">
-                    <p>{command.description}</p>
-                  </div>
+                    </span>
+                    <span className="command-usage-cell" data-label="Usage & arguments">
+                      <code>{command.usage}</code>
+                      {command.hidden ? (
+                        <span className="command-hidden" title="Input is not broadcast in public chat">
+                          <EyeOff size={13} aria-hidden="true" />
+                          <span className="sr-only">Input is not broadcast in public chat</span>
+                        </span>
+                      ) : null}
+                    </span>
+                    <span className="command-description-cell" data-label="What it does">
+                      <span>{command.description}</span>
+                    </span>
+                    <span className="command-expand-cell" aria-hidden="true">
+                      <ChevronDown size={18} />
+                    </span>
+                    <span className="sr-only">{isExpanded ? "Collapse" : "Expand"} command documentation</span>
+                  </button>
+                  {isExpanded ? <CommandDocumentation command={command} id={guideId} /> : null}
                 </article>
               );
             })}

@@ -1,4 +1,4 @@
-name: Deploy Cloudflare Pages
+name: Deploy Cloudflare Worker
 
 on:
   push:
@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: cloudflare-pages-production
+  group: cloudflare-worker-production
   cancel-in-progress: false
 
 jobs:
@@ -21,7 +21,7 @@ jobs:
     timeout-minutes: 15
     environment:
       name: production
-      url: ${{ steps.deploy.outputs.deployment-url }}
+      url: https://jump4life.org
     permissions:
       contents: read
       deployments: write
@@ -42,11 +42,12 @@ jobs:
       - name: Build production site
         run: npm run build
 
-      - name: Deploy to Cloudflare Pages
+      - name: Deploy to Cloudflare Workers
         id: deploy
-        uses: cloudflare/wrangler-action@9acf94ace14e7dc412b076f2c5c20b8ce93c79cd # v3
+        uses: cloudflare/wrangler-action@ebbaa1584979971c8614a24965b4405ff95890e0 # v4.0.0
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name=${{ vars.CLOUDFLARE_PAGES_PROJECT }} --branch=main
+          wranglerVersion: "4.114.0"
+          command: deploy --config wrangler.jsonc
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}

@@ -38,16 +38,15 @@ The supported settings are:
 
 Run the production build with either `mise run verify` or `npm run build`. The generated static site is written to `dist/`.
 
-GitHub Actions installs the locked dependencies and runs the production build for every pull request and push to `main`. A separate workflow publishes `dist/` to Cloudflare Pages after changes land on `main`.
+GitHub Actions installs the locked dependencies and runs the production build for every pull request and push to `main`. A separate workflow publishes `dist/` as the `jump4life` Cloudflare Worker after changes land on `main`.
 
 Configure the deployment workflow with:
 
-- Repository secret `CLOUDFLARE_API_TOKEN`: a token scoped to the account with `Cloudflare Pages: Edit`.
-- Repository secret `CLOUDFLARE_ACCOUNT_ID`: the Cloudflare account that owns the Pages project.
-- Repository variable `CLOUDFLARE_PAGES_PROJECT`: the existing Pages project name.
+- Production environment secret `CLOUDFLARE_API_TOKEN`: a token scoped to the account with the `Edit Cloudflare Workers` policy.
+- Production environment secret `CLOUDFLARE_ACCOUNT_ID`: the Cloudflare account that owns the Worker.
 - Repository variable `CLOUDFLARE_DEPLOY_ENABLED`: set to `true` after the other values are configured.
 
-If the Pages project uses Cloudflare's Git integration, disable its automatic production and preview branch deployments before enabling the GitHub Actions deploy workflow. This prevents the same commit from being deployed twice.
+The Worker serves `jump4life.org` and `www.jump4life.org` through domains managed in the Cloudflare dashboard. `wrangler.jsonc` intentionally omits route keys and disables `workers.dev` and preview URLs so deployments do not replace those dashboard-managed routing settings.
 
 The `static` Docker target builds the app and serves it with nginx:
 

@@ -15,7 +15,7 @@
     "optimize:ranks": "node scripts/optimize-ranks.mjs"
   },
   "dependencies": {
-    "@vitejs/plugin-react": "^4.3.4",
+    "@vitejs/plugin-react": "^6.0.4",
     "lucide-react": "^0.468.0",
     "sharp": "^0.35.3",
     "typescript": "^5.7.2",

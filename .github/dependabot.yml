@@ -9,6 +9,17 @@ updates:
       time: "04:00"
       timezone: Asia/Hong_Kong
     open-pull-requests-limit: 5
+    groups:
+      react:
+        patterns:
+          - react
+          - react-dom
+          - "@types/react"
+          - "@types/react-dom"
+      vite:
+        patterns:
+          - vite
+          - "@vitejs/plugin-react"
 
   - package-ecosystem: github-actions
     directory: /

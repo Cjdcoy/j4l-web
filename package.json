@@ -15,11 +15,11 @@
     "optimize:ranks": "node scripts/optimize-ranks.mjs"
   },
   "dependencies": {
-    "@vitejs/plugin-react": "^6.0.4",
+    "@vitejs/plugin-react": "^6.0.5",
     "lucide-react": "^1.27.0",
     "sharp": "^0.35.3",
     "typescript": "^5.7.2",
-    "vite": "^8.1.5",
+    "vite": "^8.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

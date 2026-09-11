@@ -1553,12 +1553,12 @@ export const commandGuides: Partial<Record<string, CommandGuide>> = {
           },
           {
             command: "!cpt rename <name|checkpoint_id> <new_name>",
-            description: "Renames a published route. Requires level 100.",
+            description: "Renames a published route. Requires level 98 or above.",
           },
           {
             command: "!cpt delete <name|checkpoint_id>",
             description:
-              "Starts deletion of a published route. Confirm with !cpt delete <checkpoint_id> confirm. Requires level 100, and routes with recorded history are protected.",
+              "Deletes a published route and its recorded history. Requires exactly level 101. First select the route, then confirm with !cpt delete <checkpoint_id> confirm.",
           },
         ],
       },
@@ -1567,18 +1567,19 @@ export const commandGuides: Partial<Record<string, CommandGuide>> = {
         items: [
           {
             command: "!cpt import <player_id>",
-            description: "Publishes that player's temporary checkpoints for the current map. Requires level 100.",
+            description: "Publishes that player's temporary checkpoints for the current map. Requires level 98 or above. Successfully published drafts are cleared, and separate routes stay disconnected.",
           },
           {
             command: "!cpt import delete",
             description:
-              "Deletes all published checkpoints for the current map. Requires level 100 and currently has no confirmation step.",
+              "Disabled. Use !cpt delete <name|checkpoint_id> with level 101 and confirmation instead.",
           },
           {
             command: "!cpt help",
             description: "Prints the in-game command summary.",
           },
         ],
+        note: "Restart the map after importing, renaming, or deleting published routes to reload gameplay checkpoints.",
       },
     ],
   },

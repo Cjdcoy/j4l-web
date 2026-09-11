@@ -1429,9 +1429,9 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:3716-3736`
 - `Creates a temporary checkpoint at your current location`
 - `Place: !cpt [radius <units>] [trigger <name>] [type <name>] [event <name>] [entity]`
 - `Drafts: !cpt remove | !cpt removeall | !cpt parse [radius=50] [route]`
-- `Publish (level 100+): !cpt import <player_id>`
-- `Published: !cpt routes | !cpt rename <name|checkpoint_id> <new_name>`
-- `Delete: !cpt delete <name|checkpoint_id> (confirmation required; recorded routes are protected)`
+- `Publish (level 98+): !cpt import <player_id> (clears published drafts; restart map)`
+- `Published: !cpt routes | Rename (level 98+): !cpt rename <name|checkpoint_id> <new_name>`
+- `Delete (level 101): !cpt delete <name|checkpoint_id> (confirmation required; deletes the route and its records)`
 
 ### Mechanical argument findings
 
@@ -1442,11 +1442,11 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:3716-3736`
 
 ### Evidence functions
 
-- `cpt2(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:3391-3554`
-- `helpcpt(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:3556-3564`
-- `cptroutes(data)` — called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:3192-3202`
-- `cptrename(data)` — called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:3231-3250`
-- `cptdelete(data)` — called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:3290-3309`
+- `cpt2(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:3306-3472`
+- `helpcpt(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:3474-3482`
+- `cptroutes(data)` — called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:3107-3117`
+- `cptrename(data)` — called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:3146-3165`
+- `cptdelete(data)` — called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:3205-3224`
 
 ### Raw argument-related matches
 
@@ -1455,65 +1455,65 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:3716-3736`
 
 #### `cpt2(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:3391-3554`
+Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:3306-3472`
 
 ```gsc
- 3393 | 	if(isdefined(data[2]))
- 3395 | 		switch(data[2])
- 3397 | 			case "removeall":
- 3401 | 			case "remove":
- 3405 | 			case "parse":
- 3408 | 				if(isdefined(data[3]))
- 3410 | 					requested_radius = int(data[3]);
- 3414 | 						if(isdefined(data[4]))
- 3415 | 							route = stripstring(data[4]);
- 3418 | 						route = stripstring(data[3]);
- 3430 | 			case "help":
- 3431 | 				self helpcpt(data);
- 3433 | 			case "routes":
- 3434 | 				self cptroutes(data);
- 3436 | 			case "rename":
- 3437 | 				self cptrename(data);
- 3439 | 			case "delete":
- 3440 | 				self cptdelete(data);
- 3442 | 			case "import":
- 3450 | 					if(!isdefined(data[3]))
- 3454 | 					else if(data[3] == "delete")
- 3460 | 						pid = int(data[3]);
- 3479 | 	for(i = 2; i < data.size - 1; i += 2)
- 3481 | 		switch(data[i])
- 3483 | 			case "radius":
- 3484 | 				c[data[i]] = int(data[i + 1]);
- 3485 | 				radius_label = c[data[i]] + "";
- 3487 | 			case "trigger":
- 3488 | 			case "type":
- 3489 | 			case "event":
- 3490 | 				value = stripstring(data[i + 1]);
- 3491 | 				c[data[i]] = "'" + value + "'";
- 3492 | 				if(data[i] == "trigger")
- 3494 | 				else if(data[i] == "type")
- 3499 | 			case "entity":
- 3520 | 						c[data[i]] = "'" + entity_label + "'";
+ 3308 | 	if(isdefined(data[2]))
+ 3310 | 		switch(data[2])
+ 3312 | 			case "removeall":
+ 3316 | 			case "remove":
+ 3320 | 			case "parse":
+ 3323 | 				if(isdefined(data[3]))
+ 3325 | 					requested_radius = int(data[3]);
+ 3329 | 						if(isdefined(data[4]))
+ 3330 | 							route = stripstring(data[4]);
+ 3333 | 						route = stripstring(data[3]);
+ 3345 | 			case "help":
+ 3346 | 				self helpcpt(data);
+ 3348 | 			case "routes":
+ 3349 | 				self cptroutes(data);
+ 3351 | 			case "rename":
+ 3352 | 				self cptrename(data);
+ 3354 | 			case "delete":
+ 3355 | 				self cptdelete(data);
+ 3357 | 			case "import":
+ 3365 | 					if(!isdefined(data[3]))
+ 3369 | 					else if(data[3] == "delete")
+ 3375 | 						pid = int(data[3]);
+ 3397 | 	for(i = 2; i < data.size - 1; i += 2)
+ 3399 | 		switch(data[i])
+ 3401 | 			case "radius":
+ 3402 | 				c[data[i]] = int(data[i + 1]);
+ 3403 | 				radius_label = c[data[i]] + "";
+ 3405 | 			case "trigger":
+ 3406 | 			case "type":
+ 3407 | 			case "event":
+ 3408 | 				value = stripstring(data[i + 1]);
+ 3409 | 				c[data[i]] = "'" + value + "'";
+ 3410 | 				if(data[i] == "trigger")
+ 3412 | 				else if(data[i] == "type")
+ 3417 | 			case "entity":
+ 3438 | 						c[data[i]] = "'" + entity_label + "'";
 ```
 
 #### `cptrename(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:3231-3250`
+Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:3146-3165`
 
 ```gsc
- 3238 | 	if(!isdefined(data[3]) || !isdefined(data[4]))
- 3245 | 	args[1] = stripstring(data[4]);
- 3248 | 	q += " AND (cp.isend & 1) = 1 AND " + cptrouteselector(data[3]);
+ 3153 | 	if(!isdefined(data[3]) || !isdefined(data[4]))
+ 3160 | 	args[1] = stripstring(data[4]);
+ 3163 | 	q += " AND (cp.isend & 1) = 1 AND " + cptrouteselector(data[3]);
 ```
 
 #### `cptdelete(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:3290-3309`
+Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:3205-3224`
 
 ```gsc
- 3297 | 	if(!isdefined(data[3]))
- 3305 | 	args[2] = isdefined(data[4]) && tolower(data[4]) == "confirm";
- 3307 | 	q += " AND (cp.isend & 1) = 1 AND " + cptrouteselector(data[3]);
+ 3212 | 	if(!isdefined(data[3]))
+ 3220 | 	args[2] = isdefined(data[4]) && tolower(data[4]) == "confirm";
+ 3222 | 	q += " AND (cp.isend & 1) = 1 AND " + cptrouteselector(data[3]);
 ```
 
 </details>

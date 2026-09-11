@@ -65,7 +65,7 @@ These are recurring concepts in the reviewed commands and should be implemented 
 | `parseXpMultiplier` | `xpmultiplier` | Parse complete finite decimal values with an optional trailing `x`, normalize to thousandths, and enforce 1.000-10.000. |
 | `requireTargetBelowCaller` | `banplayer`, `fmute`, `forceteam`, `forcespec`, `frename`, `funmute`, `kick`, `killplayer`, `moveteam`, `mute`, `nades`, `promote`, `rename` | Apply one documented self-target rule and one lower-level comparison rule. |
 | `requirePlaying` | `shock`, `teleplayer`, `teleport`, `telesave` | Return a stable failure when the caller or target is not actively playing. |
-| `confirmDestructiveAction` | `cpt delete`, `cpt import delete`, `deleterec`, `reset`, `spawnpoint purge` | Bind confirmation to caller, action, exact target, and a short expiry; invalidate it when the selection changes. |
+| `confirmDestructiveAction` | `cpt delete`, `deleterec`, `reset`, `spawnpoint purge` | Bind confirmation to caller, action, exact target, and a short expiry; invalidate it when the selection changes. |
 
 ## Confirmed legacy issues and design debt
 
@@ -74,7 +74,7 @@ These are recurring concepts in the reviewed commands and should be implemented 
 | `CMD-001` | `vote mute` | The branch reads `data[2]`, the literal `mute`, for player lookup instead of the supplied player in `data[3]`. | Fix the request shape and add a regression test before enabling the branch. |
 | `CMD-002` | `vote` | Help advertises `setnextmap`, but the active handler has no matching branch. | Remove the help entry or implement an intentional alias; do not leave it ambiguous. |
 | `CMD-003` | `customtheme` | Help advertises `onscreen_stats`, but the handler has no matching case. | Remove it or implement it with a defined value type. |
-| `CMD-004` | `cpt import delete` | Deletes all published checkpoints for the map without a confirmation step. | Route through the common destructive-action confirmation flow. |
+| `CMD-004` | `cpt import delete` | Resolved: the legacy unconfirmed delete-all branch is disabled. | Keep deletion in the level-101, route-specific confirmation flow. |
 | `CMD-005` | `setdate` | Year, month, and day ranges are checked independently; impossible calendar dates pass this handler. | Validate a real calendar date before persistence. |
 | `CMD-006` | `nominate` | Legacy help refers to `setnextmap`; the registered active command is `nominate`. | Make `nominate` canonical and decide explicitly whether `setnextmap` remains an alias. |
 | `CMD-007` | `frename` | The special uppercase value `NULL` is mixed into the free-text name grammar. | Add an explicit `clear` variant and keep `NULL` only as a compatibility alias if needed. |
@@ -190,8 +190,9 @@ These are recurring concepts in the reviewed commands and should be implemented 
 
 ### `!cpt`
 
-**Registration:** level 40; visible; selected administrative branches require level 100.  
-**Source:** `_j4l_cmd.gsc:3192-3564` (`cptroutes`, `cptrename`, `cptdelete`, `cpt2`, `helpcpt` and adjacent helpers).
+**Registration:** level 40; visible; import and rename require level 98 or above; deletion requires exactly level 101.
+
+**Source:** `_j4l_cmd.gsc` (`importcps`, `cptroutes`, `cptrename`, `cptdelete`, `cpt2`, `helpcpt` and adjacent helpers); `sql/local_overlay.sql` (`import_checkpoint_drafts`, `delete_checkpoint_route`).
 
 **Current behavior**
 
@@ -200,24 +201,26 @@ These are recurring concepts in the reviewed commands and should be implemented 
 - `type` flags are substring-matched and combinable: `onground`, `noweapon`, `notrace`, `hidden`, and `noprint`.
 - Global events include `cheated` and `warned`; maps may register additional event names.
 - Draft operations are `remove`, `removeall`, and `parse [radius] [route]`. `parse` marks the latest draft checkpoint as the endpoint and applies radius to checkpoints without one; radius defaults to 50.
-- Published-route operations are `routes`, `rename <name|checkpoint_id> <new_name>`, and `delete <name|checkpoint_id>`. Rename and delete require level 100. Delete is confirmed with `!cpt delete <checkpoint_id> confirm`, and routes with recorded history are protected.
-- `import <player_id>` publishes another player's draft and requires level 100. `import delete` deletes all published checkpoints for the map, also at level 100, currently without confirmation.
+- Published-route operations are `routes` (level 40), `rename <name|checkpoint_id> <new_name>` (level 98+), and `delete <name|checkpoint_id>` (exactly level 101). Deletion requires selecting the route first, then `!cpt delete <checkpoint_id> confirm`; it removes the route branch and recorded history, then rebuilds the map's progress and replay index.
+- `import <player_id>` requires level 98+ and publishes that player's drafts in checkpoint-ID order. It consumes the published drafts in the same transaction and does not connect an endpoint to the next route. A failed import rolls back and keeps the drafts. `import delete` is disabled and directs the caller to the confirmed route-deletion command.
+- Importing, renaming, and deleting published routes require a map restart to reload gameplay checkpoints. Neither route deletion nor publishing automatically restarts the map.
 
 **Proposed rewrite contract**
 
 - Split placement, draft, route, and import operations into explicit variants before executing any branch.
 - Parse flags as exact tokens rather than substring matches, reject duplicates, and validate incompatible combinations.
-- Replace overloaded `import delete` with an explicit `delete-all` administrative variant protected by target-bound confirmation.
+- Keep the legacy `import delete` branch disabled; route deletion uses the confirmed level-101 action.
 - Use stable route IDs internally. Names are lookup conveniences and must surface ambiguity rather than choosing silently.
-- Validate draft ownership, endpoint presence, event existence, entity availability, radius range, and recorded-history protection in named policies.
+- Validate draft ownership, endpoint presence, event existence, entity availability, and radius range. Preserve explicit level-101 authorization and confirmation for deleting recorded history.
 
 **Characterization and acceptance cases**
 
 - Bare `!cpt` creates one caller-owned draft checkpoint; placement validation failure creates none.
 - `parse` uses radius 50 only where radius was unset and marks exactly one endpoint.
-- Level 40 cannot execute level-100 route mutations.
+- Level 97 cannot import or rename; levels 98, 99, 100, and 101 can. Only level 101 can delete a published route.
 - Delete confirmation is bound to the exact route; changing the route invalidates it.
-- The rewrite must add confirmation before any delete-all operation.
+- Repeating an import without new drafts publishes nothing; deleting a route and importing again cannot recreate it from consumed drafts.
+- `import delete` performs no deletion.
 
 ### `!customtheme`
 

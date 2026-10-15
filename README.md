@@ -19,7 +19,7 @@ npm install
 npm run dev
 ```
 
-The site reads live data from the separately deployed cj-stats API. It defaults to `https://jhstats.fly.dev`, requests J4L data with `source=j4l`, and overlays 125 FPS map difficulty data from `source=jh`.
+The site reads live data from the separately deployed cj-stats API. It defaults to `https://api.jump4life.org`, requests J4L data with `source=j4l`, and overlays 125 FPS map difficulty data from `source=jh`.
 
 Copy the example environment file to override those defaults:
 

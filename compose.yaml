@@ -6,7 +6,7 @@ services:
     ports:
       - "5173:5173"
     environment:
-      VITE_API_BASE_URL: ${VITE_API_BASE_URL:-https://jhstats.fly.dev}
+      VITE_API_BASE_URL: ${VITE_API_BASE_URL:-https://api.jump4life.org}
       VITE_API_SOURCE: ${VITE_API_SOURCE:-j4l}
       VITE_MAP_DIFFICULTY_SOURCE: ${VITE_MAP_DIFFICULTY_SOURCE:-jh}
       VITE_DISCORD_URL: ${VITE_DISCORD_URL:-}

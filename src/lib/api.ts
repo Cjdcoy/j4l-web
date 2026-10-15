@@ -1,6 +1,6 @@
 import type { LeaderboardEntry, LeaderboardKind, MapInfo, OnlinePlayer, ServerInfo, ServerStatus } from "./types";
 
-const DEFAULT_API_BASE_URL = "https://jhstats.fly.dev";
+const DEFAULT_API_BASE_URL = "https://api.jump4life.org";
 const DEFAULT_API_SOURCE = "j4l";
 const DEFAULT_MAP_DIFFICULTY_SOURCE = "jh";
 const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || DEFAULT_API_BASE_URL).replace(/\/+$/, "");

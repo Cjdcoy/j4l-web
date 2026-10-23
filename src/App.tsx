@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { BookOpen, Crown, Map, MessageSquare, Server, ShieldCheck, Terminal, Trophy, Wrench } from "lucide-react";
+import { BookOpen, CalendarDays, Crown, Map, MessageSquare, Server, ShieldCheck, Terminal, Trophy, Wrench } from "lucide-react";
 import { fetchMaps, fetchServers } from "./lib/api";
 import { fallbackMaps, fallbackServerStatus } from "./lib/fallbackData";
 import { usePolling } from "./lib/usePolling";
@@ -11,8 +11,10 @@ import { MapExplorer } from "./components/MapExplorer";
 import { RulesSection } from "./components/RulesSection";
 import { StaticSection } from "./components/StaticSection";
 import { CommandDirectory } from "./components/CommandDirectory";
+import { EventsPage } from "./components/EventsPage";
 
-type TabID = "servers" | "maps" | "leaderboards" | "levels" | "commands" | "rules" | "start";
+// "events" is its own path (/events), not a hash tab.
+type TabID = "servers" | "maps" | "leaderboards" | "levels" | "commands" | "rules" | "start" | "events";
 
 const tabs: Array<{ id: TabID; label: string; icon: typeof Server }> = [
   { id: "servers", label: "Servers", icon: Server },
@@ -27,6 +29,7 @@ const tabs: Array<{ id: TabID; label: string; icon: typeof Server }> = [
 const DISCORD_INVITE_URL = "https://discord.com/invite/5zqvy25M9W";
 
 function initialTab(): TabID {
+  if (window.location.pathname.startsWith("/events")) return "events";
   const hash = window.location.hash.replace("#", "");
   return tabs.some((tab) => tab.id === hash) ? (hash as TabID) : "servers";
 }
@@ -75,7 +78,7 @@ export function App() {
     <div className="app-shell">
       <header className="site-header">
         <div className="header-inner">
-          <button className="brand" type="button" onClick={() => selectTab("servers")} aria-label="Jump4Life servers">
+          <button className="brand" type="button" onClick={() => (activeTab === "events" ? window.location.assign("/") : selectTab("servers"))} aria-label="Jump4Life servers">
             <span className="brand-mark">J4L</span>
             <span>
               <strong>Jump4Life</strong>
@@ -89,9 +92,10 @@ export function App() {
               return (
                 <a
                   key={tab.id}
-                  href={`#${tab.id}`}
+                  href={`/#${tab.id}`}
                   className={activeTab === tab.id ? "is-active" : ""}
                   onClick={(event) => {
+                    if (activeTab === "events") return;
                     event.preventDefault();
                     selectTab(tab.id);
                   }}
@@ -102,6 +106,14 @@ export function App() {
                 </a>
               );
             })}
+            <a
+              href="/events"
+              className={activeTab === "events" ? "is-active" : ""}
+              aria-current={activeTab === "events" ? "page" : undefined}
+            >
+              <CalendarDays size={16} aria-hidden="true" />
+              Events
+            </a>
           </nav>
         </div>
       </header>
@@ -115,6 +127,12 @@ export function App() {
             Share feedback
           </a>
         </aside>
+
+        {activeTab === "events" ? (
+          <div className="tab-view">
+            <EventsPage />
+          </div>
+        ) : null}
 
         {activeTab === "servers" ? (
           <div className="tab-view tab-servers">

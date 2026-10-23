@@ -3178,3 +3178,47 @@ a {
     grid-column: auto;
   }
 }
+
+/* Events page (/events): reuses the leaderboard table, with a per-table column count. */
+.events-nav {
+  margin-bottom: 28px;
+}
+
+.events-page h3 {
+  margin: 28px 0 0;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+}
+
+.event-table {
+  margin-top: 16px;
+}
+
+.event-table [role="cell"] {
+  min-width: 0;
+}
+
+.event-winner {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (min-width: 681px) {
+  .event-table .leaderboard-row {
+    grid-template-columns: 94px minmax(180px, 1.5fr) repeat(var(--event-cols), minmax(0, 1fr));
+  }
+
+  .event-table .leaderboard-row > :nth-child(n + 3) {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@media (max-width: 680px) {
+  .event-table .rank-cell::before,
+  .event-table .leaderboard-player::before {
+    display: none;
+  }
+}

@@ -1,4 +1,15 @@
-import type { LeaderboardEntry, LeaderboardKind, MapInfo, OnlinePlayer, ServerInfo, ServerStatus } from "./types";
+import type {
+  EventSummary,
+  LeaderboardEntry,
+  LeaderboardKind,
+  MapInfo,
+  OnlinePlayer,
+  Season,
+  SeasonSummary,
+  ServerInfo,
+  ServerStatus,
+  WeeklyEvent,
+} from "./types";
 
 const DEFAULT_API_BASE_URL = "https://api.jump4life.org";
 const DEFAULT_API_SOURCE = "j4l";
@@ -109,6 +120,44 @@ export async function fetchLeaderboard(kind: LeaderboardKind, fps: string, signa
   }
   const payload = await request<unknown>(apiPath(leaderboardPaths[kind], params), signal);
   return normalizeLeaderboardPayload(payload);
+}
+
+// Errors keep the "<status> <text>" message from request(), so callers can tell 404/503 apart.
+export async function fetchEvent(eventID: number | undefined, signal?: AbortSignal): Promise<WeeklyEvent> {
+  const event = await request<WeeklyEvent>(apiPath("/api/v1/event", idParam("eventid", eventID)), signal);
+  return {
+    ...event,
+    routes: list(event.routes),
+    boards: list(event.boards).map((board) => ({
+      ...board,
+      standings: list(board.standings),
+      maps: list(board.maps).map((map) => ({ ...map, results: list(map.results) })),
+    })),
+  };
+}
+
+export async function fetchEventList(seasonID: number | undefined, signal?: AbortSignal): Promise<EventSummary[]> {
+  const events = await request<EventSummary[]>(apiPath("/api/v1/event/list", idParam("seasonid", seasonID)), signal);
+  return list(events).map((event) => ({ ...event, winners: list(event.winners) }));
+}
+
+export async function fetchSeason(seasonID: number | undefined, signal?: AbortSignal): Promise<Season> {
+  const season = await request<Season>(apiPath("/api/v1/season", idParam("seasonid", seasonID)), signal);
+  return { ...season, boards: list(season.boards).map((board) => ({ ...board, standings: list(board.standings) })) };
+}
+
+export async function fetchSeasonList(signal?: AbortSignal): Promise<SeasonSummary[]> {
+  const seasons = await request<SeasonSummary[]>(apiPath("/api/v1/season/list"), signal);
+  return list(seasons).map((season) => ({ ...season, winners: list(season.winners) }));
+}
+
+function idParam(name: string, id: number | undefined): Record<string, string> {
+  return id ? { [name]: String(id) } : {};
+}
+
+// Go encodes empty slices as null.
+function list<T>(value: T[] | null | undefined): T[] {
+  return Array.isArray(value) ? value : [];
 }
 
 function apiPath(path: string, params: Record<string, string> = {}, source = API_SOURCE) {

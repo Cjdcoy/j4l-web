@@ -85,3 +85,86 @@ export type LoadState<T> = {
   loading: boolean;
   error: string | null;
 };
+
+// Weekly events and seasons (J4L only). Field order follows the API contract.
+export type EventPlayer = {
+  player_id: number;
+  playername: string;
+  country: string;
+};
+
+export type EventStanding = EventPlayer & {
+  rank: number;
+  points: number;
+  maps_finished: number;
+  first_places: number;
+  xp_awarded: number;
+  coins_awarded: number;
+};
+
+export type EventResult = EventPlayer & {
+  rank: number;
+  run_id: number;
+  nadejumps: number;
+  time_played: number;
+  time_created: string | null;
+  points: number;
+};
+
+export type EventRoute = {
+  slot: number;
+  bucket: string;
+  mapid: number;
+  mapname: string;
+  cp_id: number;
+  ender: string | null;
+  difficulty: number;
+};
+
+export type EventBoard = {
+  fps: number;
+  standings: EventStanding[];
+  maps: Array<{ cp_id: number; results: EventResult[] }>;
+};
+
+export type WeeklyEvent = {
+  event_id: number;
+  season_id: number;
+  week_no: number;
+  starts_at: string;
+  ends_at: string;
+  status: "active" | "finished";
+  routes: EventRoute[];
+  boards: EventBoard[];
+};
+
+export type EventWinner = EventPlayer & {
+  fps: number;
+  points: number;
+};
+
+export type EventSummary = Omit<WeeklyEvent, "routes" | "boards"> & {
+  winners: EventWinner[];
+};
+
+export type SeasonStanding = EventPlayer & {
+  rank: number;
+  points: number;
+  weeks_played: number;
+  weekly_wins: number;
+  xp_awarded: number;
+  coins_awarded: number;
+};
+
+export type Season = {
+  season_id: number;
+  starts_at: string;
+  ends_at: string | null;
+  status: "active" | "finished";
+  weeks: number;
+  boards: Array<{ fps: number; standings: SeasonStanding[] }>;
+};
+
+export type SeasonSummary = Omit<Season, "boards"> & {
+  winners: EventWinner[];
+};

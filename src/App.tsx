@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { BookOpen, CalendarDays, Crown, Map, MessageSquare, Server, ShieldCheck, Terminal, Trophy, Wrench } from "lucide-react";
 import { fetchMaps, fetchServers } from "./lib/api";
 import { fallbackMaps, fallbackServerStatus } from "./lib/fallbackData";
@@ -41,6 +41,7 @@ export function App() {
   const [mapsError, setMapsError] = useState<string | null>(null);
   const discordURL = import.meta.env.VITE_DISCORD_URL || DISCORD_INVITE_URL;
   const [activeTab, setActiveTab] = useState<TabID>(initialTab);
+  const tabsRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -69,6 +70,11 @@ export function App() {
     return () => window.removeEventListener("hashchange", onHashChange);
   }, []);
 
+  // The strip scrolls sideways on phones; the sticky header keeps it in view, so this never scrolls the page.
+  useEffect(() => {
+    tabsRef.current?.querySelector(".is-active")?.scrollIntoView({ block: "nearest", inline: "nearest" });
+  }, [activeTab]);
+
   function selectTab(tab: TabID) {
     setActiveTab(tab);
     window.history.replaceState(null, "", `#${tab}`);
@@ -86,7 +92,7 @@ export function App() {
             </span>
           </button>
 
-          <nav className="site-tabs" aria-label="Primary navigation">
+          <nav ref={tabsRef} className="site-tabs" aria-label="Primary navigation">
             {tabs.map((tab) => {
               const Icon = tab.icon;
               return (

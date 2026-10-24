@@ -24,3 +24,9 @@ export function formatCountdown(msLeft: number) {
   if (days > 0) return `${days}d ${hours}h ${minutes}m`;
   return hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`;
 }
+
+// Board to show before the user picks one: 125 if it has standings, else 250 if it does, else 125.
+export function defaultFPS(boards: Array<{ fps: number; standings: unknown[] }>) {
+  const has = (fps: number) => boards.some((board) => board.fps === fps && board.standings.length > 0);
+  return !has(125) && has(250) ? 250 : 125;
+}

@@ -1,7 +1,7 @@
 import { Fragment, useCallback, useEffect, useState, type CSSProperties, type ReactNode } from "react";
 import { Clock, Trophy } from "lucide-react";
 import { fetchEvent, fetchEventList, fetchSeason, fetchSeasonList } from "../lib/api";
-import { formatCountdown, formatTicks } from "../lib/eventFormat";
+import { defaultFPS, formatCountdown, formatTicks } from "../lib/eventFormat";
 import type { EventSummary, EventWinner, LoadState, Season, SeasonSummary, WeeklyEvent } from "../lib/types";
 import { usePolling } from "../lib/usePolling";
 import { ColoredPlayerName, stripColorCodes } from "./ColoredPlayerName";
@@ -35,7 +35,6 @@ function parseView(hash: string): View {
 
 export function EventsPage() {
   const [view, setView] = useState(() => parseView(window.location.hash));
-  const [fps, setFPS] = useState(125);
   const [full, setFull] = useState(false);
 
   useEffect(() => {
@@ -50,7 +49,7 @@ export function EventsPage() {
 
   let content: ReactNode;
   if (view.tab === "current" || view.eventID) {
-    content = <EventView key={view.eventID ?? "current"} eventID={view.eventID} fps={fps} setFPS={setFPS} full={full} setFull={setFull} />;
+    content = <EventView key={view.eventID ?? "current"} eventID={view.eventID} full={full} setFull={setFull} />;
   } else if (view.tab === "history") {
     content = (
       <>
@@ -66,7 +65,7 @@ export function EventsPage() {
   } else {
     content = (
       <>
-        <SeasonView key={view.seasonID ?? "current"} seasonID={view.seasonID} fps={fps} setFPS={setFPS} />
+        <SeasonView key={view.seasonID ?? "current"} seasonID={view.seasonID} />
         <h3>{view.seasonID ? "Weeks" : "All seasons"}</h3>
         {view.seasonID ? <WeekList key={view.seasonID} seasonID={view.seasonID} /> : <SeasonList />}
       </>
@@ -92,18 +91,19 @@ export function EventsPage() {
 
 type EventViewProps = {
   eventID?: number;
-  fps: number;
-  setFPS: (fps: number) => void;
   full: boolean;
   setFull: (full: boolean) => void;
 };
 
-function EventView({ eventID, fps, setFPS, full, setFull }: EventViewProps) {
+function EventView({ eventID, full, setFull }: EventViewProps) {
+  // Views are keyed, so a pick lasts for this view only.
+  const [picked, setFPS] = useState<number>();
   const loader = useCallback((signal: AbortSignal) => fetchEvent(eventID, signal), [eventID]);
   const state = usePolling<WeeklyEvent | null>(null, loader, REFRESH_MS);
   const event = state.data;
   if (!event) return <Notice state={state} notFound="No event yet" />;
 
+  const fps = picked ?? defaultFPS(event.boards);
   const finished = event.status === "finished";
   const board = event.boards.find((item) => item.fps === fps);
   const routes = new Map(event.routes.map((route) => [route.cp_id, route]));
@@ -128,7 +128,7 @@ function EventView({ eventID, fps, setFPS, full, setFull }: EventViewProps) {
         empty="No routes."
         rows={event.routes.map((route) => ({
           key: route.slot,
-          cells: [bucketLabels[route.bucket] ?? route.bucket, twoLine(route.mapname, route.ender), Number(route.difficulty).toFixed(1)],
+          cells: [bucketLabels[route.bucket] ?? route.bucket, twoLine(route.mapname, route.ender), Number(route.difficulty).toFixed(2)],
         }))}
       />
 
@@ -209,12 +209,14 @@ function WeekList({ seasonID }: { seasonID?: number }) {
   );
 }
 
-function SeasonView({ seasonID, fps, setFPS }: { seasonID?: number; fps: number; setFPS: (fps: number) => void }) {
+function SeasonView({ seasonID }: { seasonID?: number }) {
+  const [picked, setFPS] = useState<number>();
   const loader = useCallback((signal: AbortSignal) => fetchSeason(seasonID, signal), [seasonID]);
   const state = usePolling<Season | null>(null, loader, REFRESH_MS);
   const season = state.data;
   if (!season) return <Notice state={state} notFound="No season yet" />;
 
+  const fps = picked ?? defaultFPS(season.boards);
   const finished = season.status === "finished";
   const standings = season.boards.find((board) => board.fps === fps)?.standings ?? [];
 

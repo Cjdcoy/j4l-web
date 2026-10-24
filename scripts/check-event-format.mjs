@@ -1,6 +1,6 @@
 // Self-check for the events page formatters: `node scripts/check-event-format.mjs` (Node 26 strips TS types).
 import assert from "node:assert/strict";
-import { defaultFPS, formatCountdown, formatTicks } from "../src/lib/eventFormat.ts";
+import { defaultFPS, formatCountdown, formatRecord, formatTicks } from "../src/lib/eventFormat.ts";
 
 assert.equal(formatTicks(812), "0:40.60");
 assert.equal(formatTicks(0), "0:00.00");
@@ -24,5 +24,9 @@ assert.equal(defaultFPS([board(125, 0), board(250, 3)]), 250);
 assert.equal(defaultFPS([board(250, 1)]), 250);
 assert.equal(defaultFPS([board(125, 0), board(250, 0)]), 125);
 assert.equal(defaultFPS([]), 125);
+
+assert.equal(formatRecord({ nadejumps: 12, time_ticks: 812 }), "12 nades · 0:40.60");
+assert.equal(formatRecord({ nadejumps: 1, time_ticks: 1 }), "1 nade · 0:00.05");
+assert.equal(formatRecord({ nadejumps: 0, time_ticks: 20 * 61 }), "0 nades · 1:01.00");
 
 console.log("event format checks passed");

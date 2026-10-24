@@ -168,3 +168,40 @@ export type Season = {
 export type SeasonSummary = Omit<Season, "boards"> & {
   winners: EventWinner[];
 };
+
+// Wanted maps (J4L only): routes where J4L chases the JH nadejumps rank 1 at 125 and 250 fps.
+export type WantedRecord = {
+  player_name: string;
+  nadejumps: number;
+  time_ticks: number;
+};
+
+export type WantedFPS = {
+  fps: number;
+  jh: WantedRecord | null;
+  j4l: (WantedRecord & { player_id: number; run_id: number }) | null;
+  beaten: boolean;
+  beaten_at_start: boolean;
+  bounty_player_id: number | null;
+};
+
+export type WantedRoute = {
+  slot: number;
+  mapid: number;
+  mapname: string;
+  cp_id: number;
+  ender: string | null;
+  tier: number;
+  fps: WantedFPS[];
+};
+
+export type Wanted = {
+  wanted_week_id: number | null;
+  event_id: number | null;
+  starts_at: string | null;
+  ends_at: string | null;
+  done: boolean;
+  progress: { routes_in_scope: number; routes_beaten: number };
+  bounty: { coins: number; xp: number };
+  routes: WantedRoute[];
+};

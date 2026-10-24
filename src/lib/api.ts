@@ -8,6 +8,7 @@ import type {
   SeasonSummary,
   ServerInfo,
   ServerStatus,
+  Wanted,
   WeeklyEvent,
 } from "./types";
 
@@ -149,6 +150,11 @@ export async function fetchSeason(seasonID: number | undefined, signal?: AbortSi
 export async function fetchSeasonList(signal?: AbortSignal): Promise<SeasonSummary[]> {
   const seasons = await request<SeasonSummary[]>(apiPath("/api/v1/season/list"), signal);
   return list(seasons).map((season) => ({ ...season, winners: list(season.winners) }));
+}
+
+export async function fetchWanted(signal?: AbortSignal): Promise<Wanted> {
+  const wanted = await request<Wanted>(apiPath("/api/v1/wanted"), signal);
+  return { ...wanted, routes: list(wanted.routes).map((route) => ({ ...route, fps: list(route.fps) })) };
 }
 
 function idParam(name: string, id: number | undefined): Record<string, string> {

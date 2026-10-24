@@ -30,3 +30,8 @@ export function defaultFPS(boards: Array<{ fps: number; standings: unknown[] }>)
   const has = (fps: number) => boards.some((board) => board.fps === fps && board.standings.length > 0);
   return !has(125) && has(250) ? 250 : 125;
 }
+
+// A nadejumps record in leaderboard order (nades, then time): "12 nades · 0:40.60".
+export function formatRecord(record: { nadejumps: number; time_ticks: number }) {
+  return `${record.nadejumps} ${record.nadejumps === 1 ? "nade" : "nades"} · ${formatTicks(record.time_ticks)}`;
+}

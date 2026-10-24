@@ -1,18 +1,29 @@
 import { Fragment, useCallback, useEffect, useState, type CSSProperties, type ReactNode } from "react";
 import { Clock, Trophy } from "lucide-react";
-import { fetchEvent, fetchEventList, fetchSeason, fetchSeasonList } from "../lib/api";
-import { defaultFPS, formatCountdown, formatTicks } from "../lib/eventFormat";
-import type { EventSummary, EventWinner, LoadState, Season, SeasonSummary, WeeklyEvent } from "../lib/types";
+import { fetchEvent, fetchEventList, fetchSeason, fetchSeasonList, fetchWanted } from "../lib/api";
+import { defaultFPS, formatCountdown, formatRecord, formatTicks } from "../lib/eventFormat";
+import type {
+  EventSummary,
+  EventWinner,
+  LoadState,
+  Season,
+  SeasonSummary,
+  Wanted,
+  WantedRecord,
+  WantedRoute,
+  WeeklyEvent,
+} from "../lib/types";
 import { usePolling } from "../lib/usePolling";
 import { ColoredPlayerName, stripColorCodes } from "./ColoredPlayerName";
 
-type Tab = "current" | "history" | "seasons";
+type Tab = "current" | "history" | "seasons" | "wanted";
 type View = { tab: Tab; eventID?: number; seasonID?: number };
 
 const tabs: Array<[Tab, string]> = [
   ["current", "Current week"],
   ["history", "History"],
   ["seasons", "Seasons"],
+  ["wanted", "Wanted"],
 ];
 const fpsOptions: Array<[number, string]> = [
   [125, "125"],
@@ -62,6 +73,8 @@ export function EventsPage() {
         <WeekList />
       </>
     );
+  } else if (view.tab === "wanted") {
+    content = <WantedView />;
   } else {
     content = (
       <>
@@ -277,6 +290,61 @@ function SeasonList() {
   );
 }
 
+function WantedView() {
+  const state = usePolling<Wanted | null>(null, fetchWanted, REFRESH_MS);
+  const wanted = state.data;
+  if (!wanted) return <Notice state={state} notFound="No wanted maps yet" unavailable="Wanted maps are not available yet" />;
+
+  const { routes_in_scope: total, routes_beaten: beaten } = wanted.progress;
+  const active = Boolean(wanted.wanted_week_id);
+  let status: string;
+  if (wanted.done) status = "JH is beaten on every map.";
+  else if (!active) status = "No wanted week right now. New wanted maps are picked when the next weekly event starts.";
+  else
+    status = `${wanted.bounty.coins.toLocaleString()} coins + ${wanted.bounty.xp.toLocaleString()} XP for the J4L top 1 of each wanted route and fps beaten this week, paid at the weekly close.`;
+
+  return (
+    <>
+      <div className="section-heading">
+        <div>
+          <p className="eyebrow">J4L vs JumpersHeaven</p>
+          <h2>Wanted maps</h2>
+        </div>
+        {active && wanted.ends_at ? (
+          <div className="section-meta">
+            <Clock size={16} aria-hidden="true" />
+            <Countdown endsAt={wanted.ends_at} />
+          </div>
+        ) : null}
+      </div>
+
+      <div className="compact-section wanted-summary">
+        <strong>
+          {beaten.toLocaleString()} of {total.toLocaleString()} routes beaten
+        </strong>
+        <progress value={beaten} max={total || 1} aria-label="Routes beaten" />
+        <p>{status}</p>
+      </div>
+
+      {active ? (
+        <>
+          <h3>This week</h3>
+          <EventTable
+            label="Wanted routes"
+            className="wanted-table"
+            head={["Tier", "Route", "125 fps", "250 fps"]}
+            empty="No wanted routes."
+            rows={wanted.routes.map((route) => ({
+              key: route.slot,
+              cells: [`Tier ${route.tier}`, twoLine(route.mapname, route.ender), wantedCell(route, 125), wantedCell(route, 250)],
+            }))}
+          />
+        </>
+      ) : null}
+    </>
+  );
+}
+
 function Countdown({ endsAt }: { endsAt: string }) {
   const [now, setNow] = useState(Date.now);
 
@@ -289,23 +357,43 @@ function Countdown({ endsAt }: { endsAt: string }) {
   return <>{left ? `Ends in ${left}` : "New week starting soon"}</>;
 }
 
-function Notice({ state, notFound }: { state: LoadState<unknown>; notFound: string }) {
+function Notice({
+  state,
+  notFound,
+  unavailable = "Weekly events are not available yet",
+}: {
+  state: LoadState<unknown>;
+  notFound: string;
+  unavailable?: string;
+}) {
   // request() errors read "<status> <statusText>".
   const status = state.error?.slice(0, 3);
   if (state.error && status !== "404" && status !== "503") {
     return <p className="inline-alert">Events API unavailable: {state.error}</p>;
   }
 
-  const text = status === "503" ? "Weekly events are not available yet" : status === "404" ? notFound : "Loading…";
+  const text = status === "503" ? unavailable : status === "404" ? notFound : "Loading…";
   return <p className="compact-section">{text}</p>;
 }
 
 type Row = { key: string | number; rank?: number; cells: ReactNode[] };
 
-function EventTable({ label, head, rows, empty }: { label: string; head: string[]; rows: Row[]; empty: string }) {
+function EventTable({
+  label,
+  head,
+  rows,
+  empty,
+  className = "",
+}: {
+  label: string;
+  head: string[];
+  rows: Row[];
+  empty: string;
+  className?: string;
+}) {
   return (
     <div
-      className="leaderboard-table event-table"
+      className={`leaderboard-table event-table ${className}`}
       role="table"
       aria-label={label}
       style={{ "--event-cols": head.length - 2 } as CSSProperties}
@@ -397,6 +485,33 @@ function winnerCell(winners: EventWinner[], fps: number, status: string) {
       </span>
       {winner.points.toLocaleString()} pts
     </>
+  );
+}
+
+function wantedCell(route: WantedRoute, fps: number) {
+  const item = route.fps.find((entry) => entry.fps === fps);
+  if (!item) return "-";
+  return (
+    <span className="wanted-fps">
+      <span className={`type-badge ${item.beaten ? "is-beaten" : "is-wanted"}`}>{item.beaten ? "Beaten" : "Wanted"}</span>
+      {recordLine("JH", item.jh)}
+      {recordLine("J4L", item.j4l)}
+    </span>
+  );
+}
+
+function recordLine(source: string, record: WantedRecord | null) {
+  return (
+    <small>
+      <b>{source}</b>{" "}
+      {record ? (
+        <>
+          <ColoredPlayerName name={record.player_name} /> · {formatRecord(record)}
+        </>
+      ) : (
+        "no record"
+      )}
+    </small>
   );
 }
 

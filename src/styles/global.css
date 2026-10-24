@@ -3222,3 +3222,71 @@ a {
     display: none;
   }
 }
+
+/* Wanted tab: overall progress, then fps cells that stack a badge over the JH and J4L records. */
+.wanted-summary {
+  display: grid;
+  gap: 12px;
+}
+
+.wanted-summary p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.wanted-summary progress {
+  width: 100%;
+  height: 10px;
+  appearance: none;
+  border: 0;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.wanted-summary progress::-webkit-progress-bar {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.wanted-summary progress::-webkit-progress-value {
+  background: var(--accent);
+}
+
+.wanted-summary progress::-moz-progress-bar {
+  background: var(--accent);
+}
+
+.wanted-table .leaderboard-row > :nth-child(n + 3) {
+  text-align: left;
+}
+
+.wanted-fps {
+  display: grid;
+  justify-items: start;
+  gap: 4px;
+}
+
+.wanted-fps small {
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+.wanted-fps b {
+  color: var(--subtle);
+}
+
+.type-badge.is-beaten {
+  background: rgba(97, 214, 157, 0.12);
+  color: var(--accent-strong);
+}
+
+.type-badge.is-wanted {
+  background: rgba(212, 178, 103, 0.13);
+  color: var(--amber);
+}
+
+@media (max-width: 680px) {
+  .wanted-table .leaderboard-row > :nth-child(n + 3) {
+    grid-column: 1 / -1;
+  }
+}

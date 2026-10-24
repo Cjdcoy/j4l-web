@@ -3227,6 +3227,7 @@ a {
 .wanted-summary {
   display: grid;
   gap: 12px;
+  margin-top: 24px;
 }
 
 .wanted-summary p {
@@ -3288,5 +3289,12 @@ a {
 @media (max-width: 680px) {
   .wanted-table .leaderboard-row > :nth-child(n + 3) {
     grid-column: 1 / -1;
+  }
+}
+
+/* Four event tabs fit a 390px screen without scrolling the control. */
+@media (max-width: 560px) {
+  .events-nav .segmented-control button {
+    padding: 0 10px;
   }
 }

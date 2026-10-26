@@ -4,15 +4,15 @@
 
 This inventory gives reviewers traceable evidence for every active command. It deliberately separates observed source facts from semantic conclusions: the scan does not decide whether an argument is required, whether a branch is reachable, or what a value means.
 
-- Commands: 123
-- Active registrations: 123
-- Evidence functions: 257
-- Commands with bracket/size references: 99
-- Raw matching source lines: 777
-- Deep review: 27
-- Argument check: 72
-- Confirm no arguments: 24
-- Source root used by the generator: `../jump4life`
+- Commands: 132
+- Active registrations: 132
+- Evidence functions: 124
+- Commands with bracket/size references: 33
+- Raw matching source lines: 186
+- Deep review: 6
+- Argument check: 27
+- Confirm no arguments: 99
+- Source root used by the generator: `../../../../jump4life/.claude/worktrees/test-all`
 - Regenerate: `npm run audit:command-arguments`
 - Verify: `npm run check:command-arguments`
 
@@ -34,164 +34,175 @@ This inventory gives reviewers traceable evidence for every active command. It d
 
 ## Review queues
 
-### Deep review (27)
+### Deep review (6)
 
 Commands with dynamic indexing, at least three positional slots, or at least four case labels. Review these branch by branch.
 
-- [`!ambiant`](#ambiant), [`!battle`](#battle), [`!changemap`](#changemap), [`!cpt`](#cpt), [`!customtheme`](#customtheme), [`!deleterec`](#deleterec), [`!findmap`](#findmap), [`!forceteam`](#forceteam)
-- [`!frename`](#frename), [`!kick`](#kick), [`!mapinfo`](#mapinfo), [`!moveteam`](#moveteam), [`!nominate`](#nominate), [`!personalbest`](#personalbest), [`!personalbestplayer`](#personalbestplayer), [`!pm`](#pm)
-- [`!poll`](#poll), [`!rename`](#rename), [`!saybold`](#saybold), [`!setauthor`](#setauthor), [`!setdate`](#setdate), [`!setprefname`](#setprefname), [`!taunt`](#taunt), [`!teleport`](#teleport)
-- [`!telesave`](#telesave), [`!viewrecords`](#viewrecords), [`!vote`](#vote)
+- [`!ambiant`](#ambiant), [`!findmap`](#findmap), [`!setprefname`](#setprefname), [`!teleport`](#teleport), [`!telesave`](#telesave), [`!vote`](#vote)
 
-### Argument check (72)
+### Argument check (27)
 
 Commands with a smaller direct argument footprint. Verify syntax, accepted values, and defaults.
 
-- [`!addtime`](#addtime), [`!addxp`](#addxp), [`!afk`](#afk), [`!alias`](#alias), [`!allowvote`](#allowvote), [`!anglehelper`](#anglehelper), [`!autobhop`](#autobhop), [`!autoload`](#autoload)
-- [`!autoreset`](#autoreset), [`!autostand`](#autostand), [`!banplayer`](#banplayer), [`!bounce`](#bounce), [`!checkpointsound`](#checkpointsound), [`!classicmode`](#classicmode), [`!clonetheme`](#clonetheme), [`!confirmvote`](#confirmvote)
-- [`!country`](#country), [`!crosshair`](#crosshair), [`!csc`](#csc), [`!donated`](#donated), [`!draw2d`](#draw2d), [`!drawdist`](#drawdist), [`!drawgun`](#drawgun), [`!enablesave`](#enablesave)
-- [`!english`](#english), [`!fignore`](#fignore), [`!fmute`](#fmute), [`!fog`](#fog), [`!forcespec`](#forcespec), [`!fov`](#fov), [`!fps`](#fps), [`!fullscreennotification`](#fullscreennotification)
-- [`!funignore`](#funignore), [`!funmute`](#funmute), [`!givebacksave`](#givebacksave), [`!gun`](#gun), [`!hello`](#hello), [`!help`](#help), [`!howmany`](#howmany), [`!huds`](#huds)
-- [`!ignore`](#ignore), [`!jumptimer`](#jumptimer), [`!killplayer`](#killplayer), [`!measure`](#measure), [`!mute`](#mute), [`!nadecheat`](#nadecheat), [`!nades`](#nades), [`!noclip`](#noclip)
-- [`!nowaypoints`](#nowaypoints), [`!osmode`](#osmode), [`!pistol`](#pistol), [`!players`](#players), [`!promote`](#promote), [`!pstats`](#pstats), [`!removexp`](#removexp), [`!runid`](#runid)
-- [`!savelist`](#savelist), [`!servers`](#servers), [`!shock`](#shock), [`!showclips`](#showclips), [`!showcpid`](#showcpid), [`!spawnpoint`](#spawnpoint), [`!taunts`](#taunts), [`!teleplayer`](#teleplayer)
-- [`!temppromote`](#temppromote), [`!theme`](#theme), [`!thirdperson`](#thirdperson), [`!unignore`](#unignore), [`!unmute`](#unmute), [`!vignore`](#vignore), [`!vunignore`](#vunignore), [`!xpmultiplier`](#xpmultiplier)
+- [`!afk`](#afk), [`!allowvote`](#allowvote), [`!anglehelper`](#anglehelper), [`!confirmvote`](#confirmvote), [`!country`](#country), [`!crosshair`](#crosshair), [`!drawdist`](#drawdist), [`!enablesave`](#enablesave)
+- [`!fignore`](#fignore), [`!fov`](#fov), [`!fps`](#fps), [`!funignore`](#funignore), [`!help`](#help), [`!ignore`](#ignore), [`!measure`](#measure), [`!nadecheat`](#nadecheat)
+- [`!noclip`](#noclip), [`!pistol`](#pistol), [`!players`](#players), [`!pstats`](#pstats), [`!savelist`](#savelist), [`!servers`](#servers), [`!showclips`](#showclips), [`!taunts`](#taunts)
+- [`!unignore`](#unignore), [`!vignore`](#vignore), [`!vunignore`](#vunignore)
 
-### Confirm no arguments (24)
+### Confirm no arguments (99)
 
 Commands with no direct argument evidence after same-file pass-through tracing. Confirm that argument-free usage is intentional.
 
-- [`!commands`](#commands), [`!endmap`](#endmap), [`!getlist`](#getlist), [`!hudedit`](#hudedit), [`!myid`](#myid), [`!replayanimdebug`](#replayanimdebug), [`!replayexit`](#replayexit), [`!replayfpshud`](#replayfpshud)
-- [`!replayhud`](#replayhud), [`!replaykeyhud`](#replaykeyhud), [`!replaynextcp`](#replaynextcp), [`!replaypause`](#replaypause), [`!replayprevcp`](#replayprevcp), [`!replayskip`](#replayskip), [`!replayspeedhud`](#replayspeedhud), [`!replaytimerhud`](#replaytimerhud)
-- [`!reset`](#reset), [`!saverun`](#saverun), [`!savesettings`](#savesettings), [`!specfix`](#specfix), [`!speclist`](#speclist), [`!startmusic`](#startmusic), [`!stopmusic`](#stopmusic), [`!veto`](#veto)
+- [`!addtime`](#addtime), [`!addxp`](#addxp), [`!alias`](#alias), [`!autobhop`](#autobhop), [`!autoload`](#autoload), [`!autoreset`](#autoreset), [`!autostand`](#autostand), [`!banplayer`](#banplayer)
+- [`!battle`](#battle), [`!bounce`](#bounce), [`!cape`](#cape), [`!changemap`](#changemap), [`!checkpointsound`](#checkpointsound), [`!classicmode`](#classicmode), [`!clonetheme`](#clonetheme), [`!coins`](#coins)
+- [`!commands`](#commands), [`!cpt`](#cpt), [`!csc`](#csc), [`!customtheme`](#customtheme), [`!deleterec`](#deleterec), [`!donated`](#donated), [`!draw2d`](#draw2d), [`!drawgun`](#drawgun)
+- [`!endmap`](#endmap), [`!english`](#english), [`!event`](#event), [`!fmute`](#fmute), [`!fog`](#fog), [`!forcespec`](#forcespec), [`!forceteam`](#forceteam), [`!frename`](#frename)
+- [`!fullscreennotification`](#fullscreennotification), [`!funmute`](#funmute), [`!getlist`](#getlist), [`!givebacksave`](#givebacksave), [`!gun`](#gun), [`!hat`](#hat), [`!hello`](#hello), [`!howmany`](#howmany)
+- [`!hudedit`](#hudedit), [`!huds`](#huds), [`!kick`](#kick), [`!killplayer`](#killplayer), [`!mapinfo`](#mapinfo), [`!member`](#member), [`!moveteam`](#moveteam), [`!mute`](#mute)
+- [`!myid`](#myid), [`!nades`](#nades), [`!nominate`](#nominate), [`!nowaypoints`](#nowaypoints), [`!osmode`](#osmode), [`!outfit`](#outfit), [`!personalbest`](#personalbest), [`!personalbestplayer`](#personalbestplayer)
+- [`!pm`](#pm), [`!poll`](#poll), [`!promote`](#promote), [`!removexp`](#removexp), [`!rename`](#rename), [`!replayanglehud`](#replayanglehud), [`!replayanimdebug`](#replayanimdebug), [`!replayexit`](#replayexit)
+- [`!replayfpshud`](#replayfpshud), [`!replayhud`](#replayhud), [`!replaykeyhud`](#replaykeyhud), [`!replaynextcp`](#replaynextcp), [`!replaypause`](#replaypause), [`!replayprevcp`](#replayprevcp), [`!replayskip`](#replayskip), [`!replayspeedhud`](#replayspeedhud)
+- [`!replaytimerhud`](#replaytimerhud), [`!reset`](#reset), [`!runid`](#runid), [`!saverun`](#saverun), [`!savesettings`](#savesettings), [`!saybold`](#saybold), [`!setauthor`](#setauthor), [`!setdate`](#setdate)
+- [`!shock`](#shock), [`!showcpid`](#showcpid), [`!spawnpoint`](#spawnpoint), [`!specfix`](#specfix), [`!speclist`](#speclist), [`!startmusic`](#startmusic), [`!stopmusic`](#stopmusic), [`!taunt`](#taunt)
+- [`!teleplayer`](#teleplayer), [`!temppromote`](#temppromote), [`!theme`](#theme), [`!thirdperson`](#thirdperson), [`!tpcpn`](#tpcpn), [`!tpcpp`](#tpcpp), [`!unmute`](#unmute), [`!veto`](#veto)
+- [`!viewrecords`](#viewrecords), [`!wanted`](#wanted), [`!xpmultiplier`](#xpmultiplier)
 
 ## Command index
 
 | # | Command | Level | Review tier | Evidence footprint | Current usage |
 |---:|---|---:|---|---|---|
-| 1 | [`!addtime`](#addtime) | 60 | Argument check | positional slot 1 | `!addtime [minutes]` |
-| 2 | [`!addxp`](#addxp) | 100 | Argument check | positional slots 1, 2 | `!addxp [player] [amount]` |
+| 1 | [`!addtime`](#addtime) | 60 | Confirm no arguments | no direct argument references | `!addtime [minutes]` |
+| 2 | [`!addxp`](#addxp) | 100 | Confirm no arguments | no direct argument references | `!addxp [player] [amount]` |
 | 3 | [`!afk`](#afk) | 0 | Argument check | positional slot 1 | `!afk \| !afk [player]` |
-| 4 | [`!alias`](#alias) | 0 | Argument check | positional slot 1 | `!alias [player]` |
+| 4 | [`!alias`](#alias) | 0 | Confirm no arguments | no direct argument references | `!alias [player]` |
 | 5 | [`!allowvote`](#allowvote) | 60 | Argument check | positional slot 1 | `!allowvote [on/off/5-45]` |
 | 6 | [`!ambiant`](#ambiant) | 0 | Deep review | positional slot 1; 4 case labels | `!ambiant [on/off/toggle/cycle]` |
 | 7 | [`!anglehelper`](#anglehelper) | 0 | Argument check | positional slot 1 | `!anglehelper [on/off]` |
-| 8 | [`!autobhop`](#autobhop) | 0 | Argument check | positional slot 1 | `!autobhop [on/off]` |
-| 9 | [`!autoload`](#autoload) | 1 | Argument check | positional slot 1 | `!autoload [on/off]` |
-| 10 | [`!autoreset`](#autoreset) | 0 | Argument check | positional slot 1 | `!autoreset [on/off]` |
-| 11 | [`!autostand`](#autostand) | 0 | Argument check | positional slot 1 | `!autostand [on/off]` |
-| 12 | [`!banplayer`](#banplayer) | 90 | Argument check | positional slot 1 | `!banplayer [player]` |
-| 13 | [`!battle`](#battle) | 0 | Deep review | positional slots 1, 2; dynamic argument scan; argument-count check; 34 case labels | `!battle [private/public] \| !battle player [player] \| !battle nades [mode] \| !battle record [filters]` |
-| 14 | [`!bounce`](#bounce) | 90 | Argument check | positional slot 1 | `!bounce [status/on/off]` |
-| 15 | [`!changemap`](#changemap) | 80 | Deep review | positional slot 1; dynamic argument scan; argument-count check | `!changemap [map name]` |
-| 16 | [`!checkpointsound`](#checkpointsound) | 0 | Argument check | positional slot 1 | `!checkpointsound [on/off/toggle/cycle/default/none]` |
-| 17 | [`!classicmode`](#classicmode) | 1 | Argument check | positional slot 1 | `!classicmode [on/off]` |
-| 18 | [`!clonetheme`](#clonetheme) | 1 | Argument check | positional slot 1 | `!clonetheme [player]` |
-| 19 | [`!commands`](#commands) | 0 | Confirm no arguments | no direct argument references | `!commands` |
-| 20 | [`!confirmvote`](#confirmvote) | 0 | Argument check | positional slot 1 | `!confirmvote [pin]` |
-| 21 | [`!country`](#country) | 1 | Argument check | positional slot 1 | `!country [player]` |
-| 22 | [`!cpt`](#cpt) | 40 | Deep review | positional slots 1, 2, 3; dynamic argument scan; argument-count check; 13 case labels | `!cpt [radius <units>] [trigger <name>] [type <flags>] [event <name>] [entity]` |
-| 23 | [`!crosshair`](#crosshair) | 0 | Argument check | positional slot 1 | `!crosshair [on/off]` |
-| 24 | [`!csc`](#csc) | 1 | Argument check | positional slot 1 | `!csc [on/off]` |
-| 25 | [`!customtheme`](#customtheme) | 1 | Deep review | positional slots 1, 2, 3, 4; 21 case labels | `!customtheme [item] [value...] \| !customtheme reset \| !customtheme import [theme]` |
-| 26 | [`!deleterec`](#deleterec) | 100 | Deep review | positional slot 1; dynamic argument scan; argument-count check; 27 case labels | `!deleterec [time/save/load/jump/nades] [fps/mix] [rank 1-10]` |
-| 27 | [`!donated`](#donated) | 100 | Argument check | positional slots 1, 2 | `!donated [player] [1/0]` |
-| 28 | [`!draw2d`](#draw2d) | 0 | Argument check | positional slot 1 | `!draw2d [on/off]` |
-| 29 | [`!drawdist`](#drawdist) | 0 | Argument check | positional slot 1 | `!drawdist [distance >= 0]` |
-| 30 | [`!drawgun`](#drawgun) | 0 | Argument check | positional slot 1 | `!drawgun [on/off/toggle]` |
-| 31 | [`!enablesave`](#enablesave) | 1 | Argument check | positional slot 1 | `!enablesave [on/off]` |
-| 32 | [`!endmap`](#endmap) | 80 | Confirm no arguments | no direct argument references | `!endmap` |
-| 33 | [`!english`](#english) | 80 | Argument check | positional slot 1 | `!english [player]` |
-| 34 | [`!fignore`](#fignore) | 20 | Argument check | positional slot 1 | `!fignore [player]` |
-| 35 | [`!findmap`](#findmap) | 0 | Deep review | positional slot 1; dynamic argument scan; argument-count check | `!findmap [map name]` |
-| 36 | [`!fmute`](#fmute) | 80 | Argument check | positional slot 1 | `!fmute [player]` |
-| 37 | [`!fog`](#fog) | 0 | Argument check | positional slot 1 | `!fog [on/off]` |
-| 38 | [`!forcespec`](#forcespec) | 80 | Argument check | positional slot 1 | `!forcespec [player]` |
-| 39 | [`!forceteam`](#forceteam) | 90 | Deep review | positional slots 1, 2; 6 case labels | `!forceteam [allies/axis/spectator/none] [player]` |
-| 40 | [`!fov`](#fov) | 0 | Argument check | positional slot 1 | `!fov [13-160/cycle]` |
-| 41 | [`!fps`](#fps) | 0 | Argument check | positional slot 1 | `!fps [43/76/125/250/333/1000/cycle]` |
-| 42 | [`!frename`](#frename) | 80 | Deep review | positional slots 1, 2; dynamic argument scan; argument-count check | `!frename [player] [new name...] \| !frename [player] NULL` |
-| 43 | [`!fullscreennotification`](#fullscreennotification) | 0 | Argument check | positional slot 1 | `!fullscreennotification [on/off]` |
-| 44 | [`!funignore`](#funignore) | 20 | Argument check | positional slot 1 | `!funignore [player]` |
-| 45 | [`!funmute`](#funmute) | 80 | Argument check | positional slot 1 | `!funmute [player]` |
-| 46 | [`!getlist`](#getlist) | 1 | Confirm no arguments | no direct argument references | `!getlist` |
-| 47 | [`!givebacksave`](#givebacksave) | 100 | Argument check | positional slot 1 | `!givebacksave [checkpoint pass ID]` |
-| 48 | [`!gun`](#gun) | 0 | Argument check | positional slot 1 | `!gun [on/off/toggle]` |
-| 49 | [`!hello`](#hello) | 40 | Argument check | positional slot 1 | `!hello` |
-| 50 | [`!help`](#help) | 0 | Argument check | positional slot 1 | `!help [command]` |
-| 51 | [`!howmany`](#howmany) | 0 | Argument check | positional slot 1 | `!howmany [player]` |
-| 52 | [`!hudedit`](#hudedit) | 0 | Confirm no arguments | no direct argument references | `!hudedit` |
-| 53 | [`!huds`](#huds) | 0 | Argument check | positional slots 1, 2 | `!huds [on/off] \| !huds stat [on/off] \| !huds rec [on/off/full/smart] \| !huds seconds [small/large] \| !huds [nades/rpgs] [on/off]` |
-| 54 | [`!ignore`](#ignore) | 1 | Argument check | positional slot 1 | `!ignore [player]` |
-| 55 | [`!jumptimer`](#jumptimer) | 0 | Argument check | positional slot 1; 2 case labels | `!jumptimer [on/off]` |
-| 56 | [`!kick`](#kick) | 90 | Deep review | positional slot 1; dynamic argument scan; argument-count check | `!kick [player] [reason...]` |
-| 57 | [`!killplayer`](#killplayer) | 80 | Argument check | positional slot 1 | `!killplayer [player]` |
-| 58 | [`!mapinfo`](#mapinfo) | 0 | Deep review | positional slot 1; dynamic argument scan; argument-count check | `!mapinfo [map name]` |
-| 59 | [`!measure`](#measure) | 0 | Argument check | positional slots 1, 2 | `!measure [numbers/graph/maxspeed/color] [on/off]` |
-| 60 | [`!moveteam`](#moveteam) | 100 | Deep review | positional slots 1, 2; 5 case labels | `!moveteam [allies/axis/spectator] [player]` |
-| 61 | [`!mute`](#mute) | 80 | Argument check | positional slot 1 | `!mute [player]` |
-| 62 | [`!myid`](#myid) | 0 | Confirm no arguments | no direct argument references | `!myid` |
-| 63 | [`!nadecheat`](#nadecheat) | 1 | Argument check | positional slot 1 | `!nadecheat [on/off/99/angle]` |
-| 64 | [`!nades`](#nades) | 80 | Argument check | positional slots 1, 2 | `!nades [player] [on/off]` |
-| 65 | [`!noclip`](#noclip) | 1 | Argument check | positional slot 1 | `!noclip [speed 1-50]` |
-| 66 | [`!nominate`](#nominate) | 20 | Deep review | positional slot 1; dynamic argument scan; argument-count check | `!nominate [map name]` |
-| 67 | [`!nowaypoints`](#nowaypoints) | 0 | Argument check | positional slot 1 | `!nowaypoints [on/off]` |
-| 68 | [`!osmode`](#osmode) | 0 | Argument check | positional slot 1 | `!osmode [on/off]` |
-| 69 | [`!personalbest`](#personalbest) | 1 | Deep review | positional slots 1, 2, 3; 16 case labels | `!personalbest [time/save/load/jump] [43/76/125/250/333/mix] [all]` |
-| 70 | [`!personalbestplayer`](#personalbestplayer) | 1 | Deep review | positional slots 1, 2, 3, 4; 16 case labels | `!personalbestplayer [player] [time/save/load/jump] [43/76/125/250/333/mix] [all]` |
-| 71 | [`!pistol`](#pistol) | 0 | Argument check | positional slot 1 | `!pistol [pistol name]` |
-| 72 | [`!players`](#players) | 0 | Argument check | positional slot 1 | `!players [server-name fragment]` |
-| 73 | [`!pm`](#pm) | 0 | Deep review | positional slots 1, 2; dynamic argument scan; argument-count check | `!pm [player] [message...]` |
-| 74 | [`!poll`](#poll) | 40 | Deep review | positional slot 1; dynamic argument scan; argument-count check | `!poll [question...]` |
-| 75 | [`!promote`](#promote) | 60 | Argument check | positional slots 1, 2 | `!promote [player] [admin level -1 to 99]` |
-| 76 | [`!pstats`](#pstats) | 0 | Argument check | positional slot 1 | `!pstats [player]` |
-| 77 | [`!removexp`](#removexp) | 100 | Argument check | positional slots 1, 2 | `!removexp [player] [amount]` |
-| 78 | [`!rename`](#rename) | 80 | Deep review | positional slots 1, 2; dynamic argument scan; argument-count check | `!rename [player] [new name...]` |
-| 79 | [`!replayanimdebug`](#replayanimdebug) | 0 | Confirm no arguments | no direct argument references | `!replayanimdebug` |
-| 80 | [`!replayexit`](#replayexit) | 0 | Confirm no arguments | no direct argument references | `!replayexit` |
-| 81 | [`!replayfpshud`](#replayfpshud) | 0 | Confirm no arguments | no direct argument references | `!replayfpshud` |
-| 82 | [`!replayhud`](#replayhud) | 0 | Confirm no arguments | no direct argument references | `!replayhud` |
-| 83 | [`!replaykeyhud`](#replaykeyhud) | 0 | Confirm no arguments | no direct argument references | `!replaykeyhud` |
-| 84 | [`!replaynextcp`](#replaynextcp) | 0 | Confirm no arguments | no direct argument references | `!replaynextcp` |
-| 85 | [`!replaypause`](#replaypause) | 0 | Confirm no arguments | no direct argument references | `!replaypause` |
-| 86 | [`!replayprevcp`](#replayprevcp) | 0 | Confirm no arguments | no direct argument references | `!replayprevcp` |
-| 87 | [`!replayskip`](#replayskip) | 0 | Confirm no arguments | no direct argument references | `!replayskip` |
-| 88 | [`!replayspeedhud`](#replayspeedhud) | 0 | Confirm no arguments | no direct argument references | `!replayspeedhud` |
-| 89 | [`!replaytimerhud`](#replaytimerhud) | 0 | Confirm no arguments | no direct argument references | `!replaytimerhud` |
-| 90 | [`!reset`](#reset) | 0 | Confirm no arguments | no direct argument references | `!reset` |
-| 91 | [`!runid`](#runid) | 0 | Argument check | positional slot 1 | `!runid [player]` |
-| 92 | [`!savelist`](#savelist) | 1 | Argument check | positional slot 1; 3 case labels | `!savelist [cps/time/date]` |
-| 93 | [`!saverun`](#saverun) | 0 | Confirm no arguments | no direct argument references | `!saverun` |
-| 94 | [`!savesettings`](#savesettings) | 0 | Confirm no arguments | no direct argument references | `!savesettings` |
-| 95 | [`!saybold`](#saybold) | 60 | Deep review | dynamic argument scan; argument-count check | `!saybold [message...]` |
-| 96 | [`!servers`](#servers) | 0 | Argument check | positional slots 1, 2 | `!servers \| !servers join [server-name fragment]` |
-| 97 | [`!setauthor`](#setauthor) | 90 | Deep review | positional slot 1; dynamic argument scan; argument-count check | `!setauthor [author...]` |
-| 98 | [`!setdate`](#setdate) | 90 | Deep review | positional slots 1, 2, 3 | `!setdate [YYYY] [MM] [DD]` |
-| 99 | [`!setprefname`](#setprefname) | 0 | Deep review | positional slot 1; dynamic argument scan; argument-count check | `!setprefname [preferred name...]` |
-| 100 | [`!shock`](#shock) | 80 | Argument check | positional slot 1 | `!shock [player]` |
-| 101 | [`!showclips`](#showclips) | 0 | Argument check | positional slot 1 | `!showclips [on/off/toggle]` |
-| 102 | [`!showcpid`](#showcpid) | 0 | Argument check | positional slot 1 | `!showcpid [on/off/toggle]` |
-| 103 | [`!spawnpoint`](#spawnpoint) | 100 | Argument check | positional slot 1 | `!spawnpoint [put/purge]` |
-| 104 | [`!specfix`](#specfix) | 60 | Confirm no arguments | no direct argument references | `!specfix` |
-| 105 | [`!speclist`](#speclist) | 0 | Confirm no arguments | no direct argument references | `!speclist` |
-| 106 | [`!startmusic`](#startmusic) | 0 | Confirm no arguments | no direct argument references | `!startmusic` |
-| 107 | [`!stopmusic`](#stopmusic) | 0 | Confirm no arguments | no direct argument references | `!stopmusic` |
-| 108 | [`!taunt`](#taunt) | 40 | Deep review | positional slots 1, 2, 3 | `!taunt [category 1-3] [row 1-9] [variant]` |
-| 109 | [`!taunts`](#taunts) | 0 | Argument check | positional slot 1 | `!taunts [on/off]` |
-| 110 | [`!teleplayer`](#teleplayer) | 80 | Argument check | positional slot 1 | `!teleplayer [player]` |
-| 111 | [`!teleport`](#teleport) | 1 | Deep review | positional slot 1; dynamic argument scan; argument-count check | `!teleport [player]` |
-| 112 | [`!telesave`](#telesave) | 1 | Deep review | positional slot 1; dynamic argument scan; argument-count check | `!telesave [player]` |
-| 113 | [`!temppromote`](#temppromote) | 98 | Argument check | positional slots 1, 2 | `!temppromote [player] [admin level 0 to caller-1]` |
-| 114 | [`!theme`](#theme) | 1 | Argument check | positional slot 1 | `!theme [default/matrix/egz/custom/cycle]` |
-| 115 | [`!thirdperson`](#thirdperson) | 0 | Argument check | positional slot 1 | `!thirdperson [on/off]` |
-| 116 | [`!unignore`](#unignore) | 1 | Argument check | positional slot 1 | `!unignore [player]` |
-| 117 | [`!unmute`](#unmute) | 80 | Argument check | positional slot 1 | `!unmute [player]` |
-| 118 | [`!veto`](#veto) | 60 | Confirm no arguments | no direct argument references | `!veto` |
-| 119 | [`!viewrecords`](#viewrecords) | 0 | Deep review | positional slot 1; dynamic argument scan; argument-count check | `!viewrecords [map name]` |
-| 120 | [`!vignore`](#vignore) | 0 | Argument check | positional slot 1 | `!vignore [player]` |
-| 121 | [`!vote`](#vote) | 1 | Deep review | positional slots 1, 2; dynamic argument scan; argument-count check; 16 case labels | `!vote [map/addtime/mute/map_rotate/map_restart/disable/nades] [value]` |
-| 122 | [`!vunignore`](#vunignore) | 0 | Argument check | positional slot 1 | `!vunignore [player]` |
-| 123 | [`!xpmultiplier`](#xpmultiplier) | 100 | Argument check | positional slot 1 | `!xpmultiplier [off/1-10/1x-10x]` |
+| 8 | [`!autobhop`](#autobhop) | 0 | Confirm no arguments | no direct argument references | `!autobhop [on/off]` |
+| 9 | [`!autoload`](#autoload) | 1 | Confirm no arguments | no direct argument references | `!autoload [on/off]` |
+| 10 | [`!autoreset`](#autoreset) | 0 | Confirm no arguments | no direct argument references | `!autoreset [on/off]` |
+| 11 | [`!autostand`](#autostand) | 0 | Confirm no arguments | no direct argument references | `!autostand [on/off]` |
+| 12 | [`!banplayer`](#banplayer) | 90 | Confirm no arguments | no direct argument references | `!banplayer [player]` |
+| 13 | [`!battle`](#battle) | 0 | Confirm no arguments | no direct argument references | `!battle [private/public] \| !battle player [player] \| !battle nades [mode] \| !battle record [filters]` |
+| 14 | [`!bounce`](#bounce) | 90 | Confirm no arguments | no direct argument references | `!bounce [status/on/off]` |
+| 15 | [`!cape`](#cape) | 0 | Confirm no arguments | no direct argument references | `!cape` |
+| 16 | [`!changemap`](#changemap) | 80 | Confirm no arguments | no direct argument references | `!changemap [map name]` |
+| 17 | [`!checkpointsound`](#checkpointsound) | 0 | Confirm no arguments | no direct argument references | `!checkpointsound [on/off/toggle/cycle/default/none]` |
+| 18 | [`!classicmode`](#classicmode) | 1 | Confirm no arguments | no direct argument references | `!classicmode [on/off]` |
+| 19 | [`!clonetheme`](#clonetheme) | 1 | Confirm no arguments | no direct argument references | `!clonetheme [player]` |
+| 20 | [`!coins`](#coins) | 101 | Confirm no arguments | no direct argument references | `!coins` |
+| 21 | [`!commands`](#commands) | 0 | Confirm no arguments | no direct argument references | `!commands` |
+| 22 | [`!confirmvote`](#confirmvote) | 0 | Argument check | positional slot 1 | `!confirmvote [pin]` |
+| 23 | [`!country`](#country) | 1 | Argument check | positional slot 1 | `!country [player]` |
+| 24 | [`!cpt`](#cpt) | 40 | Confirm no arguments | no direct argument references | `!cpt [radius <units>] [trigger <name>] [type <flags>] [event <name>] [entity]` |
+| 25 | [`!crosshair`](#crosshair) | 0 | Argument check | positional slot 1 | `!crosshair [on/off]` |
+| 26 | [`!csc`](#csc) | 1 | Confirm no arguments | no direct argument references | `!csc [on/off]` |
+| 27 | [`!customtheme`](#customtheme) | 1 | Confirm no arguments | no direct argument references | `!customtheme [item] [value...] \| !customtheme reset \| !customtheme import [theme]` |
+| 28 | [`!deleterec`](#deleterec) | 100 | Confirm no arguments | no direct argument references | `!deleterec [time/save/load/jump/nades] [fps/mix] [rank 1-10]` |
+| 29 | [`!donated`](#donated) | 100 | Confirm no arguments | no direct argument references | `!donated [player] [1/0]` |
+| 30 | [`!draw2d`](#draw2d) | 0 | Confirm no arguments | no direct argument references | `!draw2d [on/off]` |
+| 31 | [`!drawdist`](#drawdist) | 0 | Argument check | positional slot 1 | `!drawdist [distance >= 0]` |
+| 32 | [`!drawgun`](#drawgun) | 0 | Confirm no arguments | no direct argument references | `!drawgun [on/off/toggle]` |
+| 33 | [`!enablesave`](#enablesave) | 1 | Argument check | positional slot 1 | `!enablesave [on/off]` |
+| 34 | [`!endmap`](#endmap) | 80 | Confirm no arguments | no direct argument references | `!endmap` |
+| 35 | [`!english`](#english) | 80 | Confirm no arguments | no direct argument references | `!english [player]` |
+| 36 | [`!event`](#event) | 0 | Confirm no arguments | no direct argument references | `!event` |
+| 37 | [`!fignore`](#fignore) | 20 | Argument check | positional slot 1 | `!fignore [player]` |
+| 38 | [`!findmap`](#findmap) | 0 | Deep review | positional slot 1; dynamic argument scan; argument-count check | `!findmap [map name]` |
+| 39 | [`!fmute`](#fmute) | 80 | Confirm no arguments | no direct argument references | `!fmute [player]` |
+| 40 | [`!fog`](#fog) | 0 | Confirm no arguments | no direct argument references | `!fog [on/off]` |
+| 41 | [`!forcespec`](#forcespec) | 80 | Confirm no arguments | no direct argument references | `!forcespec [player]` |
+| 42 | [`!forceteam`](#forceteam) | 90 | Confirm no arguments | no direct argument references | `!forceteam [allies/axis/spectator/none] [player]` |
+| 43 | [`!fov`](#fov) | 0 | Argument check | positional slot 1 | `!fov [13-160/cycle]` |
+| 44 | [`!fps`](#fps) | 0 | Argument check | positional slot 1 | `!fps [43/76/125/250/333/1000/cycle]` |
+| 45 | [`!frename`](#frename) | 80 | Confirm no arguments | no direct argument references | `!frename [player] [new name...] \| !frename [player] NULL` |
+| 46 | [`!fullscreennotification`](#fullscreennotification) | 0 | Confirm no arguments | no direct argument references | `!fullscreennotification [on/off]` |
+| 47 | [`!funignore`](#funignore) | 20 | Argument check | positional slot 1 | `!funignore [player]` |
+| 48 | [`!funmute`](#funmute) | 80 | Confirm no arguments | no direct argument references | `!funmute [player]` |
+| 49 | [`!getlist`](#getlist) | 1 | Confirm no arguments | no direct argument references | `!getlist` |
+| 50 | [`!givebacksave`](#givebacksave) | 100 | Confirm no arguments | no direct argument references | `!givebacksave [checkpoint pass ID]` |
+| 51 | [`!gun`](#gun) | 0 | Confirm no arguments | no direct argument references | `!gun [on/off/toggle]` |
+| 52 | [`!hat`](#hat) | 0 | Confirm no arguments | no direct argument references | `!hat` |
+| 53 | [`!hello`](#hello) | 40 | Confirm no arguments | no direct argument references | `!hello` |
+| 54 | [`!help`](#help) | 0 | Argument check | positional slot 1 | `!help [command]` |
+| 55 | [`!howmany`](#howmany) | 0 | Confirm no arguments | no direct argument references | `!howmany [player]` |
+| 56 | [`!hudedit`](#hudedit) | 0 | Confirm no arguments | no direct argument references | `!hudedit` |
+| 57 | [`!huds`](#huds) | 0 | Confirm no arguments | no direct argument references | `!huds [on/off] \| !huds stat [on/off] \| !huds rec [on/off/full/smart] \| !huds seconds [small/large] \| !huds [nades/rpgs] [on/off]` |
+| 58 | [`!ignore`](#ignore) | 1 | Argument check | positional slot 1 | `!ignore [player]` |
+| 59 | [`!kick`](#kick) | 90 | Confirm no arguments | no direct argument references | `!kick [player] [reason...]` |
+| 60 | [`!killplayer`](#killplayer) | 80 | Confirm no arguments | no direct argument references | `!killplayer [player]` |
+| 61 | [`!mapinfo`](#mapinfo) | 0 | Confirm no arguments | no direct argument references | `!mapinfo [map name]` |
+| 62 | [`!measure`](#measure) | 0 | Argument check | positional slots 1, 2 | `!measure [numbers/graph/maxspeed/color] [on/off]` |
+| 63 | [`!member`](#member) | 101 | Confirm no arguments | no direct argument references | `!member` |
+| 64 | [`!moveteam`](#moveteam) | 100 | Confirm no arguments | no direct argument references | `!moveteam [allies/axis/spectator] [player]` |
+| 65 | [`!mute`](#mute) | 80 | Confirm no arguments | no direct argument references | `!mute [player]` |
+| 66 | [`!myid`](#myid) | 0 | Confirm no arguments | no direct argument references | `!myid` |
+| 67 | [`!nadecheat`](#nadecheat) | 1 | Argument check | positional slot 1 | `!nadecheat [on/off/99/angle]` |
+| 68 | [`!nades`](#nades) | 80 | Confirm no arguments | no direct argument references | `!nades [player] [on/off]` |
+| 69 | [`!noclip`](#noclip) | 1 | Argument check | positional slot 1 | `!noclip [speed 1-50]` |
+| 70 | [`!nominate`](#nominate) | 20 | Confirm no arguments | no direct argument references | `!nominate [map name]` |
+| 71 | [`!nowaypoints`](#nowaypoints) | 0 | Confirm no arguments | no direct argument references | `!nowaypoints [on/off]` |
+| 72 | [`!osmode`](#osmode) | 0 | Confirm no arguments | no direct argument references | `!osmode [on/off]` |
+| 73 | [`!outfit`](#outfit) | 0 | Confirm no arguments | no direct argument references | `!outfit` |
+| 74 | [`!personalbest`](#personalbest) | 1 | Confirm no arguments | no direct argument references | `!personalbest [time/save/load/jump] [43/76/125/250/333/mix] [all]` |
+| 75 | [`!personalbestplayer`](#personalbestplayer) | 1 | Confirm no arguments | no direct argument references | `!personalbestplayer [player] [time/save/load/jump] [43/76/125/250/333/mix] [all]` |
+| 76 | [`!pistol`](#pistol) | 0 | Argument check | positional slot 1 | `!pistol [pistol name]` |
+| 77 | [`!players`](#players) | 0 | Argument check | positional slot 1 | `!players [server-name fragment]` |
+| 78 | [`!pm`](#pm) | 0 | Confirm no arguments | no direct argument references | `!pm [player] [message...]` |
+| 79 | [`!poll`](#poll) | 40 | Confirm no arguments | no direct argument references | `!poll [question...]` |
+| 80 | [`!promote`](#promote) | 60 | Confirm no arguments | no direct argument references | `!promote [player] [admin level -1 to 99]` |
+| 81 | [`!pstats`](#pstats) | 0 | Argument check | positional slot 1 | `!pstats [player]` |
+| 82 | [`!removexp`](#removexp) | 100 | Confirm no arguments | no direct argument references | `!removexp [player] [amount]` |
+| 83 | [`!rename`](#rename) | 80 | Confirm no arguments | no direct argument references | `!rename [player] [new name...]` |
+| 84 | [`!replayanglehud`](#replayanglehud) | 0 | Confirm no arguments | no direct argument references | `!replayanglehud` |
+| 85 | [`!replayanimdebug`](#replayanimdebug) | 98 | Confirm no arguments | no direct argument references | `!replayanimdebug` |
+| 86 | [`!replayexit`](#replayexit) | 0 | Confirm no arguments | no direct argument references | `!replayexit` |
+| 87 | [`!replayfpshud`](#replayfpshud) | 0 | Confirm no arguments | no direct argument references | `!replayfpshud` |
+| 88 | [`!replayhud`](#replayhud) | 0 | Confirm no arguments | no direct argument references | `!replayhud` |
+| 89 | [`!replaykeyhud`](#replaykeyhud) | 0 | Confirm no arguments | no direct argument references | `!replaykeyhud` |
+| 90 | [`!replaynextcp`](#replaynextcp) | 0 | Confirm no arguments | no direct argument references | `!replaynextcp` |
+| 91 | [`!replaypause`](#replaypause) | 0 | Confirm no arguments | no direct argument references | `!replaypause` |
+| 92 | [`!replayprevcp`](#replayprevcp) | 0 | Confirm no arguments | no direct argument references | `!replayprevcp` |
+| 93 | [`!replayskip`](#replayskip) | 0 | Confirm no arguments | no direct argument references | `!replayskip` |
+| 94 | [`!replayspeedhud`](#replayspeedhud) | 0 | Confirm no arguments | no direct argument references | `!replayspeedhud` |
+| 95 | [`!replaytimerhud`](#replaytimerhud) | 0 | Confirm no arguments | no direct argument references | `!replaytimerhud` |
+| 96 | [`!reset`](#reset) | 0 | Confirm no arguments | no direct argument references | `!reset` |
+| 97 | [`!runid`](#runid) | 0 | Confirm no arguments | no direct argument references | `!runid [player]` |
+| 98 | [`!savelist`](#savelist) | 1 | Argument check | positional slot 1; 3 case labels | `!savelist [cps/time/date]` |
+| 99 | [`!saverun`](#saverun) | 0 | Confirm no arguments | no direct argument references | `!saverun` |
+| 100 | [`!savesettings`](#savesettings) | 0 | Confirm no arguments | no direct argument references | `!savesettings` |
+| 101 | [`!saybold`](#saybold) | 60 | Confirm no arguments | no direct argument references | `!saybold [message...]` |
+| 102 | [`!servers`](#servers) | 0 | Argument check | positional slots 1, 2 | `!servers \| !servers join [server-name fragment]` |
+| 103 | [`!setauthor`](#setauthor) | 90 | Confirm no arguments | no direct argument references | `!setauthor [author...]` |
+| 104 | [`!setdate`](#setdate) | 90 | Confirm no arguments | no direct argument references | `!setdate [YYYY] [MM] [DD]` |
+| 105 | [`!setprefname`](#setprefname) | 0 | Deep review | positional slot 1; dynamic argument scan; argument-count check | `!setprefname [preferred name...]` |
+| 106 | [`!shock`](#shock) | 80 | Confirm no arguments | no direct argument references | `!shock [player]` |
+| 107 | [`!showclips`](#showclips) | 0 | Argument check | positional slot 1 | `!showclips [on/off/toggle]` |
+| 108 | [`!showcpid`](#showcpid) | 0 | Confirm no arguments | no direct argument references | `!showcpid [on/off/toggle]` |
+| 109 | [`!spawnpoint`](#spawnpoint) | 100 | Confirm no arguments | no direct argument references | `!spawnpoint [put/purge]` |
+| 110 | [`!specfix`](#specfix) | 60 | Confirm no arguments | no direct argument references | `!specfix` |
+| 111 | [`!speclist`](#speclist) | 0 | Confirm no arguments | no direct argument references | `!speclist` |
+| 112 | [`!startmusic`](#startmusic) | 0 | Confirm no arguments | no direct argument references | `!startmusic` |
+| 113 | [`!stopmusic`](#stopmusic) | 0 | Confirm no arguments | no direct argument references | `!stopmusic` |
+| 114 | [`!taunt`](#taunt) | 40 | Confirm no arguments | no direct argument references | `!taunt [category 1-3] [row 1-9] [variant]` |
+| 115 | [`!taunts`](#taunts) | 0 | Argument check | positional slot 1 | `!taunts [on/off]` |
+| 116 | [`!teleplayer`](#teleplayer) | 80 | Confirm no arguments | no direct argument references | `!teleplayer [player]` |
+| 117 | [`!teleport`](#teleport) | 1 | Deep review | positional slot 1; dynamic argument scan; argument-count check | `!teleport [player]` |
+| 118 | [`!telesave`](#telesave) | 1 | Deep review | positional slot 1; dynamic argument scan; argument-count check | `!telesave [player]` |
+| 119 | [`!temppromote`](#temppromote) | 98 | Confirm no arguments | no direct argument references | `!temppromote [player] [admin level 0 to caller-1]` |
+| 120 | [`!theme`](#theme) | 1 | Confirm no arguments | no direct argument references | `!theme [default/matrix/egz/custom/cycle]` |
+| 121 | [`!thirdperson`](#thirdperson) | 0 | Confirm no arguments | no direct argument references | `!thirdperson [on/off]` |
+| 122 | [`!tpcpn`](#tpcpn) | 1 | Confirm no arguments | no direct argument references | `!tpcpn` |
+| 123 | [`!tpcpp`](#tpcpp) | 1 | Confirm no arguments | no direct argument references | `!tpcpp` |
+| 124 | [`!unignore`](#unignore) | 1 | Argument check | positional slot 1 | `!unignore [player]` |
+| 125 | [`!unmute`](#unmute) | 80 | Confirm no arguments | no direct argument references | `!unmute [player]` |
+| 126 | [`!veto`](#veto) | 60 | Confirm no arguments | no direct argument references | `!veto` |
+| 127 | [`!viewrecords`](#viewrecords) | 0 | Confirm no arguments | no direct argument references | `!viewrecords [map name]` |
+| 128 | [`!vignore`](#vignore) | 0 | Argument check | positional slot 1 | `!vignore [player]` |
+| 129 | [`!vote`](#vote) | 1 | Deep review | positional slots 1, 2; dynamic argument scan; argument-count check; 16 case labels | `!vote [map/addtime/mute/map_rotate/map_restart/disable/nades] [value]` |
+| 130 | [`!vunignore`](#vunignore) | 0 | Argument check | positional slot 1 | `!vunignore [player]` |
+| 131 | [`!wanted`](#wanted) | 0 | Confirm no arguments | no direct argument references | `!wanted` |
+| 132 | [`!xpmultiplier`](#xpmultiplier) | 100 | Confirm no arguments | no direct argument references | `!xpmultiplier [off/1-10/1x-10x]` |
 
 ## !addtime
 
@@ -200,59 +211,37 @@ Commands with no direct argument evidence after same-file pass-through tracing. 
 - Hidden input: no
 - Current page usage: `!addtime [minutes]`
 - Current page summary: Adds minutes to the current map; level 80+ admins can also remove time.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:12`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:15`
 - Handler: `addtime(data)`
 - Help handler: `helpaddtime(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Add any amount of minutes between 1 and 1000 to the current map`
-- `Usage: !addtime [amount]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: `b3_addtime_plus`, ``, `b3_addtime_minus`
-- Unresolved same-file functions called with data: none
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `addtime`, `helpaddtime`
 
 ### Evidence functions
 
-- `addtime(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:4398-4441`
-- `helpaddtime(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:4443-4447`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 10 raw argument-related source lines</summary>
-
-#### `addtime(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4398-4441`
-
-```gsc
- 4400 | 	if(!isdefined(data[2]) || int(data[2]) == 0)
- 4402 | 		self helpaddtime(data);
- 4405 | 	if(int(data[2]) > 1000)
- 4412 | 	if(time_remaining + int(data[2]) * 60  > 60000)
- 4418 | 	if(int(data[2]) > 0)
- 4420 | 		JumpMod\_time_management::addtime(int(data[2]));
- 4421 | 		level locprintlnbold("b3_addtime_plus", (int(data[2]) + ""));
- 4426 | 		if(!admins.size || time_remaining - int(data[2]) * 60 > 240)
- 4428 | 			JumpMod\_time_management::addtime(int(data[2]));
- 4429 | 			level locprintlnbold("b3_addtime_minus", ((-1 * int(data[2])) + ""));
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !addxp
 
@@ -261,66 +250,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4398-4441`
 - Hidden input: no
 - Current page usage: `!addxp [player] [amount]`
 - Current page summary: Adds a positive amount of rank XP to a connected player.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:45`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:48`
 - Handler: `addxp(data)`
 - Help handler: `helpaddxp(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slots 1, 2
-- Positional arguments observed: `data[2]` (argument 1), `data[3]` (argument 2)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Adds game XP to a player`
-- `Usage: !addxp [player] [amount]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`, `data[3]`
+- References: none found
 - Case labels in data-referencing functions: none found
 - Quoted literals on raw matching lines: none found
-- Unresolved same-file functions called with data: none
+- Unresolved same-file functions called with data: `addxp`, `helpaddxp`
 
 ### Evidence functions
 
-- `addxp(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:1682-1685`
-- `helpaddxp(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:1802-1806`
-- `adjustrankxpcommand(data, add)` — called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:1692-1733`
-- `helpremovexp(data)` — called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:1808-1812`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 8 raw argument-related source lines</summary>
-
-#### `addxp(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1682-1685`
-
-```gsc
- 1684 | 	self adjustrankxpcommand(data, true);
-```
-
-#### `adjustrankxpcommand(data, add)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1692-1733`
-
-```gsc
- 1694 | 	if(!isdefined(data[2]) || !isdefined(data[3]))
- 1697 | 			self helpaddxp(data);
- 1699 | 			self helpremovexp(data);
- 1703 | 	player = findplayerbydata(data[2]);
- 1710 | 	amount = int(data[3]);
- 1714 | 			self helpaddxp(data);
- 1716 | 			self helpremovexp(data);
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !afk
 
@@ -329,7 +289,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1692-1733`
 - Hidden input: yes
 - Current page usage: `!afk | !afk [player]`
 - Current page summary: Pauses an active run while you remain still, or checks another player's AFK status.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:78`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:76`
 - Handler: `afk(data)`
 - Help handler: `helpafk(data)`
 
@@ -356,8 +316,8 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1692-1733`
 
 ### Evidence functions
 
-- `afk(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:2823-2855`
-- `helpafk(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:2857-2861`
+- `afk(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:431-460`
+- `helpafk(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:462-466`
 
 ### Raw argument-related matches
 
@@ -366,11 +326,11 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1692-1733`
 
 #### `afk(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2823-2855`
+Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:431-460`
 
 ```gsc
- 2825 | 	if(!isdefined(data[2]))
- 2844 | 		player = findplayerbydata(data[2]);
+  433 | 	if(!isdefined(data[2]))
+  452 | 		player = self findtarget(data[2]);
 ```
 
 </details>
@@ -382,52 +342,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2823-2855`
 - Hidden input: yes
 - Current page usage: `!alias [player]`
 - Current page summary: Shows a connected player's most-used recorded names and preferred name.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:74`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:72`
 - Handler: `alias(data)`
 - Help handler: `helpalias(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Shows a player's most used names`
-- `Usage: !alias [player]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
 - Quoted literals on raw matching lines: none found
-- Unresolved same-file functions called with data: none
+- Unresolved same-file functions called with data: `alias`, `helpalias`
 
 ### Evidence functions
 
-- `alias(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:5201-5221`
-- `helpalias(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:5279-5283`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 3 raw argument-related source lines</summary>
-
-#### `alias(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:5201-5221`
-
-```gsc
- 5203 | 	if(!isdefined(data[2]))
- 5205 | 		self helpalias(data);
- 5208 | 	player = findplayerbydata(data[2]);
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !allowvote
 
@@ -436,7 +381,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:5201-5221`
 - Hidden input: no
 - Current page usage: `!allowvote [on/off/5-45]`
 - Current page summary: Enables voting, disables it, or schedules it to return after 5-45 minutes.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd_vote.gsc:7`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd_vote.gsc:8`
 - Handler: `allowvote(data)`
 - Help handler: `helpallowvote(data)`
 
@@ -451,6 +396,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:5201-5221`
 
 ### In-game help strings collected by the existing sync
 
+- `Allows you disable/enable voting`
 - `Usage: !allowvote [on/off] or !allowvote [after_time], in which time is in minutes`
 
 ### Mechanical argument findings
@@ -491,7 +437,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd_vote.gsc:245-279`
 - Hidden input: no
 - Current page usage: `!ambiant [on/off/toggle/cycle]`
 - Current page summary: Controls the fallback server ambient sound.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:7`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:8`
 - Handler: `ambiant(data)`
 - Help handler: `helpambiant(data)`
 
@@ -518,8 +464,8 @@ Source: `gsc/shared/jumpmod/_j4l_cmd_vote.gsc:245-279`
 
 ### Evidence functions
 
-- `ambiant(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:41-73`
-- `helpambiant(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:75-79`
+- `ambiant(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:42-74`
+- `helpambiant(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:76-80`
 
 ### Raw argument-related matches
 
@@ -528,17 +474,17 @@ Source: `gsc/shared/jumpmod/_j4l_cmd_vote.gsc:245-279`
 
 #### `ambiant(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:41-73`
+Source: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:42-74`
 
 ```gsc
-   43 | 	if(!isdefined(data[2]))
-   45 | 		self helpambiant(data);
-   49 | 	switch(data[2])
-   51 | 		case "on":
-   55 | 		case "off":
-   59 | 		case "toggle":
-   60 | 		case "cycle":
-   72 | 	self helpambiant(data);
+   44 | 	if(!isdefined(data[2]))
+   46 | 		self helpambiant(data);
+   50 | 	switch(data[2])
+   52 | 		case "on":
+   56 | 		case "off":
+   60 | 		case "toggle":
+   61 | 		case "cycle":
+   73 | 	self helpambiant(data);
 ```
 
 </details>
@@ -550,7 +496,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:41-73`
 - Hidden input: no
 - Current page usage: `!anglehelper [on/off]`
 - Current page summary: Enables or disables the strafe-angle helper HUD.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:13`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:14`
 - Handler: `anglehelper(data)`
 - Help handler: `helpanglehelper(data)`
 
@@ -572,13 +518,13 @@ Source: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:41-73`
 
 - References: `data[2]`
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: `on`, `off`, `anglehelper`
+- Quoted literals on raw matching lines: `anglehelper`, `on`
 - Unresolved same-file functions called with data: none
 
 ### Evidence functions
 
-- `anglehelper(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:187-195`
-- `helpanglehelper(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:197-201`
+- `anglehelper(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:188-196`
+- `helpanglehelper(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:198-202`
 
 ### Raw argument-related matches
 
@@ -587,12 +533,12 @@ Source: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:41-73`
 
 #### `anglehelper(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:187-195`
+Source: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:188-196`
 
 ```gsc
-  189 | 	if(!isdefined(data[2]) || (data[2] != "on" && data[2] != "off"))
-  191 | 		self helpanglehelper(data);
-  194 | 	self JumpMod\_settings::changesetting("anglehelper", data[2] == "on");
+  190 | 	if(!JumpMod\_j4l_cmd::isonoff(data[2]))
+  192 | 		self helpanglehelper(data);
+  195 | 	self JumpMod\_settings::changesetting("anglehelper", data[2] == "on");
 ```
 
 </details>
@@ -604,52 +550,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:187-195`
 - Hidden input: no
 - Current page usage: `!autobhop [on/off]`
 - Current page summary: Enables or disables automatic jumping after holding jump for 500 ms.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:128`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:134`
 - Handler: `autobhop(data)`
 - Help handler: `helpautobhop(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Automatically jumps after holding jump for 500ms and touching ground or a ladder`
-- `Usage: !autobhop [on/off]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: `on`, `off`, `autobhop`
-- Unresolved same-file functions called with data: none
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `autobhop`, `helpautobhop`
 
 ### Evidence functions
 
-- `autobhop(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:2270-2278`
-- `helpautobhop(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:2280-2284`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 3 raw argument-related source lines</summary>
-
-#### `autobhop(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2270-2278`
-
-```gsc
- 2272 | 	if(!isdefined(data[2]) || (data[2] != "on" && data[2] != "off"))
- 2274 | 		self helpautobhop(data);
- 2277 | 	self JumpMod\_settings::changesetting("autobhop", data[2] == "on");
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !autoload
 
@@ -658,54 +589,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2270-2278`
 - Hidden input: no
 - Current page usage: `!autoload [on/off]`
 - Current page summary: Enables or disables the height-triggered automatic load behavior.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:130`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:135`
 - Handler: `autoload(data)`
 - Help handler: `helpautoload(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Set a certain height by shooting a platform`
-- `Autoload automatically loads your previous position if you go below this height`
-- `To quickly disable: shoot somewhere high or far away`
-- `Usage: !autoload [on/off]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: `on`, `off`, `autoload_init`
-- Unresolved same-file functions called with data: none
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `autoload`, `helpautoload`
 
 ### Evidence functions
 
-- `autoload(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:1620-1632`
-- `helpautoload(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:1634-1640`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 3 raw argument-related source lines</summary>
-
-#### `autoload(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1620-1632`
-
-```gsc
- 1622 | 	if(!isdefined(data[2]) || (data[2] != "on" && data[2] != "off"))
- 1624 | 		self helpautoload(data);
- 1627 | 	self JumpMod\_settings::changesetting("autoload_init", data[2] == "on");
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !autoreset
 
@@ -714,53 +628,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1620-1632`
 - Hidden input: no
 - Current page usage: `!autoreset [on/off]`
 - Current page summary: Controls whether loading without a save automatically resets run statistics.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:121`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:127`
 - Handler: `autoreset(data)`
 - Help handler: `helpautoreset(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Switch off or on automatically resetting of stats`
-- `When trying to load without having any saves`
-- `Usage: !autoreset [on/off]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: `on`, `off`, `auto_reset`
-- Unresolved same-file functions called with data: none
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `autoreset`, `helpautoreset`
 
 ### Evidence functions
 
-- `autoreset(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:4381-4389`
-- `helpautoreset(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:4391-4396`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 3 raw argument-related source lines</summary>
-
-#### `autoreset(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4381-4389`
-
-```gsc
- 4383 | 	if(!isdefined(data[2]) || (data[2] != "on" && data[2] != "off"))
- 4385 | 		self helpautoreset(data);
- 4388 | 	self JumpMod\_settings::changesetting("auto_reset", data[2] == "on");
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !autostand
 
@@ -769,52 +667,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4381-4389`
 - Hidden input: no
 - Current page usage: `!autostand [on/off]`
 - Current page summary: Controls whether loading a position automatically returns you to standing.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:127`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:133`
 - Handler: `autostand(data)`
 - Help handler: `helpautostand(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Switch off or on automatically standing upon loading a position`
-- `Usage: !autostand [on/off]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: `on`, `off`, `auto_stand`
-- Unresolved same-file functions called with data: none
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `autostand`, `helpautostand`
 
 ### Evidence functions
 
-- `autostand(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:2254-2262`
-- `helpautostand(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:2264-2268`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 3 raw argument-related source lines</summary>
-
-#### `autostand(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2254-2262`
-
-```gsc
- 2256 | 	if(!isdefined(data[2]) || (data[2] != "on" && data[2] != "off"))
- 2258 | 		self helpautostand(data);
- 2261 | 	self JumpMod\_settings::changesetting("auto_stand", data[2] == "on");
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !banplayer
 
@@ -823,53 +706,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2254-2262`
 - Hidden input: no
 - Current page usage: `!banplayer [player]`
 - Current page summary: Bans a connected player's account and IP for one year, then disconnects them.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:17`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:20`
 - Handler: `banplayer(data)`
 - Help handler: `helpbanplayer(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Bans a player for a year`
-- `Usage: !ban [player]`
-- `Usage currently limited to the following players: north eagle.`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
 - Quoted literals on raw matching lines: none found
-- Unresolved same-file functions called with data: none
+- Unresolved same-file functions called with data: `banplayer`, `helpbanplayer`
 
 ### Evidence functions
 
-- `banplayer(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:356-372`
-- `helpbanplayer(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:374-379`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 3 raw argument-related source lines</summary>
-
-#### `banplayer(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:356-372`
-
-```gsc
-  358 | 	if(!isdefined(data[2]))
-  360 | 		self helpbanplayer(data);
-  363 | 	player = findplayerbydata(data[2]);
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !battle
 
@@ -878,103 +745,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:356-372`
 - Hidden input: no
 - Current page usage: `!battle [private/public] | !battle player [player] | !battle nades [mode] | !battle record [filters]`
 - Current page summary: Chooses the record, player, or grenade benchmark shown by the battle HUD.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:93`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:90`
 - Handler: `battle(data)`
 - Help handler: `helpbattle(data)`
 
 ### Review summary
 
-- Review tier: **Deep review**
-- Evidence footprint: positional slots 1, 2; dynamic argument scan; argument-count check; 34 case labels
-- Positional arguments observed: `data[2]` (argument 1), `data[3]` (argument 2)
-- Dynamic references: `data[i]`
-- Reads `data.size`: yes
-- Reviewer focus: Trace each syntax branch and verify accepted values, defaults, required arguments, and examples.
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
+- Dynamic references: none found
+- Reads `data.size`: no
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Switch between battling all records or only your personal best`
-- `Usage: !battle [private/public], !battle player [player]`
-- `Or !battle record [time/save/load/jump] [fps] [number], defaults to number one on 125 fps, time record`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`, `data[3]`, `data[i]`, `data.size`
-- Case labels in data-referencing functions: `"equal"`, `"none"`, `"inf"`, `"infinite"`, `"infinity"`, `"infty"`, `"time"`, `"times"`, `"save"`, `"saves"`, `"load"`, `"loads"`, `"jump"`, `"jumps"`, `"nades"`, `"nadejumps"`, `"125"`, `"250"`, `"333"`, `"43"`, `"76"`, `"mix"`, `"mixed"`, `"1"`, `"2"`, `"3"`, `"4"`, `"5"`, `"6"`, `"7"`, `"8"`, `"9"`, `"10"`, `"player"`
-- Quoted literals on raw matching lines: `private`, `privjet`, `public`, `player`, `record`, `nades`, `equal`, `none`, `inf`, `infinite`, `infinity`, `infty`, `0`, ``, `battle_nades`, `c`, `time`, `times`, `save`, `saves`, `load`, `loads`, `jump`, `jumps`, `nadejumps`, `125`, `250`, `333`, `43`, `76`, `mix`, `mixed`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`
-- Unresolved same-file functions called with data: none
+- References: none found
+- Case labels in data-referencing functions: none found
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `battle`, `helpbattle`
 
 ### Evidence functions
 
-- `battle(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:3957-4129`
-- `helpbattle(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:4131-4136`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 53 raw argument-related source lines</summary>
-
-#### `battle(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:3957-4129`
-
-```gsc
- 3968 | 	if(data.size < 3)
- 3970 | 		self helpbattle(data);
- 3973 | 	if((data[2] != "private" && data[2] != "privjet") && data[2] != "public" && data[2] != "player" && data[2] != "record" && data[2] != "nades")
- 3975 | 		self helpbattle(data);
- 3978 | 	if(data[2] == "nades")
- 3980 | 		if(!isdefined(data[3]))
- 3982 | 			self helpbattle(data);
- 3985 | 		switch(data[3])
- 3987 | 			case "equal":
- 3992 | 			case "none":
- 3997 | 			case "inf":
- 3998 | 			case "infinite":
- 3999 | 			case "infinity":
- 4000 | 			case "infty":
- 4005 | 			default:
- 4007 | 				if(data[3] == "0" || data[3] == int(data[3]) + "")
- 4009 | 					self.data["battle_nades"] = "c" + int(data[3]);
- 4017 | 	else if(data[2] == "private" || data[2] == "privjet")
- 4023 | 	else if(data[2] == "public")
- 4029 | 	else if(data[2] == "player")
- 4031 | 		player = findplayerbydata(data[3]);
- 4052 | 		for(i = 3; i < data.size; i++)
- 4054 | 			switch(tolower(data[i]))
- 4056 | 				case "time":
- 4057 | 				case "times":
- 4060 | 				case "save":
- 4061 | 				case "saves":
- 4064 | 				case "load":
- 4065 | 				case "loads":
- 4068 | 				case "jump":
- 4069 | 				case "jumps":
- 4072 | 				case "nades":
- 4073 | 				case "nadejumps":
- 4076 | 				case "125":
- 4077 | 				case "250":
- 4078 | 				case "333":
- 4079 | 				case "43":
- 4080 | 				case "76":
- 4081 | 					fps = int(tolower(data[i]));
- 4083 | 				case "mix":
- 4084 | 				case "mixed":
- 4087 | 				case "1":
- 4088 | 				case "2":
- 4089 | 				case "3":
- 4090 | 				case "4":
- 4091 | 				case "5":
- 4092 | 				case "6":
- 4093 | 				case "7":
- 4094 | 				case "8":
- 4095 | 				case "9":
- 4096 | 				case "10":
- 4097 | 					num = int(tolower(data[i]));
- 4099 | 				case "player":
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !bounce
 
@@ -983,55 +784,76 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:3957-4129`
 - Hidden input: no
 - Current page usage: `!bounce [status/on/off]`
 - Current page summary: Shows or temporarily overrides COD4-style bounce collision for the current map.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:53`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:56`
 - Handler: `bounce(data)`
 - Help handler: `helpbounce(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Enable/disable COD4 bounce collision`
-- `Usage: !bounce [on/off/status]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: `status`, `on`, `off`
-- Unresolved same-file functions called with data: none
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `bounce`, `helpbounce`
 
 ### Evidence functions
 
-- `bounce(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:876-904`
-- `helpbounce(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:906-910`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 6 raw argument-related source lines</summary>
+No raw data references or pass-through calls found.
 
-#### `bounce(data)`
+## !cape
 
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:876-904`
+- Access: level 0
+- Aliases: none
+- Hidden input: yes
+- Current page usage: `!cape`
+- Current page summary: Wears a cape you own by its number in the shop (!cape <n>), saved like the shop's Equip and shown at once; off unequips it, !cape lists your numbers. A locked cape says how it unlocks. Level 100 can wear any cape without saving it, for testing. CoD2 only.
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:111`
+- Handler: `cape(data)`
+- Help handler: `helpcape(data)`
 
-```gsc
-  882 | 	if(!isdefined(data[2]))
-  885 | 		self helpbounce(data);
-  888 | 	if(data[2] == "status")
-  893 | 	if(data[2] != "on" && data[2] != "off")
-  895 | 		self helpbounce(data);
-  898 | 	if(data[2] == "on")
-```
+### Review summary
 
-</details>
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
+- Dynamic references: none found
+- Reads `data.size`: no
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
+
+### In-game help strings collected by the existing sync
+
+- None found by the command sync parser.
+
+### Mechanical argument findings
+
+- References: none found
+- Case labels in data-referencing functions: none found
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `cape`, `helpcape`
+
+### Evidence functions
+
+
+
+### Raw argument-related matches
+
+No raw data references or pass-through calls found.
 
 ## !changemap
 
@@ -1040,55 +862,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:876-904`
 - Hidden input: no
 - Current page usage: `!changemap [map name]`
 - Current page summary: Searches for a map and changes to the selected result.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:57`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:59`
 - Handler: `changemap(data)`
 - Help handler: `helpchangemap(data)`
 
 ### Review summary
 
-- Review tier: **Deep review**
-- Evidence footprint: positional slot 1; dynamic argument scan; argument-count check
-- Positional arguments observed: `data[2]` (argument 1)
-- Dynamic references: `data[i]`
-- Reads `data.size`: yes
-- Reviewer focus: Trace each syntax branch and verify accepted values, defaults, required arguments, and examples.
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
+- Dynamic references: none found
+- Reads `data.size`: no
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Change the map to one of your chosing`
-- `Make sure you pick the correct map, preferably by doing !findmap [mapname] first`
-- `Usage: !changemap [mapname]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`, `data[i]`, `data.size`
+- References: none found
 - Case labels in data-referencing functions: none found
 - Quoted literals on raw matching lines: none found
-- Unresolved same-file functions called with data: none
+- Unresolved same-file functions called with data: `changemap`, `helpchangemap`
 
 ### Evidence functions
 
-- `changemap(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:1055-1078`
-- `helpchangemap(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:1092-1097`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 5 raw argument-related source lines</summary>
-
-#### `changemap(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1055-1078`
-
-```gsc
- 1057 | 	if(!isdefined(data[2]))
- 1059 | 		self helpchangemap(data);
- 1063 | 	for(i = 2; i < data.size; i++)
- 1065 | 		mapname += stripstring(data[i]);
- 1066 | 		if(i != data.size - 1)
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !checkpointsound
 
@@ -1097,54 +901,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1055-1078`
 - Hidden input: no
 - Current page usage: `!checkpointsound [on/off/toggle/cycle/default/none]`
 - Current page summary: Controls the sound played when passing a checkpoint.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:96`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:93`
 - Handler: `checkpointsound(data)`
 - Help handler: `helpcheckpointsound(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Changes the sound played when you pass a checkpoint`
-- `Usage: !checkpointsound [on/off/toggle]`
-- `Legacy options still work: default, none`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: `cp_sound`
-- Unresolved same-file functions called with data: none
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `checkpointsound`, `helpcheckpointsound`
 
 ### Evidence functions
 
-- `checkpointsound(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:1887-1896`
-- `helpcheckpointsound(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:1898-1903`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 4 raw argument-related source lines</summary>
-
-#### `checkpointsound(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1887-1896`
-
-```gsc
- 1889 | 	if(!isdefined(data[2]))
- 1891 | 		self helpcheckpointsound(data);
- 1894 | 	if(!self JumpMod\_settings::changesetting("cp_sound", data[2]))
- 1895 | 		self helpcheckpointsound(data);
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !classicmode
 
@@ -1153,53 +940,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1887-1896`
 - Hidden input: no
 - Current page usage: `!classicmode [on/off]`
 - Current page summary: Enables or disables the map's classic/funmode route and resets the current run.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:125`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:131`
 - Handler: `funmode(data)`
 - Help handler: `helpfunmode(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Switch funmode on/off`
-- `Funmode does not punish for cuts and only has the final checkpoint`
-- `Usage: !funmode [on/off]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: `on`, `off`, `funmode`
-- Unresolved same-file functions called with data: none
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `funmode`, `helpfunmode`
 
 ### Evidence functions
 
-- `funmode(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:2576-2589`
-- `helpfunmode(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:2591-2596`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 3 raw argument-related source lines</summary>
-
-#### `funmode(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2576-2589`
-
-```gsc
- 2583 | 	if(!isdefined(data[2]) || (data[2] != "on" && data[2] != "off"))
- 2585 | 		self helpfunmode(data);
- 2588 | 	self JumpMod\_settings::changesetting("funmode", data[2] == "on");
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !clonetheme
 
@@ -1208,52 +979,76 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2576-2589`
 - Hidden input: no
 - Current page usage: `!clonetheme [player]`
 - Current page summary: Copies a connected player's custom theme and switches to it.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:49`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:52`
 - Handler: `clonetheme(data)`
 - Help handler: `helpclonetheme(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Clones the custom theme a player has`
-- `Usage: !clonetheme [player]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
 - Quoted literals on raw matching lines: none found
-- Unresolved same-file functions called with data: none
+- Unresolved same-file functions called with data: `clonetheme`, `helpclonetheme`
 
 ### Evidence functions
 
-- `clonetheme(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:1315-1330`
-- `helpclonetheme(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:1332-1336`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 3 raw argument-related source lines</summary>
+No raw data references or pass-through calls found.
 
-#### `clonetheme(data)`
+## !coins
 
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1315-1330`
+- Access: level 101
+- Aliases: none
+- Hidden input: no
+- Current page usage: `!coins`
+- Current page summary: Adds coins to a player, or removes them with a negative amount (!coins <player> <amount>, at most 100,000,000; the balance stops at 0) (level 101).
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:47`
+- Handler: `coins(data)`
+- Help handler: `helpcoins(data)`
 
-```gsc
- 1317 | 	if(!isdefined(data[2]))
- 1319 | 		self helpclonetheme(data);
- 1322 | 	player = findplayerbydata(data[2]);
-```
+### Review summary
 
-</details>
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
+- Dynamic references: none found
+- Reads `data.size`: no
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
+
+### In-game help strings collected by the existing sync
+
+- None found by the command sync parser.
+
+### Mechanical argument findings
+
+- References: none found
+- Case labels in data-referencing functions: none found
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `coins`, `helpcoins`
+
+### Evidence functions
+
+
+
+### Raw argument-related matches
+
+No raw data references or pass-through calls found.
 
 ## !commands
 
@@ -1262,7 +1057,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1315-1330`
 - Hidden input: no
 - Current page usage: `!commands`
 - Current page summary: Lists the canonical commands available at your current admin level.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:77`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:75`
 - Handler: `commands(data)`
 - Help handler: `helpcommands(data)`
 
@@ -1289,8 +1084,8 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1315-1330`
 
 ### Evidence functions
 
-- `commands(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:5155-5193`
-- `helpcommands(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:5195-5199`
+- `commands(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:1029-1067`
+- `helpcommands(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:1069-1073`
 
 ### Raw argument-related matches
 
@@ -1303,7 +1098,7 @@ No raw data references or pass-through calls found.
 - Hidden input: yes
 - Current page usage: `!confirmvote [pin]`
 - Current page summary: Stores a 4-10 digit PIN to confirm the player's map-contest vote.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:136`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:141`
 - Handler: `confirmvote(data)`
 - Help handler: `helpconfirmvote(data)`
 
@@ -1330,8 +1125,8 @@ No raw data references or pass-through calls found.
 
 ### Evidence functions
 
-- `confirmvote(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:325-348`
-- `helpconfirmvote(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:350-354`
+- `confirmvote(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:168-190`
+- `helpconfirmvote(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:192-196`
 
 ### Raw argument-related matches
 
@@ -1340,12 +1135,12 @@ No raw data references or pass-through calls found.
 
 #### `confirmvote(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:325-348`
+Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:168-190`
 
 ```gsc
-  327 | 	if(!isdefined(data[2]))
-  329 | 		self helpconfirmvote(data);
-  334 | 	pin = getpin(data[2]);
+  170 | 	if(!isdefined(data[2]))
+  172 | 		self helpconfirmvote(data);
+  177 | 	pin = getpin(data[2]);
 ```
 
 </details>
@@ -1357,7 +1152,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:325-348`
 - Hidden input: yes
 - Current page usage: `!country [player]`
 - Current page summary: Shows the detected country of a connected player.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:73`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:71`
 - Handler: `country(data)`
 - Help handler: `helpcountry(data)`
 
@@ -1384,8 +1179,8 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:325-348`
 
 ### Evidence functions
 
-- `country(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:3716-3736`
-- `helpcountry(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:3951-3955`
+- `country(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:625-642`
+- `helpcountry(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:644-648`
 
 ### Raw argument-related matches
 
@@ -1394,12 +1189,12 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:325-348`
 
 #### `country(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:3716-3736`
+Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:625-642`
 
 ```gsc
- 3718 | 	if(!isdefined(data[2]))
- 3720 | 		self helpcountry(data);
- 3723 | 	player = findplayerbydata(data[2]);
+  627 | 	if(!isdefined(data[2]))
+  629 | 		self helpcountry(data);
+  632 | 	player = self findtarget(data[2]);
 ```
 
 </details>
@@ -1411,112 +1206,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:3716-3736`
 - Hidden input: no
 - Current page usage: `!cpt [radius <units>] [trigger <name>] [type <flags>] [event <name>] [entity]`
 - Current page summary: Builds, publishes, lists, renames, and deletes checkpoint routes for the current map.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:69`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:67`
 - Handler: `cpt2(data)`
 - Help handler: `helpcpt(data)`
 
 ### Review summary
 
-- Review tier: **Deep review**
-- Evidence footprint: positional slots 1, 2, 3; dynamic argument scan; argument-count check; 13 case labels
-- Positional arguments observed: `data[2]` (argument 1), `data[3]` (argument 2), `data[4]` (argument 3)
-- Dynamic references: `data[i]`, `data[i + 1]`
-- Reads `data.size`: yes
-- Reviewer focus: Trace each syntax branch and verify accepted values, defaults, required arguments, and examples.
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
+- Dynamic references: none found
+- Reads `data.size`: no
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Creates a temporary checkpoint at your current location`
-- `Place: !cpt [radius <units>] [trigger <name>] [type <name>] [event <name>] [entity]`
-- `Drafts: !cpt remove | !cpt removeall | !cpt parse [radius=50] [route]`
-- `Publish (level 98+): !cpt import <player_id> (clears published drafts; restart map)`
-- `Published: !cpt routes | Rename (level 98+): !cpt rename <name|checkpoint_id> <new_name>`
-- `Delete (level 101): !cpt delete <name|checkpoint_id> (confirmation required; deletes the route and its records)`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`, `data[3]`, `data[4]`, `data[i]`, `data[i + 1]`, `data.size`
-- Case labels in data-referencing functions: `"removeall"`, `"remove"`, `"parse"`, `"help"`, `"routes"`, `"rename"`, `"delete"`, `"import"`, `"radius"`, `"trigger"`, `"type"`, `"event"`, `"entity"`
-- Quoted literals on raw matching lines: `removeall`, `remove`, `parse`, `help`, `routes`, `rename`, `delete`, `import`, `radius`, ``, `trigger`, `type`, `event`, `'`, `entity`, ` AND (cp.isend & 1) = 1 AND `, `confirm`
-- Unresolved same-file functions called with data: none
+- References: none found
+- Case labels in data-referencing functions: none found
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `cpt2`, `helpcpt`
 
 ### Evidence functions
 
-- `cpt2(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:3306-3472`
-- `helpcpt(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:3474-3482`
-- `cptroutes(data)` — called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:3107-3117`
-- `cptrename(data)` — called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:3146-3165`
-- `cptdelete(data)` — called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:3205-3224`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 42 raw argument-related source lines</summary>
-
-#### `cpt2(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:3306-3472`
-
-```gsc
- 3308 | 	if(isdefined(data[2]))
- 3310 | 		switch(data[2])
- 3312 | 			case "removeall":
- 3316 | 			case "remove":
- 3320 | 			case "parse":
- 3323 | 				if(isdefined(data[3]))
- 3325 | 					requested_radius = int(data[3]);
- 3329 | 						if(isdefined(data[4]))
- 3330 | 							route = stripstring(data[4]);
- 3333 | 						route = stripstring(data[3]);
- 3345 | 			case "help":
- 3346 | 				self helpcpt(data);
- 3348 | 			case "routes":
- 3349 | 				self cptroutes(data);
- 3351 | 			case "rename":
- 3352 | 				self cptrename(data);
- 3354 | 			case "delete":
- 3355 | 				self cptdelete(data);
- 3357 | 			case "import":
- 3365 | 					if(!isdefined(data[3]))
- 3369 | 					else if(data[3] == "delete")
- 3375 | 						pid = int(data[3]);
- 3397 | 	for(i = 2; i < data.size - 1; i += 2)
- 3399 | 		switch(data[i])
- 3401 | 			case "radius":
- 3402 | 				c[data[i]] = int(data[i + 1]);
- 3403 | 				radius_label = c[data[i]] + "";
- 3405 | 			case "trigger":
- 3406 | 			case "type":
- 3407 | 			case "event":
- 3408 | 				value = stripstring(data[i + 1]);
- 3409 | 				c[data[i]] = "'" + value + "'";
- 3410 | 				if(data[i] == "trigger")
- 3412 | 				else if(data[i] == "type")
- 3417 | 			case "entity":
- 3438 | 						c[data[i]] = "'" + entity_label + "'";
-```
-
-#### `cptrename(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:3146-3165`
-
-```gsc
- 3153 | 	if(!isdefined(data[3]) || !isdefined(data[4]))
- 3160 | 	args[1] = stripstring(data[4]);
- 3163 | 	q += " AND (cp.isend & 1) = 1 AND " + cptrouteselector(data[3]);
-```
-
-#### `cptdelete(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:3205-3224`
-
-```gsc
- 3212 | 	if(!isdefined(data[3]))
- 3220 | 	args[2] = isdefined(data[4]) && tolower(data[4]) == "confirm";
- 3222 | 	q += " AND (cp.isend & 1) = 1 AND " + cptrouteselector(data[3]);
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !crosshair
 
@@ -1525,7 +1245,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:3205-3224`
 - Hidden input: yes
 - Current page usage: `!crosshair [on/off]`
 - Current page summary: Enables or disables the player's crosshair.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:11`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:12`
 - Handler: `crosshair(data)`
 - Help handler: `helpcrosshair(data)`
 
@@ -1547,13 +1267,13 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:3205-3224`
 
 - References: `data[2]`
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: `on`, `off`, `crosshair`
+- Quoted literals on raw matching lines: `crosshair`, `on`
 - Unresolved same-file functions called with data: none
 
 ### Evidence functions
 
-- `crosshair(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:134-142`
-- `helpcrosshair()` — help handler; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:144-148`
+- `crosshair(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:135-143`
+- `helpcrosshair()` — help handler; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:145-149`
 
 ### Raw argument-related matches
 
@@ -1562,11 +1282,11 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:3205-3224`
 
 #### `crosshair(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:134-142`
+Source: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:135-143`
 
 ```gsc
-  136 | 	if(!isdefined(data[2]) || (data[2] != "on" && data[2] != "off"))
-  141 | 	self JumpMod\_settings::changesetting("crosshair", data[2] == "on");
+  137 | 	if(!JumpMod\_j4l_cmd::isonoff(data[2]))
+  142 | 	self JumpMod\_settings::changesetting("crosshair", data[2] == "on");
 ```
 
 </details>
@@ -1578,52 +1298,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:134-142`
 - Hidden input: no
 - Current page usage: `!csc [on/off]`
 - Current page summary: Enables or disables cross-server chat for the player.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:131`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:136`
 - Handler: `csc(data)`
 - Help handler: `helpcsc(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Enable/disable cross-server chat`
-- `Usage: !csc [on/off]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: `on`, `off`, `csc`
-- Unresolved same-file functions called with data: none
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `csc`, `helpcsc`
 
 ### Evidence functions
 
-- `csc(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:1600-1612`
-- `helpcsc(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:1614-1618`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 3 raw argument-related source lines</summary>
-
-#### `csc(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1600-1612`
-
-```gsc
- 1602 | 	if(!isdefined(data[2]) || (data[2] != "on" && data[2] != "off"))
- 1604 | 		self helpcsc(data);
- 1607 | 	self JumpMod\_settings::changesetting("csc", data[2] == "on");
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !customtheme
 
@@ -1632,94 +1337,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1600-1612`
 - Hidden input: yes
 - Current page usage: `!customtheme [item] [value...] | !customtheme reset | !customtheme import [theme]`
 - Current page summary: Builds a custom HUD theme from colors, templates, toggles, or an existing theme.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:48`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:51`
 - Handler: `customtheme(data)`
 - Help handler: `helpcustomtheme(data)`
 
 ### Review summary
 
-- Review tier: **Deep review**
-- Evidence footprint: positional slots 1, 2, 3, 4; 21 case labels
-- Positional arguments observed: `data[2]` (argument 1), `data[3]` (argument 2), `data[4]` (argument 3), `data[5]` (argument 4)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Trace each syntax branch and verify accepted values, defaults, required arguments, and examples.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Allows you to set custom values to themeable items`
-- `Usage: !customtheme [item] [value]`
-- `Legal items: name_other, name_self, number_self, number_other, rec_other, rec_self, hud_stats, hud_stats_value, hud_stats_mix_string_m`
-- `strip_name_colors, strip_name_colors_self, highlight_safe, highlight_cheat, highlight_warn, ownrecord_background, onscreen_stats`
-- `Use !customtheme reset to reset your custom theme`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`, `data[3]`, `data[4]`, `data[5]`
-- Case labels in data-referencing functions: `"reset"`, `"highlight_safe"`, `"highlight_cheat"`, `"highlight_warn"`, `"ownrecord_background"`, `"color_8"`, `"color_9"`, `"ownrecord_background_alpha"`, `"highlight_alpha"`, `"strip_name_colors"`, `"strip_name_colors_self"`, `"name_other"`, `"name_self"`, `"number_self"`, `"number_other"`, `"rec_other"`, `"rec_self"`, `"hud_stats"`, `"hud_stats_value"`, `"hud_stats_mix_string_m"`, `"import"`
-- Quoted literals on raw matching lines: `reset`, `highlight_safe`, `highlight_cheat`, `highlight_warn`, `ownrecord_background`, `color_8`, `color_9`, `custom_theme`, `ownrecord_background_alpha`, `highlight_alpha`, `strip_name_colors`, `strip_name_colors_self`, `on`, `off`, `name_other`, `name_self`, `number_self`, `number_other`, `rec_other`, `rec_self`, `hud_stats`, `hud_stats_value`, `hud_stats_mix_string_m`, `import`
-- Unresolved same-file functions called with data: none
+- References: none found
+- Case labels in data-referencing functions: none found
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `customtheme`, `helpcustomtheme`
 
 ### Evidence functions
 
-- `customtheme(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:1338-1507`
-- `helpcustomtheme(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:1509-1516`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 42 raw argument-related source lines</summary>
-
-#### `customtheme(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1338-1507`
-
-```gsc
- 1340 | 	if(!isdefined(data[2]))
- 1342 | 		self helpcustomtheme(data);
- 1345 | 	switch(data[2])
- 1347 | 		case "reset":
- 1352 | 		case "highlight_safe":
- 1353 | 		case "highlight_cheat":
- 1354 | 		case "highlight_warn":
- 1355 | 		case "ownrecord_background":
- 1356 | 		case "color_8":
- 1357 | 		case "color_9":
- 1360 | 			if(isdefined(data[3]) && isdefined(data[4]) && isdefined(data[5]))
- 1362 | 				vec = (stringtofloat(data[3]), stringtofloat(data[4]), stringtofloat(data[5]));
- 1368 | 				self.data["custom_theme"][data[2]] = vec;
- 1377 | 		case "ownrecord_background_alpha":
- 1378 | 		case "highlight_alpha":
- 1381 | 			if(isdefined(data[3]))
- 1383 | 				val = stringtofloat(data[3]);
- 1389 | 				self.data["custom_theme"][data[2]] = val;
- 1398 | 		case "strip_name_colors":
- 1399 | 		case "strip_name_colors_self":
- 1402 | 			if(isdefined(data[3]) && (data[3] == "on" || data[3] == "off"))
- 1404 | 				self.data["custom_theme"][data[2]] = (data[3] == "on");
- 1413 | 		case "name_other":
- 1414 | 		case "name_self":
- 1415 | 		case "number_self":
- 1416 | 		case "number_other":
- 1417 | 		case "rec_other":
- 1418 | 		case "rec_self":
- 1419 | 		case "hud_stats":
- 1420 | 		case "hud_stats_value":
- 1421 | 		case "hud_stats_mix_string_m":
- 1425 | 			if(isdefined(data[3]))
- 1428 | 				for(i = 0; i < data[3].size; i++)
- 1432 | 						if(data[3][i] == illegal[j])
- 1444 | 				self.data["custom_theme"][data[2]] = data[3];
- 1453 | 		case "import":
- 1455 | 			if(isdefined(data[3]))
- 1460 | 					if(level.themes[i] == data[3])
- 1483 | 					self.data["custom_theme"][s[i]] = JumpMod\_themes::getthemedcolor(data[3], s[i]);
- 1496 | 					self.data["custom_theme"][s[i]] = JumpMod\_themes::getthemetemplate(data[3], s[i]);
- 1500 | 		default:
- 1502 | 			self helpcustomtheme(data);
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !deleterec
 
@@ -1728,83 +1376,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1338-1507`
 - Hidden input: no
 - Current page usage: `!deleterec [time/save/load/jump/nades] [fps/mix] [rank 1-10]`
 - Current page summary: Deletes a ranked record after repeating the same selection to confirm it.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:42`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:43`
 - Handler: `deleterec(data)`
 - Help handler: `helpdeleterec(data)`
 
 ### Review summary
 
-- Review tier: **Deep review**
-- Evidence footprint: positional slot 1; dynamic argument scan; argument-count check; 27 case labels
-- Positional arguments observed: `data[2]` (argument 1)
-- Dynamic references: `data[i]`
-- Reads `data.size`: yes
-- Reviewer focus: Trace each syntax branch and verify accepted values, defaults, required arguments, and examples.
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
+- Dynamic references: none found
+- Reads `data.size`: no
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Deletes a record, requires a confirmation`
-- `Usage is same as !battle record [arguments]`
-- `Open a certain ender list to delete those records`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`, `data[i]`, `data.size`
-- Case labels in data-referencing functions: `"time"`, `"times"`, `"save"`, `"saves"`, `"load"`, `"loads"`, `"jump"`, `"jumps"`, `"nades"`, `"nadejumps"`, `"125"`, `"250"`, `"333"`, `"43"`, `"76"`, `"mix"`, `"mixed"`, `"1"`, `"2"`, `"3"`, `"4"`, `"5"`, `"6"`, `"7"`, `"8"`, `"9"`, `"10"`
-- Quoted literals on raw matching lines: `time`, `times`, `save`, `saves`, `load`, `loads`, `jump`, `jumps`, `nades`, `nadejumps`, `125`, `250`, `333`, `43`, `76`, `mix`, `mixed`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`
-- Unresolved same-file functions called with data: none
+- References: none found
+- Case labels in data-referencing functions: none found
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `deleterec`, `helpdeleterec`
 
 ### Evidence functions
 
-- `deleterec(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:1961-2056`
-- `helpdeleterec(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:2065-2070`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 33 raw argument-related source lines</summary>
-
-#### `deleterec(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1961-2056`
-
-```gsc
- 1965 | 	if(!isdefined(data[2]))
- 1967 | 		self helpdeleterec(data);
- 1973 | 	for(i = 2; i < data.size; i++)
- 1975 | 		switch(tolower(data[i]))
- 1977 | 			case "time":
- 1978 | 			case "times":
- 1981 | 			case "save":
- 1982 | 			case "saves":
- 1985 | 			case "load":
- 1986 | 			case "loads":
- 1989 | 			case "jump":
- 1990 | 			case "jumps":
- 1993 | 			case "nades":
- 1994 | 			case "nadejumps":
- 1997 | 			case "125":
- 1998 | 			case "250":
- 1999 | 			case "333":
- 2000 | 			case "43":
- 2001 | 			case "76":
- 2002 | 				fps = int(tolower(data[i]));
- 2004 | 			case "mix":
- 2005 | 			case "mixed":
- 2008 | 			case "1":
- 2009 | 			case "2":
- 2010 | 			case "3":
- 2011 | 			case "4":
- 2012 | 			case "5":
- 2013 | 			case "6":
- 2014 | 			case "7":
- 2015 | 			case "8":
- 2016 | 			case "9":
- 2017 | 			case "10":
- 2018 | 				num = int(tolower(data[i]));
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !donated
 
@@ -1813,57 +1415,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1961-2056`
 - Hidden input: no
 - Current page usage: `!donated [player] [1/0]`
 - Current page summary: Sets or revokes a connected player's donation status.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:44`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:45`
 - Handler: `donated(data)`
 - Help handler: `helpdonated(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slots 1, 2
-- Positional arguments observed: `data[2]` (argument 1), `data[3]` (argument 2)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Sets or strips donation rank`
-- `Usage: !donated [player] [1/0]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`, `data[3]`
+- References: none found
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: `1`, `0`, `donated`, `UPDATE `, ` SET donated = `, ` WHERE player_id = `, `player_id`
-- Unresolved same-file functions called with data: none
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `donated`, `helpdonated`
 
 ### Evidence functions
 
-- `donated(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:1642-1674`
-- `helpdonated(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:1676-1680`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 8 raw argument-related source lines</summary>
-
-#### `donated(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1642-1674`
-
-```gsc
- 1644 | 	if(!isdefined(data[2]))
- 1646 | 		self helpdonated(data);
- 1649 | 	player = findplayerbydata(data[2]);
- 1655 | 	if(!isdefined(data[3]) || (data[3] != "1" && data[3] != "0"))
- 1657 | 		self helpdonated(data);
- 1660 | 	player.data["donated"] = int(data[3]);
- 1661 | 	trt = add_async_query_nosave("UPDATE " + level.player_information_table + " SET donated = " + int(data[3]) + " WHERE player_id = " + player.data["player_id"]);
- 1664 | 	if(int(data[3]))
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !draw2d
 
@@ -1872,52 +1454,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1642-1674`
 - Hidden input: no
 - Current page usage: `!draw2d [on/off]`
 - Current page summary: Enables or disables all 2D HUD drawing for the player.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:98`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:95`
 - Handler: `draw2d(data)`
 - Help handler: `helpdraw2d(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Enable/disable 2d drawing`
-- `Usage: !draw2d [on/off]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: `on`, `off`, `draw2d`
-- Unresolved same-file functions called with data: none
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `draw2d`, `helpdraw2d`
 
 ### Evidence functions
 
-- `draw2d(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:912-920`
-- `helpdraw2d(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:922-926`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 3 raw argument-related source lines</summary>
-
-#### `draw2d(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:912-920`
-
-```gsc
-  914 | 	if(!isdefined(data[2]) || (data[2] != "on" && data[2] != "off"))
-  916 | 		self helpdraw2d(data);
-  919 | 	self JumpMod\_settings::changesetting("draw2d", data[2] == "on");
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !drawdist
 
@@ -1926,7 +1493,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:912-920`
 - Hidden input: yes
 - Current page usage: `!drawdist [distance >= 0]`
 - Current page summary: Sets a non-negative client draw distance; zero disables the override.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:8`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:9`
 - Handler: `drawdist(data)`
 - Help handler: `helpdrawdist(data)`
 
@@ -1954,8 +1521,8 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:912-920`
 
 ### Evidence functions
 
-- `drawdist(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:81-89`
-- `helpdrawdist(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:91-96`
+- `drawdist(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:82-90`
+- `helpdrawdist(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:92-97`
 
 ### Raw argument-related matches
 
@@ -1964,12 +1531,12 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:912-920`
 
 #### `drawdist(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:81-89`
+Source: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:82-90`
 
 ```gsc
-   83 | 	if(!isdefined(data[2]) || int(data[2]) < 0)
-   85 | 		self helpdrawdist(data);
-   88 | 	self JumpMod\_settings::changesetting("drawdist", data[2]);
+   84 | 	if(!isdefined(data[2]) || int(data[2]) < 0)
+   86 | 		self helpdrawdist(data);
+   89 | 	self JumpMod\_settings::changesetting("drawdist", data[2]);
 ```
 
 </details>
@@ -1981,55 +1548,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:81-89`
 - Hidden input: no
 - Current page usage: `!drawgun [on/off/toggle]`
 - Current page summary: Shows, hides, or toggles the first-person weapon model.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:100`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:97`
 - Handler: `drawgun(data)`
 - Help handler: `helpdrawgun(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Enable/disable gun drawing`
-- `Usage: !drawgun [on/off]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: `toggle`, `off`, `on`, `drawgun`
-- Unresolved same-file functions called with data: none
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `drawgun`, `helpdrawgun`
 
 ### Evidence functions
 
-- `drawgun(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:853-868`
-- `helpdrawgun(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:870-874`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 6 raw argument-related source lines</summary>
-
-#### `drawgun(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:853-868`
-
-```gsc
-  855 | 	if(isdefined(data[2]) && data[2] == "toggle")
-  858 | 			data[2] = "off";
-  860 | 			data[2] = "on";
-  862 | 	if(!isdefined(data[2]) || (data[2] != "on" && data[2] != "off"))
-  864 | 		self helpdrawgun(data);
-  867 | 	self JumpMod\_settings::changesetting("drawgun", data[2] == "on");
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !enablesave
 
@@ -2038,7 +1587,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:853-868`
 - Hidden input: no
 - Current page usage: `!enablesave [on/off]`
 - Current page summary: Force-enables or disables saving; enabling a blocked save marks the run cheated.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:111`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:115`
 - Handler: `enablesave(data)`
 - Help handler: `helpenablesave(data)`
 
@@ -2060,13 +1609,13 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:853-868`
 
 - References: `data[2]`
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: `on`, `off`
+- Quoted literals on raw matching lines: `on`
 - Unresolved same-file functions called with data: none
 
 ### Evidence functions
 
-- `enablesave(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:1177-1203`
-- `helpenablesave(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:1205-1209`
+- `enablesave(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:253-279`
+- `helpenablesave(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:281-285`
 
 ### Raw argument-related matches
 
@@ -2075,12 +1624,12 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:853-868`
 
 #### `enablesave(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1177-1203`
+Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:253-279`
 
 ```gsc
- 1179 | 	if(!isdefined(data[2]) || (data[2] != "on" && data[2] != "off"))
- 1181 | 		self helpenablesave(data);
- 1184 | 	if(data[2] == "on")
+  255 | 	if(!isonoff(data[2]))
+  257 | 		self helpenablesave(data);
+  260 | 	if(data[2] == "on")
 ```
 
 </details>
@@ -2092,7 +1641,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1177-1203`
 - Hidden input: no
 - Current page usage: `!endmap`
 - Current page summary: Starts an end-map vote when no equal- or higher-level admin is online.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:13`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:16`
 - Handler: `endmap(data)`
 - Help handler: `helpendmap(data)`
 
@@ -2103,23 +1652,22 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1177-1203`
 - Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Confirm that the command intentionally takes no arguments and that its in-game help is complete.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Use this command to end the current map`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
 - References: none found
 - Case labels in data-referencing functions: none found
 - Quoted literals on raw matching lines: none found
-- Unresolved same-file functions called with data: none
+- Unresolved same-file functions called with data: `endmap`, `helpendmap`
 
 ### Evidence functions
 
-- `endmap(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:4834-4845`
-- `helpendmap(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:4847-4850`
+
 
 ### Raw argument-related matches
 
@@ -2132,53 +1680,78 @@ No raw data references or pass-through calls found.
 - Hidden input: no
 - Current page usage: `!english [player]`
 - Current page summary: Plays an English-language reminder for a selected player.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:41`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:42`
 - Handler: `english(data)`
 - Help handler: `helpenglish(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Tries to convince a player to use the english language`
-- `Abuse of this function will not be tolerated`
-- `Usage: !english [player]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
+- Case labels in data-referencing functions: none found
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `english`, `helpenglish`
+
+### Evidence functions
+
+
+
+### Raw argument-related matches
+
+No raw data references or pass-through calls found.
+
+## !event
+
+- Access: level 0
+- Aliases: none
+- Hidden input: no
+- Current page usage: `!event`
+- Current page summary: Shows the Weekly Cup: time left, its 5 maps with their difficulty, then the top 3 and your rank at your fps (125 or 250).
+- Registration: `gsc/shared/jumpmod/_weekly_event.gsc:7`
+- Handler: `cmd_event(data)`
+- Help handler: `help_event(data)`
+
+### Review summary
+
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
+- Dynamic references: none found
+- Reads `data.size`: no
+- Reviewer focus: Confirm that the command intentionally takes no arguments and that its in-game help is complete.
+
+### In-game help strings collected by the existing sync
+
+- `Shows the Weekly Cup maps, the time left and the top 3 at your fps`
+- `Usage: !event`
+
+### Mechanical argument findings
+
+- References: none found
 - Case labels in data-referencing functions: none found
 - Quoted literals on raw matching lines: none found
 - Unresolved same-file functions called with data: none
 
 ### Evidence functions
 
-- `english(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:2099-2144`
-- `helpenglish(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:2146-2151`
+- `cmd_event(data)` — handler; `gsc/shared/jumpmod/_weekly_event.gsc:140-171`
+- `help_event(data)` — help handler; `gsc/shared/jumpmod/_weekly_event.gsc:208-212`
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 3 raw argument-related source lines</summary>
-
-#### `english(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2099-2144`
-
-```gsc
- 2109 | 	if(!isdefined(data[2]))
- 2111 | 		self helpenglish(data);
- 2114 | 	player = findplayerbydata(data[2]);
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !fignore
 
@@ -2187,7 +1760,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2099-2144`
 - Hidden input: no
 - Current page usage: `!fignore [player]`
 - Current page summary: Persistently ignores chat from a connected player.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:9`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:10`
 - Handler: `fignore(data)`
 - Help handler: `helpfignore(data)`
 
@@ -2215,9 +1788,9 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2099-2144`
 
 ### Evidence functions
 
-- `fignore(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:24-27`
-- `helpfignore(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:118-123`
-- `doignore(data, ignore, persist, help)` — called with data; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:80-102`
+- `fignore(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:25-28`
+- `helpfignore(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:110-115`
+- `doignore(data, ignore, persist, help)` — called with data; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:75-94`
 
 ### Raw argument-related matches
 
@@ -2226,20 +1799,20 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2099-2144`
 
 #### `fignore(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:24-27`
+Source: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:25-28`
 
 ```gsc
-   26 | 	self doignore(data, true, true, ::helpfignore);
+   27 | 	self doignore(data, true, true, ::helpfignore);
 ```
 
 #### `doignore(data, ignore, persist, help)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:80-102`
+Source: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:75-94`
 
 ```gsc
-   82 | 	if(!isdefined(data[2]))
-   84 | 		self [[help]](data);
-   87 | 	player = JumpMod\_j4l_cmd::findplayerbydata(data[2]);
+   77 | 	if(!isdefined(data[2]))
+   79 | 		self [[help]](data);
+   82 | 	player = self JumpMod\_j4l_cmd::findtarget(data[2]);
 ```
 
 </details>
@@ -2251,7 +1824,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:80-102`
 - Hidden input: yes
 - Current page usage: `!findmap [map name]`
 - Current page summary: Searches the map list using one or more name fragments.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd_vote.gsc:5`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd_vote.gsc:6`
 - Handler: `findmap(data)`
 - Help handler: `helpfindmap(data)`
 
@@ -2278,8 +1851,8 @@ Source: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:80-102`
 
 ### Evidence functions
 
-- `findmap(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_vote.gsc:12-27`
-- `helpfindmap(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd_vote.gsc:35-39`
+- `findmap(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_vote.gsc:13-28`
+- `helpfindmap(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd_vote.gsc:36-40`
 
 ### Raw argument-related matches
 
@@ -2288,14 +1861,14 @@ Source: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:80-102`
 
 #### `findmap(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd_vote.gsc:12-27`
+Source: `gsc/shared/jumpmod/_j4l_cmd_vote.gsc:13-28`
 
 ```gsc
-   14 | 	if(!isdefined(data[2]))
-   16 | 		self helpfindmap(data);
-   20 | 	for(i = 2; i < data.size; i++)
-   22 | 		mapname += stripstring(data[i]);
-   23 | 		if(i != data.size - 1)
+   15 | 	if(!isdefined(data[2]))
+   17 | 		self helpfindmap(data);
+   21 | 	for(i = 2; i < data.size; i++)
+   23 | 		mapname += stripstring(data[i]);
+   24 | 		if(i != data.size - 1)
 ```
 
 </details>
@@ -2307,52 +1880,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd_vote.gsc:12-27`
 - Hidden input: no
 - Current page usage: `!fmute [player]`
 - Current page summary: Mutes a connected player for one hour.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:33`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:36`
 - Handler: `fmute(data)`
 - Help handler: `helpfmute(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Mutes a player for 1 hour, including across reconnects`
-- `Usage: !fmute [player]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
 - Quoted literals on raw matching lines: none found
-- Unresolved same-file functions called with data: none
+- Unresolved same-file functions called with data: `fmute`, `helpfmute`
 
 ### Evidence functions
 
-- `fmute(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:4925-4951`
-- `helpfmute(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:4953-4957`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 3 raw argument-related source lines</summary>
-
-#### `fmute(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4925-4951`
-
-```gsc
- 4927 | 	if(!isdefined(data[2]))
- 4929 | 		self helpfmute(data);
- 4932 | 	player = findplayerbydata(data[2]);
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !fog
 
@@ -2361,52 +1919,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4925-4951`
 - Hidden input: no
 - Current page usage: `!fog [on/off]`
 - Current page summary: Enables or disables client fog rendering.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:99`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:96`
 - Handler: `fog(data)`
 - Help handler: `helpfog(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Enable/disable fog`
-- `Usage: !fog [on/off]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: `on`, `off`, `fog`
-- Unresolved same-file functions called with data: none
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `fog`, `helpfog`
 
 ### Evidence functions
 
-- `fog(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:837-845`
-- `helpfog(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:847-851`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 3 raw argument-related source lines</summary>
-
-#### `fog(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:837-845`
-
-```gsc
-  839 | 	if(!isdefined(data[2]) || (data[2] != "on" && data[2] != "off"))
-  841 | 		self helpfog(data);
-  844 | 	self JumpMod\_settings::changesetting("fog", data[2] == "on");
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !forcespec
 
@@ -2415,52 +1958,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:837-845`
 - Hidden input: no
 - Current page usage: `!forcespec [player]`
 - Current page summary: Moves yourself or a lower-level player to spectators once.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:26`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:29`
 - Handler: `forcespec(data)`
 - Help handler: `helpforcespec(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Use this command to force a player to spectate`
-- `Usage: !forcespec [player]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
 - Quoted literals on raw matching lines: none found
-- Unresolved same-file functions called with data: none
+- Unresolved same-file functions called with data: `forcespec`, `helpforcespec`
 
 ### Evidence functions
 
-- `forcespec(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:4998-5020`
-- `helpforcespec(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:5022-5026`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 3 raw argument-related source lines</summary>
-
-#### `forcespec(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4998-5020`
-
-```gsc
- 5000 | 	if(!isdefined(data[2]))
- 5002 | 		self helpforcespec(data);
- 5005 | 	player = findplayerbydata(data[2]);
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !forceteam
 
@@ -2469,60 +1997,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4998-5020`
 - Hidden input: no
 - Current page usage: `!forceteam [allies/axis/spectator/none] [player]`
 - Current page summary: Locks a lower-level player to a team, or removes that lock.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:64`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:62`
 - Handler: `forceteam(data)`
 - Help handler: `helpforceteam(data)`
 
 ### Review summary
 
-- Review tier: **Deep review**
-- Evidence footprint: positional slots 1, 2; 6 case labels
-- Positional arguments observed: `data[2]` (argument 1), `data[3]` (argument 2)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Trace each syntax branch and verify accepted values, defaults, required arguments, and examples.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Forces a player to a certain team`
-- `Usage: !forceteam [allies/axis/spectator/none] [player]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`, `data[3]`
-- Case labels in data-referencing functions: `"axis"`, `"allies"`, `"spectator"`, `"spectate"`, `"none"`, `"n"`
-- Quoted literals on raw matching lines: `axis`, `allies`, `spectator`, `spectate`, `none`, `n`
-- Unresolved same-file functions called with data: none
+- References: none found
+- Case labels in data-referencing functions: none found
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `forceteam`, `helpforceteam`
 
 ### Evidence functions
 
-- `forceteam(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:3638-3698`
-- `helpforceteam(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:3710-3714`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 11 raw argument-related source lines</summary>
-
-#### `forceteam(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:3638-3698`
-
-```gsc
- 3640 | 	if(!isdefined(data[2]) || !isdefined(data[3]))
- 3642 | 		self helpforceteam(data);
- 3646 | 	switch(data[2])
- 3648 | 		case "axis":
- 3651 | 		case "allies":
- 3654 | 		case "spectator":
- 3655 | 		case "spectate":
- 3658 | 		case "none":
- 3659 | 		case "n":
- 3662 | 		default:
- 3667 | 	player = findplayerbydata(data[3]);
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !fov
 
@@ -2531,7 +2036,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:3638-3698`
 - Hidden input: yes
 - Current page usage: `!fov [13-160/cycle]`
 - Current page summary: Sets FOV from 13 to 160 or cycles through preset values.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:10`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:11`
 - Handler: `fov(data)`
 - Help handler: `helpfov(data)`
 
@@ -2558,8 +2063,8 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:3638-3698`
 
 ### Evidence functions
 
-- `fov(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:118-126`
-- `helpfov()` — help handler; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:128-132`
+- `fov(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:119-127`
+- `helpfov()` — help handler; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:129-133`
 
 ### Raw argument-related matches
 
@@ -2568,11 +2073,11 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:3638-3698`
 
 #### `fov(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:118-126`
+Source: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:119-127`
 
 ```gsc
-  120 | 	if(!isdefined(data[2]))
-  125 | 	self JumpMod\_settings::changesetting("fov", data[2]);
+  121 | 	if(!isdefined(data[2]))
+  126 | 	self JumpMod\_settings::changesetting("fov", data[2]);
 ```
 
 </details>
@@ -2584,7 +2089,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:118-126`
 - Hidden input: yes
 - Current page usage: `!fps [43/76/125/250/333/1000/cycle]`
 - Current page summary: Sets max FPS to a supported value or cycles through presets.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:9`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:10`
 - Handler: `fps(data)`
 - Help handler: `helpfps(data)`
 
@@ -2612,8 +2117,8 @@ Source: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:118-126`
 
 ### Evidence functions
 
-- `fps(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:98-109`
-- `helpfps(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:111-116`
+- `fps(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:99-110`
+- `helpfps(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:112-117`
 
 ### Raw argument-related matches
 
@@ -2622,13 +2127,13 @@ Source: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:118-126`
 
 #### `fps(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:98-109`
+Source: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:99-110`
 
 ```gsc
-  100 | 	if(!isdefined(data[2]))
-  102 | 		self helpfps(data);
-  105 | 	if(self JumpMod\_settings::changesetting("com_maxfps", data[2]))
-  108 | 		self helpfps(data);
+  101 | 	if(!isdefined(data[2]))
+  103 | 		self helpfps(data);
+  106 | 	if(self JumpMod\_settings::changesetting("com_maxfps", data[2]))
+  109 | 		self helpfps(data);
 ```
 
 </details>
@@ -2640,59 +2145,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:98-109`
 - Hidden input: no
 - Current page usage: `!frename [player] [new name...] | !frename [player] NULL`
 - Current page summary: Immediately enforces a temporary name on a lower-level player.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:50`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:53`
 - Handler: `frename(data)`
 - Help handler: `helpfrename(data)`
 
 ### Review summary
 
-- Review tier: **Deep review**
-- Evidence footprint: positional slots 1, 2; dynamic argument scan; argument-count check
-- Positional arguments observed: `data[2]` (argument 1), `data[3]` (argument 2)
-- Dynamic references: `data[i]`
-- Reads `data.size`: yes
-- Reviewer focus: Trace each syntax branch and verify accepted values, defaults, required arguments, and examples.
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
+- Dynamic references: none found
+- Reads `data.size`: no
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Use this command to FORCEFULLY rename a player`
-- `Usage: !frename [player] newname`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`, `data[3]`, `data[i]`, `data.size`
+- References: none found
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: `NULL`, ` `
-- Unresolved same-file functions called with data: none
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `frename`, `helpfrename`
 
 ### Evidence functions
 
-- `frename(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:1257-1307`
-- `helpfrename(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:1309-1313`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 10 raw argument-related source lines</summary>
-
-#### `frename(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1257-1307`
-
-```gsc
- 1259 | 	if(!isdefined(data[2]))
- 1261 | 		self helpfrename(data);
- 1264 | 	player = findplayerbydata(data[2]);
- 1275 | 	else if(isdefined(data[3]))
- 1277 | 		if(data[3] == "NULL")
- 1286 | 		for(i = 3; i < data.size; i++)
- 1288 | 			if(i < data.size - 1)
- 1289 | 				string += data[i] + " ";
- 1291 | 				string += data[i];
- 1306 | 		self helpfrename(data);
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !fullscreennotification
 
@@ -2701,52 +2184,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1257-1307`
 - Hidden input: no
 - Current page usage: `!fullscreennotification [on/off]`
 - Current page summary: Enables or disables fullscreen save/load notifications.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:94`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:91`
 - Handler: `fullscreennotification(data)`
 - Help handler: `helpfullscreennotification(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Replace the save/load iprintln with a fullscreen colored flash`
-- `Usage: !fullscreennotification [on/off]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: `on`, `off`, `fsn`
-- Unresolved same-file functions called with data: none
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `fullscreennotification`, `helpfullscreennotification`
 
 ### Evidence functions
 
-- `fullscreennotification(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:2863-2871`
-- `helpfullscreennotification(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:2873-2877`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 3 raw argument-related source lines</summary>
-
-#### `fullscreennotification(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2863-2871`
-
-```gsc
- 2865 | 	if(!isdefined(data[2]) || (data[2] != "on" && data[2] != "off"))
- 2867 | 		self helpfullscreennotification(data);
- 2870 | 	self JumpMod\_settings::changesetting("fsn", data[2] == "on");
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !funignore
 
@@ -2755,7 +2223,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2863-2871`
 - Hidden input: no
 - Current page usage: `!funignore [player]`
 - Current page summary: Stops persistently ignoring chat from a connected player.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:10`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:11`
 - Handler: `funignore(data)`
 - Help handler: `helpfunignore(data)`
 
@@ -2783,9 +2251,9 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2863-2871`
 
 ### Evidence functions
 
-- `funignore(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:29-32`
-- `helpfunignore(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:125-130`
-- `doignore(data, ignore, persist, help)` — called with data; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:80-102`
+- `funignore(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:30-33`
+- `helpfunignore(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:117-122`
+- `doignore(data, ignore, persist, help)` — called with data; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:75-94`
 
 ### Raw argument-related matches
 
@@ -2794,20 +2262,20 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2863-2871`
 
 #### `funignore(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:29-32`
+Source: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:30-33`
 
 ```gsc
-   31 | 	self doignore(data, false, true, ::helpfunignore);
+   32 | 	self doignore(data, false, true, ::helpfunignore);
 ```
 
 #### `doignore(data, ignore, persist, help)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:80-102`
+Source: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:75-94`
 
 ```gsc
-   82 | 	if(!isdefined(data[2]))
-   84 | 		self [[help]](data);
-   87 | 	player = JumpMod\_j4l_cmd::findplayerbydata(data[2]);
+   77 | 	if(!isdefined(data[2]))
+   79 | 		self [[help]](data);
+   82 | 	player = self JumpMod\_j4l_cmd::findtarget(data[2]);
 ```
 
 </details>
@@ -2819,52 +2287,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:80-102`
 - Hidden input: no
 - Current page usage: `!funmute [player]`
 - Current page summary: Removes a forced mute from a connected player.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:34`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:37`
 - Handler: `funmute(data)`
 - Help handler: `helpfunmute(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Removes a mute set with !fmute`
-- `Usage: !funmute [player]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
 - Quoted literals on raw matching lines: none found
-- Unresolved same-file functions called with data: none
+- Unresolved same-file functions called with data: `funmute`, `helpfunmute`
 
 ### Evidence functions
 
-- `funmute(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:4959-4990`
-- `helpfunmute(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:4992-4996`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 3 raw argument-related source lines</summary>
-
-#### `funmute(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4959-4990`
-
-```gsc
- 4961 | 	if(!isdefined(data[2]))
- 4963 | 		self helpfunmute(data);
- 4966 | 	player = findplayerbydata(data[2]);
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !getlist
 
@@ -2873,7 +2326,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4959-4990`
 - Hidden input: yes
 - Current page usage: `!getlist`
 - Current page summary: Lists connected players with country, admin level, entity number, and name.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:76`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:74`
 - Handler: `getlist(data)`
 - Help handler: `helpgetlist(data)`
 
@@ -2901,8 +2354,8 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4959-4990`
 
 ### Evidence functions
 
-- `getlist(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:4727-4743`
-- `helpgetlist(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:4745-4750`
+- `getlist(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:939-955`
+- `helpgetlist(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:957-962`
 
 ### Raw argument-related matches
 
@@ -2915,52 +2368,37 @@ No raw data references or pass-through calls found.
 - Hidden input: no
 - Current page usage: `!givebacksave [checkpoint pass ID]`
 - Current page summary: Restores a deleted checkpoint pass to its connected player on the matching map.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:54`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:57`
 - Handler: `givebacksave(data)`
 - Help handler: `helpgivebacksave(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Gives a player back a save that accidentally got deleted due to finishing a run using cheating`
-- `Usage: !givebacksave [cp_pass_id] on the map in question`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
 - Quoted literals on raw matching lines: none found
-- Unresolved same-file functions called with data: none
+- Unresolved same-file functions called with data: `givebacksave`, `helpgivebacksave`
 
 ### Evidence functions
 
-- `givebacksave(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:213-222`
-- `helpgivebacksave(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:224-228`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 3 raw argument-related source lines</summary>
-
-#### `givebacksave(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:213-222`
-
-```gsc
-  215 | 	if(!isDefined(data[2]))
-  217 | 		self helpgivebacksave(data);
-  220 | 	pass_id = int(data[2]);
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !gun
 
@@ -2969,55 +2407,76 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:213-222`
 - Hidden input: no
 - Current page usage: `!gun [on/off/toggle]`
 - Current page summary: Enables, disables, or toggles weapon use for the player.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:103`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:100`
 - Handler: `gun(data)`
 - Help handler: `helpgun(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Enable/disable gun`
-- `Usage: !gun [on/off/toggle]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: `toggle`, `off`, `on`
-- Unresolved same-file functions called with data: none
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `gun`, `helpgun`
 
 ### Evidence functions
 
-- `gun(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:928-956`
-- `helpgun(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:958-962`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 6 raw argument-related source lines</summary>
+No raw data references or pass-through calls found.
 
-#### `gun(data)`
+## !hat
 
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:928-956`
+- Access: level 0
+- Aliases: none
+- Hidden input: yes
+- Current page usage: `!hat`
+- Current page summary: Wears a hat you own by its number in the shop (!hat <n>), saved like the shop's Equip and shown at once; off unequips it, !hat lists your numbers. A locked hat says how it unlocks. Level 100 can wear any hat without saving it, for testing. CoD2 only.
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:110`
+- Handler: `hat(data)`
+- Help handler: `helphat(data)`
 
-```gsc
-  932 | 	if(isdefined(data[2]) && data[2] == "toggle")
-  935 | 			data[2] = "off";
-  937 | 			data[2] = "on";
-  939 | 	if(!isdefined(data[2]) || (data[2] != "on" && data[2] != "off"))
-  941 | 		self helpgun(data);
-  945 | 	if(data[2] == "off")
-```
+### Review summary
 
-</details>
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
+- Dynamic references: none found
+- Reads `data.size`: no
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
+
+### In-game help strings collected by the existing sync
+
+- None found by the command sync parser.
+
+### Mechanical argument findings
+
+- References: none found
+- Case labels in data-referencing functions: none found
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `hat`, `helphat`
+
+### Evidence functions
+
+
+
+### Raw argument-related matches
+
+No raw data references or pass-through calls found.
 
 ## !hello
 
@@ -3026,53 +2485,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:928-956`
 - Hidden input: no
 - Current page usage: `!hello`
 - Current page summary: Plays a random song or taunt, subject to a shared cooldown.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:38`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:39`
 - Handler: `hello(data)`
 - Help handler: `helphello(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Play a random song`
-- `Cooldown time: 5 minutes or 1 minute (80+)`
-- `Usage: !hello`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`, `data[1]`
+- References: none found
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: `fucker`, `!ola`, `!lethal`, `cod4`
-- Unresolved same-file functions called with data: none
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `hello`, `helphello`
 
 ### Evidence functions
 
-- `hello(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:2500-2524`
-- `helphello(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:2526-2531`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 3 raw argument-related source lines</summary>
-
-#### `hello(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2500-2524`
-
-```gsc
- 2510 | 	if(isdefined(data[2]) && data[2] == "fucker")
- 2514 | 		if(data[1] == "!ola")
- 2516 | 		else if(data[1] == "!lethal" && level.gameversion == "cod4")
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !help
 
@@ -3081,7 +2524,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2500-2524`
 - Hidden input: no
 - Current page usage: `!help [command]`
 - Current page summary: Shows command-specific help by canonical name or alias.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:75`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:73`
 - Handler: `help(data)`
 - Help handler: `helphelp(data)`
 
@@ -3108,24 +2551,23 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2500-2524`
 
 ### Evidence functions
 
-- `help(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:4752-4826`
-- `helphelp(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:4828-4832`
+- `help(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:964-977`
+- `helphelp(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:998-1002`
 
 ### Raw argument-related matches
 
 <details>
-<summary>Show 5 raw argument-related source lines</summary>
+<summary>Show 4 raw argument-related source lines</summary>
 
 #### `help(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4752-4826`
+Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:964-977`
 
 ```gsc
- 4754 | 	if(!isdefined(data[2]))
- 4756 | 		self helphelp(data);
- 4759 | 	cmd = tolower(data[2]);
- 4766 | 				self [[level.commands[i].helpfunction]](data);
- 4799 | 						self [[level.commands[i].helpfunction]](data);
+  966 | 	if(!isdefined(data[2]))
+  968 | 		self helphelp(data);
+  971 | 	entry = findcommand(tolower(data[2]));
+  974 | 	self [[entry.helpfunction]](data);
 ```
 
 </details>
@@ -3137,50 +2579,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4752-4826`
 - Hidden input: no
 - Current page usage: `!howmany [player]`
 - Current page summary: Shows how many maps you or a connected player have fully finished.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:87`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:84`
 - Handler: `howmany(data)`
 - Help handler: `helphowmany(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Shows how many maps you've fully finished`
-- `Usage: !howmany`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
 - Quoted literals on raw matching lines: none found
-- Unresolved same-file functions called with data: none
+- Unresolved same-file functions called with data: `howmany`, `helphowmany`
 
 ### Evidence functions
 
-- `howmany(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:2312-2326`
-- `helphowmany(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:747-751`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 1 raw argument-related source line</summary>
-
-#### `howmany(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2312-2326`
-
-```gsc
- 2315 | 	player = findplayerbydata(data[2]);
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !hudedit
 
@@ -3189,7 +2618,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2312-2326`
 - Hidden input: no
 - Current page usage: `!hudedit`
 - Current page summary: Opens the in-game HUD editor.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:92`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:89`
 - Handler: `hudedit(data)`
 - Help handler: `helphudedit(data)`
 
@@ -3215,8 +2644,8 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2312-2326`
 
 ### Evidence functions
 
-- `hudedit(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:4212-4215`
-- `helphudedit(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:4217-4220`
+- `hudedit(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:650-653`
+- `helphudedit(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:655-658`
 
 ### Raw argument-related matches
 
@@ -3229,79 +2658,37 @@ No raw data references or pass-through calls found.
 - Hidden input: no
 - Current page usage: `!huds [on/off] | !huds stat [on/off] | !huds rec [on/off/full/smart] | !huds seconds [small/large] | !huds [nades/rpgs] [on/off]`
 - Current page summary: Controls record, statistics, timing, and grenade HUD components.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:91`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:88`
 - Handler: `huds(data)`
 - Help handler: `helphuds(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slots 1, 2
-- Positional arguments observed: `data[2]` (argument 1), `data[3]` (argument 2)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Allows you disable drawing of huds`
-- `Input: [on/off] rec [on/off] stat [on/off]`
-- `Usage: !huds [on/off] to completely enable/disable huds`
-- `Usage: !huds stat [on/off/top/bottom] to disable or move the statistics huds`
-- `Usage: !huds rec [on/off] to disable record huds`
-- `Usage: !huds rec [full/smart] to show full/partial records list`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`, `data[3]`
+- References: none found
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: `on`, `off`, `huds_rec_enabled`, `huds_stat_enabled`, `stat`, `rec`, `full`, `smart`, `showrecords_full_list`, `seconds`, `small`, `large`, `round_seconds`, `nades`, `rpgs`, `show_nades`
-- Unresolved same-file functions called with data: none
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `huds`, `helphuds`
 
 ### Evidence functions
 
-- `huds(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:4154-4200`
-- `helphuds(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:4202-4210`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 26 raw argument-related source lines</summary>
-
-#### `huds(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4154-4200`
-
-```gsc
- 4156 | 	if(!isdefined(data[2]))
- 4158 | 		self helphuds(data);
- 4161 | 	if(data[2] == "on" || data[2] == "off")
- 4163 | 		self JumpMod\_settings::changesetting("huds_rec_enabled", data[2] == "on");
- 4164 | 		self JumpMod\_settings::changesetting("huds_stat_enabled", data[2] == "on");
- 4166 | 	else if(!isdefined(data[3]))
- 4167 | 		self helphuds(data);
- 4168 | 	else if(data[2] == "stat")
- 4170 | 		if(data[3] == "on" || data[3] == "off")
- 4171 | 			self JumpMod\_settings::changesetting("huds_stat_enabled", data[3] == "on");
- 4173 | 			self helphuds(data);
- 4175 | 	else if(data[2] == "rec")
- 4177 | 		if(data[3] == "on" || data[3] == "off")
- 4178 | 			self JumpMod\_settings::changesetting("huds_rec_enabled", data[3] == "on");
- 4179 | 		else if(data[3] == "full" || data[3] == "smart")
- 4180 | 			self JumpMod\_settings::changesetting("showrecords_full_list", data[3] == "full");
- 4182 | 			self helphuds(data);
- 4184 | 	else if(data[2] == "seconds")
- 4186 | 		if(data[3] == "small" || data[3] == "large")
- 4187 | 			self JumpMod\_settings::changesetting("round_seconds", data[3] == "large");
- 4189 | 			self helphuds(data);
- 4191 | 	else if(data[2] == "nades" || data[2] == "rpgs")
- 4193 | 		if(data[3] == "on" || data[3] == "off")
- 4194 | 			self JumpMod\_settings::changesetting("show_nades", data[3] == "on");
- 4196 | 			self helphuds(data);
- 4199 | 		self helphuds(data);
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !ignore
 
@@ -3310,7 +2697,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4154-4200`
 - Hidden input: no
 - Current page usage: `!ignore [player]`
 - Current page summary: Ignores a connected player's messages for the current map session.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:5`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:6`
 - Handler: `ignore(data)`
 - Help handler: `helpignore(data)`
 
@@ -3338,9 +2725,9 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4154-4200`
 
 ### Evidence functions
 
-- `ignore(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:14-17`
-- `helpignore(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:104-109`
-- `doignore(data, ignore, persist, help)` — called with data; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:80-102`
+- `ignore(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:15-18`
+- `helpignore(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:96-101`
+- `doignore(data, ignore, persist, help)` — called with data; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:75-94`
 
 ### Raw argument-related matches
 
@@ -3349,79 +2736,20 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4154-4200`
 
 #### `ignore(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:14-17`
+Source: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:15-18`
 
 ```gsc
-   16 | 	self doignore(data, true, false, ::helpignore);
+   17 | 	self doignore(data, true, false, ::helpignore);
 ```
 
 #### `doignore(data, ignore, persist, help)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:80-102`
+Source: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:75-94`
 
 ```gsc
-   82 | 	if(!isdefined(data[2]))
-   84 | 		self [[help]](data);
-   87 | 	player = JumpMod\_j4l_cmd::findplayerbydata(data[2]);
-```
-
-</details>
-
-## !jumptimer
-
-- Access: level 0
-- Aliases: none
-- Hidden input: no
-- Current page usage: `!jumptimer [on/off]`
-- Current page summary: Shows or hides the jump-power restoration countdown.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd_vote.gsc:9`
-- Handler: `jumptimer(data)`
-- Help handler: `helpjumptimer(data)`
-
-### Review summary
-
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1; 2 case labels
-- Positional arguments observed: `data[2]` (argument 1)
-- Dynamic references: none found
-- Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
-
-### In-game help strings collected by the existing sync
-
-- `Shows a counter that counts until full restoration of jump-power`
-- `Usage: !jumptimer [on/off]`
-
-### Mechanical argument findings
-
-- References: `data[2]`
-- Case labels in data-referencing functions: `"on"`, `"off"`
-- Quoted literals on raw matching lines: `on`, `off`, `jumptimer_enabled`
-- Unresolved same-file functions called with data: none
-
-### Evidence functions
-
-- `jumptimer(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_vote.gsc:298-315`
-- `helpjumptimer(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd_vote.gsc:317-321`
-
-### Raw argument-related matches
-
-<details>
-<summary>Show 8 raw argument-related source lines</summary>
-
-#### `jumptimer(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd_vote.gsc:298-315`
-
-```gsc
-  300 | 	if(!isdefined(data[2]))
-  302 | 		self helpjumptimer(data);
-  305 | 	switch(data[2])
-  307 | 		case "on":
-  308 | 		case "off":
-  309 | 			self.data["jumptimer_enabled"] = (data[2] == "on");
-  311 | 		default:
-  312 | 			self helpjumptimer(data);
+   77 | 	if(!isdefined(data[2]))
+   79 | 		self [[help]](data);
+   82 | 	player = self JumpMod\_j4l_cmd::findtarget(data[2]);
 ```
 
 </details>
@@ -3433,55 +2761,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd_vote.gsc:298-315`
 - Hidden input: no
 - Current page usage: `!kick [player] [reason...]`
 - Current page summary: Kicks a lower-level player with an optional reason.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:28`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:31`
 - Handler: `kickplayer(data)`
 - Help handler: `helpkickplayer(data)`
 
 ### Review summary
 
-- Review tier: **Deep review**
-- Evidence footprint: positional slot 1; dynamic argument scan; argument-count check
-- Positional arguments observed: `data[2]` (argument 1)
-- Dynamic references: `data[i]`
-- Reads `data.size`: yes
-- Reviewer focus: Trace each syntax branch and verify accepted values, defaults, required arguments, and examples.
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
+- Dynamic references: none found
+- Reads `data.size`: no
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Use this command to kick a player`
-- `Usage: !kick [player]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`, `data[i]`, `data.size`
+- References: none found
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: ` `
-- Unresolved same-file functions called with data: none
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `kickplayer`, `helpkickplayer`
 
 ### Evidence functions
 
-- `kickplayer(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:5100-5129`
-- `helpkickplayer(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:5131-5135`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 6 raw argument-related source lines</summary>
-
-#### `kickplayer(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:5100-5129`
-
-```gsc
- 5102 | 	if(!isdefined(data[2]))
- 5104 | 		self helpkickplayer(data);
- 5107 | 	player = findplayerbydata(data[2]);
- 5119 | 	for(i = 3; i < data.size; i++)
- 5120 | 		str += data[i] + " ";
- 5122 | 	if(!data.size)
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !killplayer
 
@@ -3490,52 +2800,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:5100-5129`
 - Hidden input: no
 - Current page usage: `!killplayer [player]`
 - Current page summary: Kills yourself or a lower-level connected player who is actively playing.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:27`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:30`
 - Handler: `killplayer(data)`
 - Help handler: `helpkillplayer(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Use this command to kill a player`
-- `Usage: !killplayer [player]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
 - Quoted literals on raw matching lines: none found
-- Unresolved same-file functions called with data: none
+- Unresolved same-file functions called with data: `killplayer`, `helpkillplayer`
 
 ### Evidence functions
 
-- `killplayer(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:5028-5050`
-- `helpkillplayer(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:5052-5056`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 3 raw argument-related source lines</summary>
-
-#### `killplayer(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:5028-5050`
-
-```gsc
- 5030 | 	if(!isdefined(data[2]))
- 5032 | 		self helpkillplayer(data);
- 5035 | 	player = findplayerbydata(data[2]);
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !mapinfo
 
@@ -3544,53 +2839,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:5028-5050`
 - Hidden input: no
 - Current page usage: `!mapinfo [map name]`
 - Current page summary: Shows metadata for the current map or a searched map.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:82`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:80`
 - Handler: `mapinfo(data)`
 - Help handler: `helpmapinfo(data)`
 
 ### Review summary
 
-- Review tier: **Deep review**
-- Evidence footprint: positional slot 1; dynamic argument scan; argument-count check
-- Positional arguments observed: `data[2]` (argument 1)
-- Dynamic references: `data[i]`
-- Reads `data.size`: yes
-- Reviewer focus: Trace each syntax branch and verify accepted values, defaults, required arguments, and examples.
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
+- Dynamic references: none found
+- Reads `data.size`: no
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Shows information about a certain map`
-- `Usage: !mapinfo [mapname] or !mapinfo to find info about the current map`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`, `data[i]`, `data.size`
+- References: none found
 - Case labels in data-referencing functions: none found
 - Quoted literals on raw matching lines: none found
-- Unresolved same-file functions called with data: none
+- Unresolved same-file functions called with data: `mapinfo`, `helpmapinfo`
 
 ### Evidence functions
 
-- `mapinfo(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:2286-2310`
-- `helpmapinfo(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:2483-2487`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 4 raw argument-related source lines</summary>
-
-#### `mapinfo(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2286-2310`
-
-```gsc
- 2290 | 	if(!isdefined(data[2]))
- 2302 | 		for(i = 2; i < data.size; i++)
- 2304 | 			mapname += stripstring(data[i]);
- 2305 | 			if(i != data.size - 1)
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !measure
 
@@ -3599,7 +2878,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2286-2310`
 - Hidden input: no
 - Current page usage: `!measure [numbers/graph/maxspeed/color] [on/off]`
 - Current page summary: Controls the measurement numbers, graph, maximum-speed, and color displays.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:102`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:99`
 - Handler: `measure(data)`
 - Help handler: `helpmeasure(data)`
 
@@ -3626,8 +2905,8 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2286-2310`
 
 ### Evidence functions
 
-- `measure(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:964-979`
-- `helpmeasure(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:981-985`
+- `measure(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:230-245`
+- `helpmeasure(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:247-251`
 
 ### Raw argument-related matches
 
@@ -3636,22 +2915,61 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2286-2310`
 
 #### `measure(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:964-979`
+Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:230-245`
 
 ```gsc
-  966 | 	if(!isdefined(data[2]) || !isdefined(data[3]) || (data[2] != "graph" && data[2] != "numbers" && data[2] != "maxspeed") && data[2] != "color" || (data[3] != "on" && data[3] != "off"))
-  968 | 		self helpmeasure(data);
-  971 | 	if(data[2] == "graph")
-  972 | 		self JumpMod\_settings::changesetting("measure_graph", (data[3] == "on"));
-  973 | 	else if(data[2] == "numbers")
-  974 | 		self JumpMod\_settings::changesetting("measure_on", (data[3] == "on"));
-  975 | 	else if(data[2] == "maxspeed")
-  976 | 		self JumpMod\_settings::changesetting("measure_maxspeed", (data[3] == "on"));
-  977 | 	else if(data[2] == "color")
-  978 | 		self JumpMod\_settings::changesetting("measure_color", (data[3] == "on"));
+  232 | 	if(!isdefined(data[2]) || !isdefined(data[3]) || (data[2] != "graph" && data[2] != "numbers" && data[2] != "maxspeed") && data[2] != "color" || (data[3] != "on" && data[3] != "off"))
+  234 | 		self helpmeasure(data);
+  237 | 	if(data[2] == "graph")
+  238 | 		self JumpMod\_settings::changesetting("measure_graph", (data[3] == "on"));
+  239 | 	else if(data[2] == "numbers")
+  240 | 		self JumpMod\_settings::changesetting("measure_on", (data[3] == "on"));
+  241 | 	else if(data[2] == "maxspeed")
+  242 | 		self JumpMod\_settings::changesetting("measure_maxspeed", (data[3] == "on"));
+  243 | 	else if(data[2] == "color")
+  244 | 		self JumpMod\_settings::changesetting("measure_color", (data[3] == "on"));
 ```
 
 </details>
+
+## !member
+
+- Access: level 101
+- Aliases: none
+- Hidden input: no
+- Current page usage: `!member`
+- Current page summary: Sets or removes a player's J4L membership, which unlocks the member skins in the shop (level 101).
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:46`
+- Handler: `member(data)`
+- Help handler: `helpmember(data)`
+
+### Review summary
+
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
+- Dynamic references: none found
+- Reads `data.size`: no
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
+
+### In-game help strings collected by the existing sync
+
+- None found by the command sync parser.
+
+### Mechanical argument findings
+
+- References: none found
+- Case labels in data-referencing functions: none found
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `member`, `helpmember`
+
+### Evidence functions
+
+
+
+### Raw argument-related matches
+
+No raw data references or pass-through calls found.
 
 ## !moveteam
 
@@ -3660,59 +2978,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:964-979`
 - Hidden input: no
 - Current page usage: `!moveteam [allies/axis/spectator] [player]`
 - Current page summary: Moves a lower-level player to a team once without locking future team changes.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:37`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:38`
 - Handler: `moveteam(data)`
 - Help handler: `helpmoveteam(data)`
 
 ### Review summary
 
-- Review tier: **Deep review**
-- Evidence footprint: positional slots 1, 2; 5 case labels
-- Positional arguments observed: `data[2]` (argument 1), `data[3]` (argument 2)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Trace each syntax branch and verify accepted values, defaults, required arguments, and examples.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Moves a player to a certain team`
-- `Usage: !moveteam [allies/axis/spectator/none] [player]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`, `data[3]`
-- Case labels in data-referencing functions: `"axis"`, `"allies"`, `"spectator"`, `"spectate"`, `"spec"`
-- Quoted literals on raw matching lines: `axis`, `allies`, `spectator`, `spectate`, `spec`
-- Unresolved same-file functions called with data: none
+- References: none found
+- Case labels in data-referencing functions: none found
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `moveteam`, `helpmoveteam`
 
 ### Evidence functions
 
-- `moveteam(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:3586-3630`
-- `helpmoveteam(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:3632-3636`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 10 raw argument-related source lines</summary>
-
-#### `moveteam(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:3586-3630`
-
-```gsc
- 3588 | 	if(!isdefined(data[2]) || !isdefined(data[3]))
- 3590 | 		self helpmoveteam(data);
- 3594 | 	switch(data[2])
- 3596 | 		case "axis":
- 3599 | 		case "allies":
- 3602 | 		case "spectator":
- 3603 | 		case "spectate":
- 3604 | 		case "spec":
- 3607 | 		default:
- 3612 | 	player = findplayerbydata(data[3]);
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !mute
 
@@ -3721,52 +3017,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:3586-3630`
 - Hidden input: no
 - Current page usage: `!mute [player]`
 - Current page summary: Mutes yourself or a lower-level player for the current live session.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:31`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:34`
 - Handler: `mute(data)`
 - Help handler: `helpmute(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `This command mutes a player`
-- `Usage: !mute [player]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
 - Quoted literals on raw matching lines: none found
-- Unresolved same-file functions called with data: none
+- Unresolved same-file functions called with data: `mute`, `helpmute`
 
 ### Evidence functions
 
-- `mute(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:5404-5434`
-- `helpmute(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:5436-5440`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 3 raw argument-related source lines</summary>
-
-#### `mute(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:5404-5434`
-
-```gsc
- 5406 | 	if(!isdefined(data[2]))
- 5408 | 		self helpmute(data);
- 5411 | 	player = findplayerbydata(data[2]);
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !myid
 
@@ -3775,7 +3056,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:5404-5434`
 - Hidden input: no
 - Current page usage: `!myid`
 - Current page summary: Shows your persistent player account ID.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:81`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:79`
 - Handler: `myid(data)`
 - Help handler: `helpmyid(data)`
 
@@ -3802,8 +3083,8 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:5404-5434`
 
 ### Evidence functions
 
-- `myid(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:2489-2492`
-- `helpmyid(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:2494-2498`
+- `myid(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:383-386`
+- `helpmyid(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:388-392`
 
 ### Raw argument-related matches
 
@@ -3816,7 +3097,7 @@ No raw data references or pass-through calls found.
 - Hidden input: yes
 - Current page usage: `!nadecheat [on/off/99/angle]`
 - Current page summary: Controls grenade-damage cheats and grenade-angle diagnostics.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:116`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:122`
 - Handler: `nadecheat(data)`
 - Help handler: `helpnadecheat(data)`
 
@@ -3843,8 +3124,8 @@ No raw data references or pass-through calls found.
 
 ### Evidence functions
 
-- `nadecheat(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:1211-1249`
-- `helpnadecheat(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:1251-1255`
+- `nadecheat(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:287-325`
+- `helpnadecheat(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:327-331`
 
 ### Raw argument-related matches
 
@@ -3853,15 +3134,15 @@ No raw data references or pass-through calls found.
 
 #### `nadecheat(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1211-1249`
+Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:287-325`
 
 ```gsc
- 1213 | 	if(!isdefined(data[2]) || (data[2] != "on" && data[2] != "off" && data[2] != "99" && data[2] != "angle"))
- 1215 | 		self helpnadecheat(data);
- 1218 | 	if(data[2] == "on")
- 1224 | 	else if(data[2] == "off")
- 1230 | 	else if(data[2] == "99")
- 1236 | 	else if(data[2] == "angle")
+  289 | 	if(!isdefined(data[2]) || (data[2] != "on" && data[2] != "off" && data[2] != "99" && data[2] != "angle"))
+  291 | 		self helpnadecheat(data);
+  294 | 	if(data[2] == "on")
+  300 | 	else if(data[2] == "off")
+  306 | 	else if(data[2] == "99")
+  312 | 	else if(data[2] == "angle")
 ```
 
 </details>
@@ -3873,54 +3154,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1211-1249`
 - Hidden input: no
 - Current page usage: `!nades [player] [on/off]`
 - Current page summary: Enables or disables grenades for yourself or a lower-level player.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:65`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:63`
 - Handler: `nades(data)`
 - Help handler: `helpnades(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slots 1, 2
-- Positional arguments observed: `data[2]` (argument 1), `data[3]` (argument 2)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Enable/disable grenades for a certain player`
-- `Usage: !nades [player] [on/off]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`, `data[3]`
+- References: none found
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: `on`, `off`, `grenades_enabled`, `nades `, ` for `
-- Unresolved same-file functions called with data: none
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `nades`, `helpnades`
 
 ### Evidence functions
 
-- `nades(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:807-829`
-- `helpnades(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:831-835`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 5 raw argument-related source lines</summary>
-
-#### `nades(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:807-829`
-
-```gsc
-  809 | 	if(!isdefined(data[2]) || !isdefined(data[3]) || (data[3] != "on" && data[3] != "off"))
-  811 | 		self helpnades(data);
-  814 | 	player = findplayerbydata(data[2]);
-  825 | 	player.data["grenades_enabled"] = (data[3] == "on");
-  828 | 	iprintln("nades " + data[3] + " for " + player.name);
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !noclip
 
@@ -3929,7 +3193,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:807-829`
 - Hidden input: yes
 - Current page usage: `!noclip [speed 1-50]`
 - Current page summary: Toggles noclip, optionally using a movement-speed value from 1 to 50.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:115`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:121`
 - Handler: `noclip(data)`
 - Help handler: `helpnoclip(data)`
 
@@ -3956,8 +3220,8 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:807-829`
 
 ### Evidence functions
 
-- `noclip(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:5058-5075`
-- `helpnoclip(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:5077-5081`
+- `noclip(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:1004-1021`
+- `helpnoclip(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:1023-1027`
 
 ### Raw argument-related matches
 
@@ -3966,12 +3230,12 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:807-829`
 
 #### `noclip(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:5058-5075`
+Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1004-1021`
 
 ```gsc
- 5065 | 	if(isdefined(data[2]))
- 5066 | 		speed = stringtofloat(data[2]);
- 5071 | 	if(self.data["noclip"] && (self.data["noclip"] == speed || !isdefined(data[2])))
+ 1011 | 	if(isdefined(data[2]))
+ 1012 | 		speed = stringtofloat(data[2]);
+ 1017 | 	if(self.data["noclip"] && (self.data["noclip"] == speed || !isdefined(data[2])))
 ```
 
 </details>
@@ -3983,54 +3247,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:5058-5075`
 - Hidden input: no
 - Current page usage: `!nominate [map name]`
 - Current page summary: Searches for and nominates a map for the next-map rotation.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:14`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:17`
 - Handler: `nominate(data)`
 - Help handler: `helpnominate(data)`
 
 ### Review summary
 
-- Review tier: **Deep review**
-- Evidence footprint: positional slot 1; dynamic argument scan; argument-count check
-- Positional arguments observed: `data[2]` (argument 1)
-- Dynamic references: `data[i]`
-- Reads `data.size`: yes
-- Reviewer focus: Trace each syntax branch and verify accepted values, defaults, required arguments, and examples.
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
+- Dynamic references: none found
+- Reads `data.size`: no
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Sets the next map the server will run`
-- `Usage: !setnextmap [mapname]. Command accepts inputs like !setnextmap scu legend`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`, `data[i]`, `data.size`
+- References: none found
 - Case labels in data-referencing functions: none found
 - Quoted literals on raw matching lines: none found
-- Unresolved same-file functions called with data: none
+- Unresolved same-file functions called with data: `nominate`, `helpnominate`
 
 ### Evidence functions
 
-- `nominate(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:4694-4709`
-- `helpnominate(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:4721-4725`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 5 raw argument-related source lines</summary>
-
-#### `nominate(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4694-4709`
-
-```gsc
- 4696 | 	if(!isdefined(data[2]))
- 4698 | 		self helpnominate(data);
- 4702 | 	for(i = 2; i < data.size; i++)
- 4704 | 		mapname += stripstring(data[i]);
- 4705 | 		if(i != data.size - 1)
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !nowaypoints
 
@@ -4039,52 +3286,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4694-4709`
 - Hidden input: no
 - Current page usage: `!nowaypoints [on/off]`
 - Current page summary: Enables or disables hiding checkpoint waypoints.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:90`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:87`
 - Handler: `nowaypoints(data)`
 - Help handler: `helpnowaypoints(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Allows you disable drawing waypoints`
-- `Usage: !nowaypoints [on/off]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: `on`, `off`, `waypoints_enable`
-- Unresolved same-file functions called with data: none
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `nowaypoints`, `helpnowaypoints`
 
 ### Evidence functions
 
-- `nowaypoints(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:4138-4146`
-- `helpnowaypoints(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:4148-4152`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 3 raw argument-related source lines</summary>
-
-#### `nowaypoints(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4138-4146`
-
-```gsc
- 4140 | 	if(!isdefined(data[2]) || (data[2] != "on" && data[2] != "off"))
- 4142 | 		self helpnowaypoints(data);
- 4145 | 	self JumpMod\_settings::changesetting("waypoints_enable", data[2] == "off");
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !osmode
 
@@ -4093,52 +3325,76 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4138-4146`
 - Hidden input: no
 - Current page usage: `!osmode [on/off]`
 - Current page summary: Enables or disables old-school movement and its separate record category.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:126`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:132`
 - Handler: `osmode(data)`
 - Help handler: `helposmode(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Switch os mode on/off`
-- `Usage: !osmode [on/off]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: `on`, `off`, `os_mode`
-- Unresolved same-file functions called with data: none
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `osmode`, `helposmode`
 
 ### Evidence functions
 
-- `osmode(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:2560-2568`
-- `helposmode(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:2570-2574`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 3 raw argument-related source lines</summary>
+No raw data references or pass-through calls found.
 
-#### `osmode(data)`
+## !outfit
 
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2560-2568`
+- Access: level 0
+- Aliases: none
+- Hidden input: yes
+- Current page usage: `!outfit`
+- Current page summary: Wears an outfit you own by its number in the shop (!outfit <n>), saved like the shop's Equip and shown at once; off unequips it, !outfit lists your numbers. A locked outfit says how it unlocks. Level 100 can wear any outfit without saving it, for testing. CoD2 only.
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:109`
+- Handler: `outfit(data)`
+- Help handler: `helpoutfit(data)`
 
-```gsc
- 2562 | 	if(!isdefined(data[2]) || (data[2] != "on" && data[2] != "off"))
- 2564 | 		self helposmode(data);
- 2567 | 	self JumpMod\_settings::changesetting("os_mode", data[2] == "on");
-```
+### Review summary
 
-</details>
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
+- Dynamic references: none found
+- Reads `data.size`: no
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
+
+### In-game help strings collected by the existing sync
+
+- None found by the command sync parser.
+
+### Mechanical argument findings
+
+- References: none found
+- Case labels in data-referencing functions: none found
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `outfit`, `helpoutfit`
+
+### Evidence functions
+
+
+
+### Raw argument-related matches
+
+No raw data references or pass-through calls found.
 
 ## !personalbest
 
@@ -4147,107 +3403,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2560-2568`
 - Hidden input: no
 - Current page usage: `!personalbest [time/save/load/jump] [43/76/125/250/333/mix] [all]`
 - Current page summary: Shows your best result for the current route or every route.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:79`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:77`
 - Handler: `personalbest(data)`
 - Help handler: `helppersonalbest(data)`
 
 ### Review summary
 
-- Review tier: **Deep review**
-- Evidence footprint: positional slots 1, 2, 3; 16 case labels
-- Positional arguments observed: `data[2]` (argument 1), `data[3]` (argument 2), `data[4]` (argument 3)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Trace each syntax branch and verify accepted values, defaults, required arguments, and examples.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Shows you your best result on this map`
-- `Usage: !personalbest [time/load/save/jump] [43/76/125/250/333/mix]`
-- `Defaults to best time at 125 fps`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`, `data[3]`, `data[4]`
-- Case labels in data-referencing functions: `"time"`, `"times"`, `"save"`, `"saves"`, `"load"`, `"loads"`, `"jump"`, `"jumps"`, `"125"`, `"250"`, `"333"`, `"43"`, `"76"`, `"mix"`, `"mixed"`, `"all"`
-- Quoted literals on raw matching lines: `time`, `times`, `save`, `saves`, `load`, `loads`, `jump`, `jumps`, `125`, `250`, `333`, `43`, `76`, `mix`, `mixed`, `all`
-- Unresolved same-file functions called with data: none
+- References: none found
+- Case labels in data-referencing functions: none found
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `personalbest`, `helppersonalbest`
 
 ### Evidence functions
 
-- `personalbest(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:2599-2761`
-- `helppersonalbest(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:2816-2821`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 57 raw argument-related source lines</summary>
-
-#### `personalbest(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2599-2761`
-
-```gsc
- 2607 | 	if(isdefined(data[2]))
- 2609 | 		switch(tolower(data[2]))
- 2611 | 			case "time":
- 2612 | 			case "times":
- 2615 | 			case "save":
- 2616 | 			case "saves":
- 2619 | 			case "load":
- 2620 | 			case "loads":
- 2623 | 			case "jump":
- 2624 | 			case "jumps":
- 2627 | 			case "125":
- 2628 | 			case "250":
- 2629 | 			case "333":
- 2630 | 			case "43":
- 2631 | 			case "76":
- 2632 | 				fps = int(tolower(data[2]));
- 2634 | 			case "mix":
- 2635 | 			case "mixed":
- 2638 | 			case "all":
- 2643 | 	if(isdefined(data[3]))
- 2645 | 		switch(tolower(data[3]))
- 2647 | 			case "time":
- 2648 | 			case "times":
- 2651 | 			case "save":
- 2652 | 			case "saves":
- 2655 | 			case "load":
- 2656 | 			case "loads":
- 2659 | 			case "jump":
- 2660 | 			case "jumps":
- 2663 | 			case "125":
- 2664 | 			case "250":
- 2665 | 			case "333":
- 2666 | 			case "43":
- 2667 | 			case "76":
- 2668 | 				fps = int(tolower(data[3]));
- 2670 | 			case "mix":
- 2671 | 			case "mixed":
- 2674 | 			case "all":
- 2679 | 	if(isdefined(data[4]))
- 2681 | 		switch(tolower(data[4]))
- 2683 | 			case "time":
- 2684 | 			case "times":
- 2687 | 			case "save":
- 2688 | 			case "saves":
- 2691 | 			case "load":
- 2692 | 			case "loads":
- 2695 | 			case "jump":
- 2696 | 			case "jumps":
- 2699 | 			case "125":
- 2700 | 			case "250":
- 2701 | 			case "333":
- 2702 | 			case "43":
- 2703 | 			case "76":
- 2704 | 				fps = int(tolower(data[4]));
- 2706 | 			case "mix":
- 2707 | 			case "mixed":
- 2710 | 			case "all":
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !personalbestplayer
 
@@ -4256,109 +3442,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2599-2761`
 - Hidden input: no
 - Current page usage: `!personalbestplayer [player] [time/save/load/jump] [43/76/125/250/333/mix] [all]`
 - Current page summary: Shows another player's best result for the current route or every route.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:80`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:78`
 - Handler: `personalbestplayer(data)`
 - Help handler: `helppersonalbestplayer(data)`
 
 ### Review summary
 
-- Review tier: **Deep review**
-- Evidence footprint: positional slots 1, 2, 3, 4; 16 case labels
-- Positional arguments observed: `data[2]` (argument 1), `data[3]` (argument 2), `data[4]` (argument 3), `data[5]` (argument 4)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Trace each syntax branch and verify accepted values, defaults, required arguments, and examples.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Shows a player's best result on this map`
-- `Usage: !pbp [player] [time/load/save/jump] [fps/mix]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`, `data[5]`, `data[3]`, `data[4]`
-- Case labels in data-referencing functions: `"time"`, `"times"`, `"save"`, `"saves"`, `"load"`, `"loads"`, `"jump"`, `"jumps"`, `"125"`, `"250"`, `"333"`, `"43"`, `"76"`, `"mix"`, `"mixed"`, `"all"`
-- Quoted literals on raw matching lines: `time`, `times`, `save`, `saves`, `load`, `loads`, `jump`, `jumps`, `125`, `250`, `333`, `43`, `76`, `mix`, `mixed`, `all`
-- Unresolved same-file functions called with data: none
+- References: none found
+- Case labels in data-referencing functions: none found
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `personalbestplayer`, `helppersonalbestplayer`
 
 ### Evidence functions
 
-- `personalbestplayer(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:381-555`
-- `helppersonalbestplayer(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:613-617`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 60 raw argument-related source lines</summary>
-
-#### `personalbestplayer(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:381-555`
-
-```gsc
-  383 | 	if(!isdefined(data[2]))
-  385 | 		self helppersonalbestplayer(data);
-  388 | 	player = findplayerbydata(data[2]);
-  400 | 	if(isdefined(data[5]))
-  402 | 		switch(tolower(data[5]))
-  404 | 			case "time":
-  405 | 			case "times":
-  408 | 			case "save":
-  409 | 			case "saves":
-  412 | 			case "load":
-  413 | 			case "loads":
-  416 | 			case "jump":
-  417 | 			case "jumps":
-  420 | 			case "125":
-  421 | 			case "250":
-  422 | 			case "333":
-  423 | 			case "43":
-  424 | 			case "76":
-  425 | 				fps = int(tolower(data[5]));
-  427 | 			case "mix":
-  428 | 			case "mixed":
-  431 | 			case "all":
-  436 | 	if(isdefined(data[3]))
-  438 | 		switch(tolower(data[3]))
-  440 | 			case "time":
-  441 | 			case "times":
-  444 | 			case "save":
-  445 | 			case "saves":
-  448 | 			case "load":
-  449 | 			case "loads":
-  452 | 			case "jump":
-  453 | 			case "jumps":
-  456 | 			case "125":
-  457 | 			case "250":
-  458 | 			case "333":
-  459 | 			case "43":
-  460 | 			case "76":
-  461 | 				fps = int(tolower(data[3]));
-  463 | 			case "mix":
-  464 | 			case "mixed":
-  467 | 			case "all":
-  472 | 	if(isdefined(data[4]))
-  474 | 		switch(tolower(data[4]))
-  476 | 			case "time":
-  477 | 			case "times":
-  480 | 			case "save":
-  481 | 			case "saves":
-  484 | 			case "load":
-  485 | 			case "loads":
-  488 | 			case "jump":
-  489 | 			case "jumps":
-  492 | 			case "125":
-  493 | 			case "250":
-  494 | 			case "333":
-  495 | 			case "43":
-  496 | 			case "76":
-  497 | 				fps = int(tolower(data[4]));
-  499 | 			case "mix":
-  500 | 			case "mixed":
-  503 | 			case "all":
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !pistol
 
@@ -4367,7 +3481,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:381-555`
 - Hidden input: yes
 - Current page usage: `!pistol [pistol name]`
 - Current page summary: Selects a game-specific pistol, with the donor pistol restricted to donors.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:12`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:13`
 - Handler: `pistol(data)`
 - Help handler: `helppistol(data)`
 
@@ -4395,8 +3509,8 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:381-555`
 
 ### Evidence functions
 
-- `pistol(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:150-171`
-- `helppistol(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:173-185`
+- `pistol(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:151-172`
+- `helppistol(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:174-186`
 
 ### Raw argument-related matches
 
@@ -4405,13 +3519,13 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:381-555`
 
 #### `pistol(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:150-171`
+Source: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:151-172`
 
 ```gsc
-  152 | 	if(!isdefined(data[2]))
-  154 | 		self helppistol(data);
-  159 | 		if(JumpMod\_weapons::getpistolname(level.pistols[i]) == data[2])
-  170 | 	self helppistol(data);
+  153 | 	if(!isdefined(data[2]))
+  155 | 		self helppistol(data);
+  160 | 		if(JumpMod\_weapons::getpistolname(level.pistols[i]) == data[2])
+  171 | 	self helppistol(data);
 ```
 
 </details>
@@ -4423,7 +3537,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:150-171`
 - Hidden input: yes
 - Current page usage: `!players [server-name fragment]`
 - Current page summary: Lists players across the linked Jump4Life servers.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:120`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:126`
 - Handler: `playerservers(data)`
 - Help handler: `helpplayerservers(data)`
 
@@ -4450,8 +3564,8 @@ Source: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:150-171`
 
 ### Evidence functions
 
-- `playerservers(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:2901-2915`
-- `helpplayerservers(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:2917-2921`
+- `playerservers(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:488-502`
+- `helpplayerservers(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:504-508`
 
 ### Raw argument-related matches
 
@@ -4460,11 +3574,11 @@ Source: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:150-171`
 
 #### `playerservers(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2901-2915`
+Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:488-502`
 
 ```gsc
- 2903 | 	if(!isdefined(data[2]))
- 2913 | 		add_async_query("SELECT players, name FROM servers WHERE name LIKE '%" + stripstring(data[2]) + "%' AND name != '" + stripstring(getcvar("servername")) + "' AND players != '' AND last_online > (SELECT SUBTIME(NOW(), '0 0:05:00'))", ::showplayerservers, args);
+  490 | 	if(!isdefined(data[2]))
+  500 | 		add_async_query("SELECT players, name FROM servers WHERE name LIKE '%" + stripstring(data[2]) + "%' AND name != '" + stripstring(getcvar("servername")) + "' AND players != '' AND last_online > (SELECT SUBTIME(NOW(), '0 0:05:00'))", ::showplayerservers, args);
 ```
 
 </details>
@@ -4476,57 +3590,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2901-2915`
 - Hidden input: yes
 - Current page usage: `!pm [player] [message...]`
 - Current page summary: Sends a private free-text message to another player.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:39`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:40`
 - Handler: `pm(data)`
 - Help handler: `helppm(data)`
 
 ### Review summary
 
-- Review tier: **Deep review**
-- Evidence footprint: positional slots 1, 2; dynamic argument scan; argument-count check
-- Positional arguments observed: `data[2]` (argument 1), `data[3]` (argument 2)
-- Dynamic references: `data[i]`
-- Reads `data.size`: yes
-- Reviewer focus: Trace each syntax branch and verify accepted values, defaults, required arguments, and examples.
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
+- Dynamic references: none found
+- Reads `data.size`: no
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Send a private message to a player`
-- `Usage: !pm [player] [message]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`, `data[3]`, `data[i]`, `data.size`
+- References: none found
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: ` `
-- Unresolved same-file functions called with data: none
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `pm`, `helppm`
 
 ### Evidence functions
 
-- `pm(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:2187-2246`
-- `helppm(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:2248-2252`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 8 raw argument-related source lines</summary>
-
-#### `pm(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2187-2246`
-
-```gsc
- 2189 | 	if(!isdefined(data[2]))
- 2191 | 		self helppm(data);
- 2194 | 	player = findplayerbydata(data[2]);
- 2216 | 	if(!isdefined(data[3]))
- 2218 | 		self helppm(data);
- 2221 | 	txt = data[3];
- 2222 | 	for(i = 4; i < data.size; i++)
- 2223 | 		txt += " " + data[i];
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !poll
 
@@ -4535,54 +3629,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2187-2246`
 - Hidden input: no
 - Current page usage: `!poll [question...]`
 - Current page summary: Starts a yes/no poll with a free-text question.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:23`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:26`
 - Handler: `poll(data)`
 - Help handler: `helppoll(data)`
 
 ### Review summary
 
-- Review tier: **Deep review**
-- Evidence footprint: positional slot 1; dynamic argument scan; argument-count check
-- Positional arguments observed: `data[2]` (argument 1)
-- Dynamic references: `data[i]`
-- Reads `data.size`: yes
-- Reviewer focus: Trace each syntax branch and verify accepted values, defaults, required arguments, and examples.
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
+- Dynamic references: none found
+- Reads `data.size`: no
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Use to start a poll about something`
-- `Usage: !poll [question]`
-- `Example: !poll Is j4l awesome?`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`, `data[i]`, `data.size`
+- References: none found
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: ` `
-- Unresolved same-file functions called with data: none
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `poll`, `helppoll`
 
 ### Evidence functions
 
-- `poll(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:3566-3577`
-- `helppoll(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:3579-3584`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 4 raw argument-related source lines</summary>
-
-#### `poll(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:3566-3577`
-
-```gsc
- 3568 | 	if(!isdefined(data[2]))
- 3573 | 	str = data[2];
- 3574 | 	for(i = 3; i < data.size; i++)
- 3575 | 		str += " " + data[i];
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !promote
 
@@ -4591,53 +3668,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:3566-3577`
 - Hidden input: no
 - Current page usage: `!promote [player] [admin level -1 to 99]`
 - Current page summary: Sets a connected player's admin level subject to hierarchy and caller-specific caps.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:29`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:32`
 - Handler: `promote(data)`
 - Help handler: `helppromote(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slots 1, 2
-- Positional arguments observed: `data[2]` (argument 1), `data[3]` (argument 2)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Promotes/demotes a player to a certain adminlevel`
-- `Usage: !promote [player] [adminlevel]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`, `data[3]`
+- References: none found
 - Case labels in data-referencing functions: none found
 - Quoted literals on raw matching lines: none found
-- Unresolved same-file functions called with data: none
+- Unresolved same-file functions called with data: `promote`, `helppromote`
 
 ### Evidence functions
 
-- `promote(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:4580-4636`
-- `helppromote(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:4638-4642`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 4 raw argument-related source lines</summary>
-
-#### `promote(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4580-4636`
-
-```gsc
- 4582 | 	if(!isdefined(data[2]) || !isdefined(data[3]))
- 4584 | 		self helppromote(data);
- 4587 | 	lvl = int(data[3]);
- 4588 | 	player = findplayerbydata(data[2]);
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !pstats
 
@@ -4646,7 +3707,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4580-4636`
 - Hidden input: yes
 - Current page usage: `!pstats [player]`
 - Current page summary: Opens the player-statistics menu for yourself or a connected player.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:72`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:70`
 - Handler: `pstats(data)`
 - Help handler: `helppstats(data)`
 
@@ -4673,8 +3734,8 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4580-4636`
 
 ### Evidence functions
 
-- `pstats(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:4353-4373`
-- `helppstats(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:4375-4379`
+- `pstats(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:823-840`
+- `helppstats(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:842-846`
 
 ### Raw argument-related matches
 
@@ -4683,11 +3744,11 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4580-4636`
 
 #### `pstats(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4353-4373`
+Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:823-840`
 
 ```gsc
- 4355 | 	if(!isdefined(data[2]))
- 4363 | 	player = findplayerbydata(data[2]);
+  825 | 	if(!isdefined(data[2]))
+  833 | 	player = self findtarget(data[2]);
 ```
 
 </details>
@@ -4699,66 +3760,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4353-4373`
 - Hidden input: no
 - Current page usage: `!removexp [player] [amount]`
 - Current page summary: Removes a positive amount of rank XP from a connected player, clamped at zero.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:46`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:49`
 - Handler: `removexp(data)`
 - Help handler: `helpremovexp(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slots 1, 2
-- Positional arguments observed: `data[2]` (argument 1), `data[3]` (argument 2)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Removes game XP from a player`
-- `Usage: !removexp [player] [amount]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`, `data[3]`
+- References: none found
 - Case labels in data-referencing functions: none found
 - Quoted literals on raw matching lines: none found
-- Unresolved same-file functions called with data: none
+- Unresolved same-file functions called with data: `removexp`, `helpremovexp`
 
 ### Evidence functions
 
-- `removexp(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:1687-1690`
-- `helpremovexp(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:1808-1812`
-- `adjustrankxpcommand(data, add)` — called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:1692-1733`
-- `helpaddxp(data)` — called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:1802-1806`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 8 raw argument-related source lines</summary>
-
-#### `removexp(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1687-1690`
-
-```gsc
- 1689 | 	self adjustrankxpcommand(data, false);
-```
-
-#### `adjustrankxpcommand(data, add)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1692-1733`
-
-```gsc
- 1694 | 	if(!isdefined(data[2]) || !isdefined(data[3]))
- 1697 | 			self helpaddxp(data);
- 1699 | 			self helpremovexp(data);
- 1703 | 	player = findplayerbydata(data[2]);
- 1710 | 	amount = int(data[3]);
- 1714 | 			self helpaddxp(data);
- 1716 | 			self helpremovexp(data);
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !rename
 
@@ -4767,67 +3799,91 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1692-1733`
 - Hidden input: no
 - Current page usage: `!rename [player] [new name...]`
 - Current page summary: Changes a lower-level player's current name.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:25`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:28`
 - Handler: `rename(data)`
 - Help handler: `helprename(data)`
 
 ### Review summary
 
-- Review tier: **Deep review**
-- Evidence footprint: positional slots 1, 2; dynamic argument scan; argument-count check
-- Positional arguments observed: `data[2]` (argument 1), `data[3]` (argument 2)
-- Dynamic references: `data[i]`
-- Reads `data.size`: yes
-- Reviewer focus: Trace each syntax branch and verify accepted values, defaults, required arguments, and examples.
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
+- Dynamic references: none found
+- Reads `data.size`: no
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Use this command to rename a player`
-- `Usage: !rename [player] newname`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`, `data[3]`, `data[i]`, `data.size`
+- References: none found
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: ` `
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `rename`, `helprename`
+
+### Evidence functions
+
+
+
+### Raw argument-related matches
+
+No raw data references or pass-through calls found.
+
+## !replayanglehud
+
+- Access: level 0
+- Aliases: !ra
+- Hidden input: yes
+- Current page usage: `!replayanglehud`
+- Current page summary: Toggles the angle helper overlay during replay playback, driven by the recorded run.
+- Registration: `gsc/shared/jumpmod/_replay_playback.gsc:20`
+- Handler: `cmd_replayhudanglehelper(data)`
+- Help handler: `helpreplaycmd(data)`
+
+### Review summary
+
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
+- Dynamic references: none found
+- Reads `data.size`: no
+- Reviewer focus: Confirm that the command intentionally takes no arguments and that its in-game help is complete.
+
+### In-game help strings collected by the existing sync
+
+- `!rp / !replaypause pause or resume replay`
+- `!rs / !replayskip skip failed attempts`
+- `!rprev / !replayprevcp previous checkpoint, !rnext / !replaynextcp next checkpoint`
+- `!rx / !replayexit stop replay`
+- `!rh toggle replay HUD, !rsh speed, !rk keys, !rt timer, !rf fps`
+- `!rad / !replayanimdebug print the current anim and anim match counts (full list in the server log)`
+
+### Mechanical argument findings
+
+- References: none found
+- Case labels in data-referencing functions: none found
+- Quoted literals on raw matching lines: none found
 - Unresolved same-file functions called with data: none
 
 ### Evidence functions
 
-- `rename(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:4885-4917`
-- `helprename(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:4919-4923`
+- `cmd_replayhudanglehelper(data)` — handler; `gsc/shared/jumpmod/_replay_playback.gsc:909-923`
+- `helpreplaycmd(data)` — help handler; `gsc/shared/jumpmod/_replay_playback.gsc:29-38`
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 9 raw argument-related source lines</summary>
-
-#### `rename(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4885-4917`
-
-```gsc
- 4887 | 	if(!isdefined(data[2]))
- 4889 | 		self helprename(data);
- 4892 | 	player = findplayerbydata(data[2]);
- 4903 | 	else if(isdefined(data[3]))
- 4906 | 		for(i = 3; i < data.size; i++)
- 4908 | 			if(i < data.size - 1)
- 4909 | 				string += data[i] + " ";
- 4911 | 				string += data[i];
- 4916 | 		self helprename(data);
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !replayanimdebug
 
-- Access: level 0
+- Access: level 98
 - Aliases: !rad
 - Hidden input: yes
 - Current page usage: `!replayanimdebug`
 - Current page summary: Prints current and matching movement-animation names for replay diagnostics.
-- Registration: `gsc/shared/jumpmod/_replay_playback.gsc:17`
+- Registration: `gsc/shared/jumpmod/_replay_playback.gsc:21`
 - Handler: `cmd_replayanimdebug(data)`
 - Help handler: `helpreplaycmd(data)`
 
@@ -4847,7 +3903,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4885-4917`
 - `!rprev / !replayprevcp previous checkpoint, !rnext / !replaynextcp next checkpoint`
 - `!rx / !replayexit stop replay`
 - `!rh toggle replay HUD, !rsh speed, !rk keys, !rt timer, !rf fps`
-- `!rad / !replayanimdebug print loaded jump/fall anim names`
+- `!rad / !replayanimdebug print the current anim and anim match counts (full list in the server log)`
 
 ### Mechanical argument findings
 
@@ -4858,8 +3914,8 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4885-4917`
 
 ### Evidence functions
 
-- `cmd_replayanimdebug(data)` — handler; `gsc/shared/jumpmod/_replay_playback.gsc:35-47`
-- `helpreplaycmd(data)` — help handler; `gsc/shared/jumpmod/_replay_playback.gsc:25-33`
+- `cmd_replayanimdebug(data)` — handler; `gsc/shared/jumpmod/_replay_playback.gsc:40-52`
+- `helpreplaycmd(data)` — help handler; `gsc/shared/jumpmod/_replay_playback.gsc:29-38`
 
 ### Raw argument-related matches
 
@@ -4872,7 +3928,7 @@ No raw data references or pass-through calls found.
 - Hidden input: yes
 - Current page usage: `!replayexit`
 - Current page summary: Stops the active replay and returns the player to normal state.
-- Registration: `gsc/shared/jumpmod/_replay_playback.gsc:11`
+- Registration: `gsc/shared/jumpmod/_replay_playback.gsc:14`
 - Handler: `cmd_replayexit(data)`
 - Help handler: `helpreplaycmd(data)`
 
@@ -4892,7 +3948,7 @@ No raw data references or pass-through calls found.
 - `!rprev / !replayprevcp previous checkpoint, !rnext / !replaynextcp next checkpoint`
 - `!rx / !replayexit stop replay`
 - `!rh toggle replay HUD, !rsh speed, !rk keys, !rt timer, !rf fps`
-- `!rad / !replayanimdebug print loaded jump/fall anim names`
+- `!rad / !replayanimdebug print the current anim and anim match counts (full list in the server log)`
 
 ### Mechanical argument findings
 
@@ -4903,8 +3959,8 @@ No raw data references or pass-through calls found.
 
 ### Evidence functions
 
-- `cmd_replayexit(data)` — handler; `gsc/shared/jumpmod/_replay_playback.gsc:156-164`
-- `helpreplaycmd(data)` — help handler; `gsc/shared/jumpmod/_replay_playback.gsc:25-33`
+- `cmd_replayexit(data)` — handler; `gsc/shared/jumpmod/_replay_playback.gsc:157-165`
+- `helpreplaycmd(data)` — help handler; `gsc/shared/jumpmod/_replay_playback.gsc:29-38`
 
 ### Raw argument-related matches
 
@@ -4917,7 +3973,7 @@ No raw data references or pass-through calls found.
 - Hidden input: yes
 - Current page usage: `!replayfpshud`
 - Current page summary: Toggles the FPS display during replay playback; it starts enabled.
-- Registration: `gsc/shared/jumpmod/_replay_playback.gsc:16`
+- Registration: `gsc/shared/jumpmod/_replay_playback.gsc:19`
 - Handler: `cmd_replayhudfps(data)`
 - Help handler: `helpreplaycmd(data)`
 
@@ -4937,7 +3993,7 @@ No raw data references or pass-through calls found.
 - `!rprev / !replayprevcp previous checkpoint, !rnext / !replaynextcp next checkpoint`
 - `!rx / !replayexit stop replay`
 - `!rh toggle replay HUD, !rsh speed, !rk keys, !rt timer, !rf fps`
-- `!rad / !replayanimdebug print loaded jump/fall anim names`
+- `!rad / !replayanimdebug print the current anim and anim match counts (full list in the server log)`
 
 ### Mechanical argument findings
 
@@ -4948,8 +4004,8 @@ No raw data references or pass-through calls found.
 
 ### Evidence functions
 
-- `cmd_replayhudfps(data)` — handler; `gsc/shared/jumpmod/_replay_playback.gsc:829-838`
-- `helpreplaycmd(data)` — help handler; `gsc/shared/jumpmod/_replay_playback.gsc:25-33`
+- `cmd_replayhudfps(data)` — handler; `gsc/shared/jumpmod/_replay_playback.gsc:947-956`
+- `helpreplaycmd(data)` — help handler; `gsc/shared/jumpmod/_replay_playback.gsc:29-38`
 
 ### Raw argument-related matches
 
@@ -4962,7 +4018,7 @@ No raw data references or pass-through calls found.
 - Hidden input: yes
 - Current page usage: `!replayhud`
 - Current page summary: Toggles all 2D HUD drawing during replay playback.
-- Registration: `gsc/shared/jumpmod/_replay_playback.gsc:12`
+- Registration: `gsc/shared/jumpmod/_replay_playback.gsc:15`
 - Handler: `cmd_replayhudtoggle(data)`
 - Help handler: `helpreplaycmd(data)`
 
@@ -4982,7 +4038,7 @@ No raw data references or pass-through calls found.
 - `!rprev / !replayprevcp previous checkpoint, !rnext / !replaynextcp next checkpoint`
 - `!rx / !replayexit stop replay`
 - `!rh toggle replay HUD, !rsh speed, !rk keys, !rt timer, !rf fps`
-- `!rad / !replayanimdebug print loaded jump/fall anim names`
+- `!rad / !replayanimdebug print the current anim and anim match counts (full list in the server log)`
 
 ### Mechanical argument findings
 
@@ -4993,8 +4049,8 @@ No raw data references or pass-through calls found.
 
 ### Evidence functions
 
-- `cmd_replayhudtoggle(data)` — handler; `gsc/shared/jumpmod/_replay_playback.gsc:748-771`
-- `helpreplaycmd(data)` — help handler; `gsc/shared/jumpmod/_replay_playback.gsc:25-33`
+- `cmd_replayhudtoggle(data)` — handler; `gsc/shared/jumpmod/_replay_playback.gsc:871-891`
+- `helpreplaycmd(data)` — help handler; `gsc/shared/jumpmod/_replay_playback.gsc:29-38`
 
 ### Raw argument-related matches
 
@@ -5007,7 +4063,7 @@ No raw data references or pass-through calls found.
 - Hidden input: yes
 - Current page usage: `!replaykeyhud`
 - Current page summary: Toggles the replay key-input display; it starts disabled.
-- Registration: `gsc/shared/jumpmod/_replay_playback.gsc:14`
+- Registration: `gsc/shared/jumpmod/_replay_playback.gsc:17`
 - Handler: `cmd_replayhudkeys(data)`
 - Help handler: `helpreplaycmd(data)`
 
@@ -5027,7 +4083,7 @@ No raw data references or pass-through calls found.
 - `!rprev / !replayprevcp previous checkpoint, !rnext / !replaynextcp next checkpoint`
 - `!rx / !replayexit stop replay`
 - `!rh toggle replay HUD, !rsh speed, !rk keys, !rt timer, !rf fps`
-- `!rad / !replayanimdebug print loaded jump/fall anim names`
+- `!rad / !replayanimdebug print the current anim and anim match counts (full list in the server log)`
 
 ### Mechanical argument findings
 
@@ -5038,8 +4094,8 @@ No raw data references or pass-through calls found.
 
 ### Evidence functions
 
-- `cmd_replayhudkeys(data)` — handler; `gsc/shared/jumpmod/_replay_playback.gsc:807-816`
-- `helpreplaycmd(data)` — help handler; `gsc/shared/jumpmod/_replay_playback.gsc:25-33`
+- `cmd_replayhudkeys(data)` — handler; `gsc/shared/jumpmod/_replay_playback.gsc:925-934`
+- `helpreplaycmd(data)` — help handler; `gsc/shared/jumpmod/_replay_playback.gsc:29-38`
 
 ### Raw argument-related matches
 
@@ -5052,7 +4108,7 @@ No raw data references or pass-through calls found.
 - Hidden input: yes
 - Current page usage: `!replaynextcp`
 - Current page summary: Seeks to the next recorded checkpoint during replay playback.
-- Registration: `gsc/shared/jumpmod/_replay_playback.gsc:10`
+- Registration: `gsc/shared/jumpmod/_replay_playback.gsc:13`
 - Handler: `cmd_replaynextcp(data)`
 - Help handler: `helpreplaycmd(data)`
 
@@ -5072,7 +4128,7 @@ No raw data references or pass-through calls found.
 - `!rprev / !replayprevcp previous checkpoint, !rnext / !replaynextcp next checkpoint`
 - `!rx / !replayexit stop replay`
 - `!rh toggle replay HUD, !rsh speed, !rk keys, !rt timer, !rf fps`
-- `!rad / !replayanimdebug print loaded jump/fall anim names`
+- `!rad / !replayanimdebug print the current anim and anim match counts (full list in the server log)`
 
 ### Mechanical argument findings
 
@@ -5083,8 +4139,8 @@ No raw data references or pass-through calls found.
 
 ### Evidence functions
 
-- `cmd_replaynextcp(data)` — handler; `gsc/shared/jumpmod/_replay_playback.gsc:132-137`
-- `helpreplaycmd(data)` — help handler; `gsc/shared/jumpmod/_replay_playback.gsc:25-33`
+- `cmd_replaynextcp(data)` — handler; `gsc/shared/jumpmod/_replay_playback.gsc:133-138`
+- `helpreplaycmd(data)` — help handler; `gsc/shared/jumpmod/_replay_playback.gsc:29-38`
 
 ### Raw argument-related matches
 
@@ -5097,7 +4153,7 @@ No raw data references or pass-through calls found.
 - Hidden input: yes
 - Current page usage: `!replaypause`
 - Current page summary: Pauses or resumes the active replay.
-- Registration: `gsc/shared/jumpmod/_replay_playback.gsc:7`
+- Registration: `gsc/shared/jumpmod/_replay_playback.gsc:10`
 - Handler: `cmd_replaypause(data)`
 - Help handler: `helpreplaycmd(data)`
 
@@ -5117,7 +4173,7 @@ No raw data references or pass-through calls found.
 - `!rprev / !replayprevcp previous checkpoint, !rnext / !replaynextcp next checkpoint`
 - `!rx / !replayexit stop replay`
 - `!rh toggle replay HUD, !rsh speed, !rk keys, !rt timer, !rf fps`
-- `!rad / !replayanimdebug print loaded jump/fall anim names`
+- `!rad / !replayanimdebug print the current anim and anim match counts (full list in the server log)`
 
 ### Mechanical argument findings
 
@@ -5128,8 +4184,8 @@ No raw data references or pass-through calls found.
 
 ### Evidence functions
 
-- `cmd_replaypause(data)` — handler; `gsc/shared/jumpmod/_replay_playback.gsc:111-116`
-- `helpreplaycmd(data)` — help handler; `gsc/shared/jumpmod/_replay_playback.gsc:25-33`
+- `cmd_replaypause(data)` — handler; `gsc/shared/jumpmod/_replay_playback.gsc:112-117`
+- `helpreplaycmd(data)` — help handler; `gsc/shared/jumpmod/_replay_playback.gsc:29-38`
 
 ### Raw argument-related matches
 
@@ -5142,7 +4198,7 @@ No raw data references or pass-through calls found.
 - Hidden input: yes
 - Current page usage: `!replayprevcp`
 - Current page summary: Seeks to the previous recorded checkpoint during replay playback.
-- Registration: `gsc/shared/jumpmod/_replay_playback.gsc:9`
+- Registration: `gsc/shared/jumpmod/_replay_playback.gsc:12`
 - Handler: `cmd_replayprevcp(data)`
 - Help handler: `helpreplaycmd(data)`
 
@@ -5162,7 +4218,7 @@ No raw data references or pass-through calls found.
 - `!rprev / !replayprevcp previous checkpoint, !rnext / !replaynextcp next checkpoint`
 - `!rx / !replayexit stop replay`
 - `!rh toggle replay HUD, !rsh speed, !rk keys, !rt timer, !rf fps`
-- `!rad / !replayanimdebug print loaded jump/fall anim names`
+- `!rad / !replayanimdebug print the current anim and anim match counts (full list in the server log)`
 
 ### Mechanical argument findings
 
@@ -5173,8 +4229,8 @@ No raw data references or pass-through calls found.
 
 ### Evidence functions
 
-- `cmd_replayprevcp(data)` — handler; `gsc/shared/jumpmod/_replay_playback.gsc:125-130`
-- `helpreplaycmd(data)` — help handler; `gsc/shared/jumpmod/_replay_playback.gsc:25-33`
+- `cmd_replayprevcp(data)` — handler; `gsc/shared/jumpmod/_replay_playback.gsc:126-131`
+- `helpreplaycmd(data)` — help handler; `gsc/shared/jumpmod/_replay_playback.gsc:29-38`
 
 ### Raw argument-related matches
 
@@ -5187,7 +4243,7 @@ No raw data references or pass-through calls found.
 - Hidden input: yes
 - Current page usage: `!replayskip`
 - Current page summary: Requests a manual skip ahead in the active replay.
-- Registration: `gsc/shared/jumpmod/_replay_playback.gsc:8`
+- Registration: `gsc/shared/jumpmod/_replay_playback.gsc:11`
 - Handler: `cmd_replayskip(data)`
 - Help handler: `helpreplaycmd(data)`
 
@@ -5207,7 +4263,7 @@ No raw data references or pass-through calls found.
 - `!rprev / !replayprevcp previous checkpoint, !rnext / !replaynextcp next checkpoint`
 - `!rx / !replayexit stop replay`
 - `!rh toggle replay HUD, !rsh speed, !rk keys, !rt timer, !rf fps`
-- `!rad / !replayanimdebug print loaded jump/fall anim names`
+- `!rad / !replayanimdebug print the current anim and anim match counts (full list in the server log)`
 
 ### Mechanical argument findings
 
@@ -5218,8 +4274,8 @@ No raw data references or pass-through calls found.
 
 ### Evidence functions
 
-- `cmd_replayskip(data)` — handler; `gsc/shared/jumpmod/_replay_playback.gsc:118-123`
-- `helpreplaycmd(data)` — help handler; `gsc/shared/jumpmod/_replay_playback.gsc:25-33`
+- `cmd_replayskip(data)` — handler; `gsc/shared/jumpmod/_replay_playback.gsc:119-124`
+- `helpreplaycmd(data)` — help handler; `gsc/shared/jumpmod/_replay_playback.gsc:29-38`
 
 ### Raw argument-related matches
 
@@ -5232,7 +4288,7 @@ No raw data references or pass-through calls found.
 - Hidden input: yes
 - Current page usage: `!replayspeedhud`
 - Current page summary: Toggles the replay speed display; it starts disabled.
-- Registration: `gsc/shared/jumpmod/_replay_playback.gsc:13`
+- Registration: `gsc/shared/jumpmod/_replay_playback.gsc:16`
 - Handler: `cmd_replayhudspeedmeter(data)`
 - Help handler: `helpreplaycmd(data)`
 
@@ -5252,7 +4308,7 @@ No raw data references or pass-through calls found.
 - `!rprev / !replayprevcp previous checkpoint, !rnext / !replaynextcp next checkpoint`
 - `!rx / !replayexit stop replay`
 - `!rh toggle replay HUD, !rsh speed, !rk keys, !rt timer, !rf fps`
-- `!rad / !replayanimdebug print loaded jump/fall anim names`
+- `!rad / !replayanimdebug print the current anim and anim match counts (full list in the server log)`
 
 ### Mechanical argument findings
 
@@ -5263,8 +4319,8 @@ No raw data references or pass-through calls found.
 
 ### Evidence functions
 
-- `cmd_replayhudspeedmeter(data)` — handler; `gsc/shared/jumpmod/_replay_playback.gsc:773-787`
-- `helpreplaycmd(data)` — help handler; `gsc/shared/jumpmod/_replay_playback.gsc:25-33`
+- `cmd_replayhudspeedmeter(data)` — handler; `gsc/shared/jumpmod/_replay_playback.gsc:893-907`
+- `helpreplaycmd(data)` — help handler; `gsc/shared/jumpmod/_replay_playback.gsc:29-38`
 
 ### Raw argument-related matches
 
@@ -5277,7 +4333,7 @@ No raw data references or pass-through calls found.
 - Hidden input: yes
 - Current page usage: `!replaytimerhud`
 - Current page summary: Toggles the replay timer display; it starts disabled.
-- Registration: `gsc/shared/jumpmod/_replay_playback.gsc:15`
+- Registration: `gsc/shared/jumpmod/_replay_playback.gsc:18`
 - Handler: `cmd_replayhudjumptimer(data)`
 - Help handler: `helpreplaycmd(data)`
 
@@ -5297,7 +4353,7 @@ No raw data references or pass-through calls found.
 - `!rprev / !replayprevcp previous checkpoint, !rnext / !replaynextcp next checkpoint`
 - `!rx / !replayexit stop replay`
 - `!rh toggle replay HUD, !rsh speed, !rk keys, !rt timer, !rf fps`
-- `!rad / !replayanimdebug print loaded jump/fall anim names`
+- `!rad / !replayanimdebug print the current anim and anim match counts (full list in the server log)`
 
 ### Mechanical argument findings
 
@@ -5308,8 +4364,8 @@ No raw data references or pass-through calls found.
 
 ### Evidence functions
 
-- `cmd_replayhudjumptimer(data)` — handler; `gsc/shared/jumpmod/_replay_playback.gsc:818-827`
-- `helpreplaycmd(data)` — help handler; `gsc/shared/jumpmod/_replay_playback.gsc:25-33`
+- `cmd_replayhudjumptimer(data)` — handler; `gsc/shared/jumpmod/_replay_playback.gsc:936-945`
+- `helpreplaycmd(data)` — help handler; `gsc/shared/jumpmod/_replay_playback.gsc:29-38`
 
 ### Raw argument-related matches
 
@@ -5322,7 +4378,7 @@ No raw data references or pass-through calls found.
 - Hidden input: yes
 - Current page usage: `!reset`
 - Current page summary: Immediately abandons the current run state and starts a fresh run.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:124`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:130`
 - Handler: `reset(data)`
 - Help handler: `helpreset(data)`
 
@@ -5349,8 +4405,8 @@ No raw data references or pass-through calls found.
 
 ### Evidence functions
 
-- `reset(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:5383-5386`
-- `helpreset(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:5398-5402`
+- `reset(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:1075-1078`
+- `helpreset(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:1090-1094`
 
 ### Raw argument-related matches
 
@@ -5363,51 +4419,37 @@ No raw data references or pass-through calls found.
 - Hidden input: no
 - Current page usage: `!runid [player]`
 - Current page summary: Shows the current run ID for you or a connected player.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:86`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:83`
 - Handler: `runid(data)`
 - Help handler: `helprunid(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Show the runid of a player`
-- `Usage: !runid or !runid [player]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
 - Quoted literals on raw matching lines: none found
-- Unresolved same-file functions called with data: none
+- Unresolved same-file functions called with data: `runid`, `helprunid`
 
 ### Evidence functions
 
-- `runid(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:1003-1017`
-- `helprunid(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:1019-1023`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 2 raw argument-related source lines</summary>
-
-#### `runid(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1003-1017`
-
-```gsc
- 1005 | 	if(!isdefined(data[2]))
- 1009 | 		player = findplayerbydata(data[2]);
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !savelist
 
@@ -5416,7 +4458,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1003-1017`
 - Hidden input: no
 - Current page usage: `!savelist [cps/time/date]`
 - Current page summary: Changes saved-run history sorting and refreshes the history menu.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:132`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:137`
 - Handler: `savelist(data)`
 - Help handler: `helpsavelist(data)`
 
@@ -5444,8 +4486,8 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1003-1017`
 
 ### Evidence functions
 
-- `savelist(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:753-776`
-- `helpsavelist(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:778-783`
+- `savelist(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:198-221`
+- `helpsavelist(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:223-228`
 
 ### Raw argument-related matches
 
@@ -5454,18 +4496,18 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1003-1017`
 
 #### `savelist(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:753-776`
+Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:198-221`
 
 ```gsc
-  755 | 	if(!isdefined(data[2]))
-  757 | 		self helpsavelist(data);
-  760 | 	switch(data[2])
-  762 | 		case "cps":
-  763 | 		case "time":
-  764 | 		case "date":
-  766 | 			self.data["loadpos_order_by"] = data[2];
-  770 | 		default:
-  772 | 			self helpsavelist(data);
+  200 | 	if(!isdefined(data[2]))
+  202 | 		self helpsavelist(data);
+  205 | 	switch(data[2])
+  207 | 		case "cps":
+  208 | 		case "time":
+  209 | 		case "date":
+  211 | 			self.data["loadpos_order_by"] = data[2];
+  215 | 		default:
+  217 | 			self helpsavelist(data);
 ```
 
 </details>
@@ -5477,7 +4519,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:753-776`
 - Hidden input: no
 - Current page usage: `!saverun`
 - Current page summary: Protects the current unfinished run's replay metadata from cleanup for six months.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:133`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:138`
 - Handler: `saverun(data)`
 - Help handler: `helpsaverun(data)`
 
@@ -5488,24 +4530,22 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:753-776`
 - Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Confirm that the command intentionally takes no arguments and that its in-game help is complete.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Protect current unfinished run for 6 months`
-- `Usage: !saverun`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
 - References: none found
 - Case labels in data-referencing functions: none found
 - Quoted literals on raw matching lines: none found
-- Unresolved same-file functions called with data: none
+- Unresolved same-file functions called with data: `saverun`, `helpsaverun`
 
 ### Evidence functions
 
-- `saverun(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:785-799`
-- `helpsaverun(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:801-805`
+
 
 ### Raw argument-related matches
 
@@ -5518,7 +4558,7 @@ No raw data references or pass-through calls found.
 - Hidden input: no
 - Current page usage: `!savesettings`
 - Current page summary: Queues persistence of the current player preferences and writes the client settings config.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:123`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:129`
 - Handler: `savesettings(data)`
 - Help handler: `helpsavesettings(data)`
 
@@ -5545,8 +4585,8 @@ No raw data references or pass-through calls found.
 
 ### Evidence functions
 
-- `savesettings(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:4484-4488`
-- `helpsavesettings(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:4490-4494`
+- `savesettings(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:879-883`
+- `helpsavesettings(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:885-889`
 
 ### Raw argument-related matches
 
@@ -5559,53 +4599,37 @@ No raw data references or pass-through calls found.
 - Hidden input: no
 - Current page usage: `!saybold [message...]`
 - Current page summary: Prints a bold free-text message to players who are not ignoring the sender.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:22`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:25`
 - Handler: `saybold(data)`
 - Help handler: `helpsaybold(data)`
 
 ### Review summary
 
-- Review tier: **Deep review**
-- Evidence footprint: dynamic argument scan; argument-count check
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
 - Positional arguments observed: none found
-- Dynamic references: `data[i]`
-- Reads `data.size`: yes
-- Reviewer focus: Trace each syntax branch and verify accepted values, defaults, required arguments, and examples.
+- Dynamic references: none found
+- Reads `data.size`: no
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Prints a message in the middle of the screen for all players`
-- `Usage: !saybold Message. Example: !saybold hello world`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[i]`, `data.size`
+- References: none found
 - Case labels in data-referencing functions: none found
 - Quoted literals on raw matching lines: none found
-- Unresolved same-file functions called with data: none
+- Unresolved same-file functions called with data: `saybold`, `helpsaybold`
 
 ### Evidence functions
 
-- `saybold(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:4644-4686`
-- `helpsaybold(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:4688-4692`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 4 raw argument-related source lines</summary>
-
-#### `saybold(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4644-4686`
-
-```gsc
- 4647 | 	for(i = 2; i < data.size; i++)
- 4649 | 		str += data[i];
- 4650 | 		if(i != data.size - 1)
- 4685 | 		self helpsaybold(data);
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !servers
 
@@ -5614,7 +4638,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4644-4686`
 - Hidden input: no
 - Current page usage: `!servers | !servers join [server-name fragment]`
 - Current page summary: Opens the linked-server menu or connects to one uniquely matched compatible server.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:119`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:125`
 - Handler: `servers(data)`
 - Help handler: `helpservers(data)`
 
@@ -5642,8 +4666,8 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4644-4686`
 
 ### Evidence functions
 
-- `servers(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:2879-2899`
-- `helpservers(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:3056-3061`
+- `servers(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:468-486`
+- `helpservers(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:608-613`
 
 ### Raw argument-related matches
 
@@ -5652,13 +4676,13 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4644-4686`
 
 #### `servers(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2879-2899`
+Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:468-486`
 
 ```gsc
- 2881 | 	if(!isdefined(data[2]))
- 2885 | 	else	if(data[2] == "join" && isdefined(data[3]))
- 2887 | 		src = data[3];
- 2896 | 		self helpservers(data);
+  470 | 	if(!isdefined(data[2]))
+  474 | 	else	if(data[2] == "join" && isdefined(data[3]))
+  476 | 		src = data[3];
+  483 | 		self helpservers(data);
 ```
 
 </details>
@@ -5670,54 +4694,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2879-2899`
 - Hidden input: no
 - Current page usage: `!setauthor [author...]`
 - Current page summary: Sets the current map's author metadata.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:51`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:54`
 - Handler: `setauthor(data)`
 - Help handler: `helpsetauthor(data)`
 
 ### Review summary
 
-- Review tier: **Deep review**
-- Evidence footprint: positional slot 1; dynamic argument scan; argument-count check
-- Positional arguments observed: `data[2]` (argument 1)
-- Dynamic references: `data[i]`
-- Reads `data.size`: yes
-- Reviewer focus: Trace each syntax branch and verify accepted values, defaults, required arguments, and examples.
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
+- Dynamic references: none found
+- Reads `data.size`: no
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Usage: !setauthor [author]`
-- `Only lvl 100 can change the author of a map`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`, `data[i]`, `data.size`
+- References: none found
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: ` `
-- Unresolved same-file functions called with data: none
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `setauthor`, `helpsetauthor`
 
 ### Evidence functions
 
-- `setauthor(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:1155-1169`
-- `helpsetauthor(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:1171-1175`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 5 raw argument-related source lines</summary>
-
-#### `setauthor(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1155-1169`
-
-```gsc
- 1157 | 	if(!isdefined(data[2]))
- 1159 | 		self helpsetauthor(data);
- 1162 | 	str = stripstring(data[2]);
- 1163 | 	for(i = 3; i < data.size; i++)
- 1164 | 		str += " " + stripstring(data[i]);
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !setdate
 
@@ -5726,53 +4733,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1155-1169`
 - Hidden input: no
 - Current page usage: `!setdate [YYYY] [MM] [DD]`
 - Current page summary: Sets the current map's release date metadata.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:52`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:55`
 - Handler: `setdate(data)`
 - Help handler: `helpsetdate(data)`
 
 ### Review summary
 
-- Review tier: **Deep review**
-- Evidence footprint: positional slots 1, 2, 3
-- Positional arguments observed: `data[2]` (argument 1), `data[3]` (argument 2), `data[4]` (argument 3)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Trace each syntax branch and verify accepted values, defaults, required arguments, and examples.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Usage: !setdate YYYY MM DD`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`, `data[3]`, `data[4]`
+- References: none found
 - Case labels in data-referencing functions: none found
 - Quoted literals on raw matching lines: none found
-- Unresolved same-file functions called with data: none
+- Unresolved same-file functions called with data: `setdate`, `helpsetdate`
 
 ### Evidence functions
 
-- `setdate(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:1126-1148`
-- `helpsetdate(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:1150-1153`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 5 raw argument-related source lines</summary>
-
-#### `setdate(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1126-1148`
-
-```gsc
- 1128 | 	if(!isdefined(data[2]) || !isdefined(data[3]) || !isdefined(data[4]))
- 1130 | 		self helpsetdate(data);
- 1133 | 	day = int(data[4]);
- 1134 | 	month = int(data[3]);
- 1135 | 	year = int(data[2]);
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !setprefname
 
@@ -5781,7 +4772,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1126-1148`
 - Hidden input: no
 - Current page usage: `!setprefname [preferred name...]`
 - Current page summary: Stores the name used for the player's records after the next map change.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:122`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:128`
 - Handler: `setprefname(data)`
 - Help handler: `helpsetprefname(data)`
 
@@ -5810,8 +4801,8 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1126-1148`
 
 ### Evidence functions
 
-- `setprefname(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:4449-4474`
-- `helpsetprefname(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:4476-4482`
+- `setprefname(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:848-869`
+- `helpsetprefname(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:871-877`
 
 ### Raw argument-related matches
 
@@ -5820,13 +4811,13 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1126-1148`
 
 #### `setprefname(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4449-4474`
+Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:848-869`
 
 ```gsc
- 4453 | 	if(isdefined(data[2]))
- 4455 | 		name = stripstring(data[2]);
- 4456 | 		for(i = 3; i < data.size; i++)
- 4457 | 			name += " " + stripstring(data[i]);
+  852 | 	if(isdefined(data[2]))
+  854 | 		name = stripstring(data[2]);
+  855 | 		for(i = 3; i < data.size; i++)
+  856 | 			name += " " + stripstring(data[i]);
 ```
 
 </details>
@@ -5838,52 +4829,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4449-4474`
 - Hidden input: no
 - Current page usage: `!shock [player]`
 - Current page summary: Applies the configured seven-second shellshock effect to an active lower-level player.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:24`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:27`
 - Handler: `shock(data)`
 - Help handler: `helpshock(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Use this command to give a player a shocking experience`
-- `Usage: !shock [player]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
 - Quoted literals on raw matching lines: none found
-- Unresolved same-file functions called with data: none
+- Unresolved same-file functions called with data: `shock`, `helpshock`
 
 ### Evidence functions
 
-- `shock(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:4852-4877`
-- `helpshock(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:4879-4883`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 3 raw argument-related source lines</summary>
-
-#### `shock(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4852-4877`
-
-```gsc
- 4854 | 	if(!isdefined(data[2]))
- 4856 | 		self helpshock(data);
- 4859 | 	player = findplayerbydata(data[2]);
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !showclips
 
@@ -5914,30 +4890,28 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4852-4877`
 
 - References: `data[2]`
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: `toggle`, `off`, `on`
+- Quoted literals on raw matching lines: `showclips`, `on`
 - Unresolved same-file functions called with data: none
 
 ### Evidence functions
 
-- `showclips(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_gameversion.gsc:35-66`
-- `helpshowclips(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd_gameversion.gsc:85-89`
+- `showclips(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_gameversion.gsc:34-59`
+- `helpshowclips(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd_gameversion.gsc:78-82`
 
 ### Raw argument-related matches
 
 <details>
-<summary>Show 6 raw argument-related source lines</summary>
+<summary>Show 4 raw argument-related source lines</summary>
 
 #### `showclips(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd_gameversion.gsc:35-66`
+Source: `gsc/shared/jumpmod/_j4l_cmd_gameversion.gsc:34-59`
 
 ```gsc
-   37 | 	if(isDefined(data[2]) && data[2] == "toggle")
-   40 | 			data[2] = "off";
-   42 | 			data[2] = "on";
-   49 | 	if(!isDefined(data[2]) || (data[2] != "on" && data[2] != "off"))
-   51 | 		self helpshowclips(data);
-   54 | 	if(data[2] == "on")
+   36 | 	data[2] = JumpMod\_j4l_cmd::resolvetoggle(data[2], isDefined(self.data["showclips"]) && self.data["showclips"]);
+   42 | 	if(!JumpMod\_j4l_cmd::isonoff(data[2]))
+   44 | 		self helpshowclips(data);
+   47 | 	if(data[2] == "on")
 ```
 
 </details>
@@ -5949,57 +4923,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd_gameversion.gsc:35-66`
 - Hidden input: no
 - Current page usage: `!showcpid [on/off/toggle]`
 - Current page summary: Shows or hides checkpoint IDs used while building multiroute checkpoints.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:134`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:139`
 - Handler: `showcpid(data)`
 - Help handler: `helpshowcpid(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Show checkpoint IDs`
-- `Useful for creating multiroute checkpoints`
-- `Usage: !showcpid [on/off/toggle]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: `toggle`, `off`, `on`, `showcpid`, `Checkpoint IDs showing: `
-- Unresolved same-file functions called with data: none
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `showcpid`, `helpshowcpid`
 
 ### Evidence functions
 
-- `showcpid(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:721-738`
-- `helpshowcpid(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:740-745`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 7 raw argument-related source lines</summary>
-
-#### `showcpid(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:721-738`
-
-```gsc
-  723 | 	if(isdefined(data[2]) && data[2] == "toggle")
-  726 | 			data[2] = "off";
-  728 | 			data[2] = "on";
-  730 | 	if(!isdefined(data[2]) || (data[2] != "on" && data[2] != "off"))
-  732 | 		self helpshowcpid(data);
-  735 | 	self.data["showcpid"] = (data[2] == "on");
-  737 | 	self iprintln("Checkpoint IDs showing: " + data[2]);
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !spawnpoint
 
@@ -6008,55 +4962,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:721-738`
 - Hidden input: no
 - Current page usage: `!spawnpoint [put/purge]`
 - Current page summary: Adds the caller's position as a map spawn or purges every map spawn.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:40`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:41`
 - Handler: `spawnpoint(data)`
 - Help handler: `helpspawnpoint(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Puts a spawnpoint or removes all spawnpoints from a map`
-- `Usage: !spawnpoint [put/purge]`
-- `Purge removes ALL custom spawnpoints from a map, be careful`
-- `Requires a map restart after placing the spawnpoints`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: `put`, `purge`
-- Unresolved same-file functions called with data: none
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `spawnpoint`, `helpspawnpoint`
 
 ### Evidence functions
 
-- `spawnpoint(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:2153-2177`
-- `helpspawnpoint(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:2179-2185`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 4 raw argument-related source lines</summary>
-
-#### `spawnpoint(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2153-2177`
-
-```gsc
- 2155 | 	if(!isdefined(data[2]) || (data[2] != "put" && data[2] != "purge"))
- 2157 | 		self helpspawnpoint(data);
- 2160 | 	if(data[2] == "put")
- 2170 | 	else if(data[2] == "purge")
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !specfix
 
@@ -6091,8 +5027,8 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2153-2177`
 
 ### Evidence functions
 
-- `specfix(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_gameversion.gsc:16-28`
-- `helpspecfix(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd_gameversion.gsc:30-33`
+- `specfix(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_gameversion.gsc:15-27`
+- `helpspecfix(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd_gameversion.gsc:29-32`
 
 ### Raw argument-related matches
 
@@ -6105,7 +5041,7 @@ No raw data references or pass-through calls found.
 - Hidden input: yes
 - Current page usage: `!speclist`
 - Current page summary: Lists visible spectators watching you or your current spectator target.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:84`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:81`
 - Handler: `speclist(data)`
 - Help handler: `helpspeclist(data)`
 
@@ -6132,8 +5068,8 @@ No raw data references or pass-through calls found.
 
 ### Evidence functions
 
-- `speclist(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:1562-1592`
-- `helpspeclist(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:1594-1598`
+- `speclist(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:345-375`
+- `helpspeclist(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:377-381`
 
 ### Raw argument-related matches
 
@@ -6146,7 +5082,7 @@ No raw data references or pass-through calls found.
 - Hidden input: no
 - Current page usage: `!startmusic`
 - Current page summary: Enables the player's map music while not following another player.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:5`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:6`
 - Handler: `startmusic(data)`
 - Help handler: `helpstartmusic(data)`
 
@@ -6174,8 +5110,8 @@ No raw data references or pass-through calls found.
 
 ### Evidence functions
 
-- `startmusic(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:16-20`
-- `helpstartmusic(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:22-27`
+- `startmusic(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:17-21`
+- `helpstartmusic(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:23-28`
 
 ### Raw argument-related matches
 
@@ -6188,7 +5124,7 @@ No raw data references or pass-through calls found.
 - Hidden input: no
 - Current page usage: `!stopmusic`
 - Current page summary: Disables the player's map music and returns to fallback ambient behavior.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:6`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:7`
 - Handler: `stopmusic(data)`
 - Help handler: `helpstopmusic(data)`
 
@@ -6215,8 +5151,8 @@ No raw data references or pass-through calls found.
 
 ### Evidence functions
 
-- `stopmusic(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:29-33`
-- `helpstopmusic(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:35-39`
+- `stopmusic(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:30-34`
+- `helpstopmusic(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd_client_settings.gsc:36-40`
 
 ### Raw argument-related matches
 
@@ -6229,57 +5165,37 @@ No raw data references or pass-through calls found.
 - Hidden input: yes
 - Current page usage: `!taunt [category 1-3] [row 1-9] [variant]`
 - Current page summary: Plays a selected quick-message category, row, and sound variant.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:43`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:44`
 - Handler: `taunt(data)`
 - Help handler: `helptaunt(data)`
 
 ### Review summary
 
-- Review tier: **Deep review**
-- Evidence footprint: positional slots 1, 2, 3
-- Positional arguments observed: `data[2]` (argument 1), `data[3]` (argument 2), `data[4]` (argument 3)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Trace each syntax branch and verify accepted values, defaults, required arguments, and examples.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Usage: !taunt [1 2 3] [1-9] [1-?]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`, `data[3]`, `data[4]`
+- References: none found
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: `1`, `2`, `3`
-- Unresolved same-file functions called with data: none
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `taunt`, `helptaunt`
 
 ### Evidence functions
 
-- `taunt(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:1939-1954`
-- `helptaunt(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:1956-1959`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 9 raw argument-related source lines</summary>
-
-#### `taunt(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1939-1954`
-
-```gsc
- 1941 | 	if(isdefined(data[2]) && isdefined(data[3]) && isdefined(data[4]))
- 1943 | 		if(data[2] == "1")
- 1944 | 			self thread JumpMod\_quickmessages::quickcommands2(data[3], int(data[4]));
- 1945 | 		else if(data[2] == "2")
- 1946 | 			self thread JumpMod\_quickmessages::quickstatements2(data[3], int(data[4]));
- 1947 | 		else if(data[2] == "3")
- 1948 | 			self thread JumpMod\_quickmessages::quickresponses2(data[3], int(data[4]));
- 1950 | 			self helptaunt(data);
- 1953 | 		self helptaunt(data);
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !taunts
 
@@ -6288,7 +5204,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1939-1954`
 - Hidden input: no
 - Current page usage: `!taunts [on/off]`
 - Current page summary: Enables or disables receiving player taunts.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:11`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:12`
 - Handler: `taunts(data)`
 - Help handler: `helptaunts(data)`
 
@@ -6310,13 +5226,13 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1939-1954`
 
 - References: `data[2]`
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: `on`, `off`, `ignore_taunts`, `Taunts are now: `
+- Quoted literals on raw matching lines: `ignore_taunts`, `off`, `Taunts are now: `
 - Unresolved same-file functions called with data: none
 
 ### Evidence functions
 
-- `taunts(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:132-141`
-- `helptaunts(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:143-147`
+- `taunts(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:124-133`
+- `helptaunts(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:135-139`
 
 ### Raw argument-related matches
 
@@ -6325,13 +5241,13 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1939-1954`
 
 #### `taunts(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:132-141`
+Source: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:124-133`
 
 ```gsc
-  134 | 	if(!isdefined(data[2]) || (data[2] != "on" && data[2] != "off"))
-  136 | 		self helptaunts(data);
-  139 | 	self JumpMod\_settings::changesetting("ignore_taunts", data[2] == "off");
-  140 | 	self iprintln("Taunts are now: " + data[2]);
+  126 | 	if(!JumpMod\_j4l_cmd::isonoff(data[2]))
+  128 | 		self helptaunts(data);
+  131 | 	self JumpMod\_settings::changesetting("ignore_taunts", data[2] == "off");
+  132 | 	self iprintln("Taunts are now: " + data[2]);
 ```
 
 </details>
@@ -6343,52 +5259,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:132-141`
 - Hidden input: no
 - Current page usage: `!teleplayer [player]`
 - Current page summary: Teleports an active lower-level target to the active caller's position.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:114`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:120`
 - Handler: `teleplayer(data)`
 - Help handler: `helpteleplayer(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Teleports a player to your location`
-- `Usage: !teleplayer [player]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
 - Quoted literals on raw matching lines: none found
-- Unresolved same-file functions called with data: none
+- Unresolved same-file functions called with data: `teleplayer`, `helpteleplayer`
 
 ### Evidence functions
 
-- `teleplayer(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:4222-4251`
-- `helpteleplayer(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:4253-4257`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 3 raw argument-related source lines</summary>
-
-#### `teleplayer(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4222-4251`
-
-```gsc
- 4224 | 	if(!isdefined(data[2]))
- 4226 | 		self helpteleplayer(data);
- 4229 | 	player = findplayerbydata(data[2]);
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !teleport
 
@@ -6397,7 +5298,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4222-4251`
 - Hidden input: yes
 - Current page usage: `!teleport [player]`
 - Current page summary: Teleports you to another active player's position.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:113`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:117`
 - Handler: `teleport(data)`
 - Help handler: `helpteleport(data)`
 
@@ -6424,8 +5325,8 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4222-4251`
 
 ### Evidence functions
 
-- `teleport(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:4259-4294`
-- `helpteleport(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:4296-4300`
+- `teleport(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:660-692`
+- `helpteleport(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:694-698`
 
 ### Raw argument-related matches
 
@@ -6434,15 +5335,15 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4222-4251`
 
 #### `teleport(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4259-4294`
+Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:660-692`
 
 ```gsc
- 4261 | 	if(!isdefined(data[2]))
- 4263 | 		self helpteleport(data);
- 4266 | 	player = findplayerbydata(data[2]);
- 4290 | 	txt = data[1];
- 4291 | 	for(i = 2; i < data.size; i++)
- 4292 | 		txt += " " + data[i];
+  662 | 	if(!isdefined(data[2]))
+  664 | 		self helpteleport(data);
+  667 | 	player = self findtarget(data[2]);
+  688 | 	txt = data[1];
+  689 | 	for(i = 2; i < data.size; i++)
+  690 | 		txt += " " + data[i];
 ```
 
 </details>
@@ -6454,7 +5355,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4259-4294`
 - Hidden input: yes
 - Current page usage: `!telesave [player]`
 - Current page summary: Loads another active player's latest saved position and checkpoint state.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:112`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:116`
 - Handler: `telesave(data)`
 - Help handler: `helptelesave(data)`
 
@@ -6481,8 +5382,8 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4259-4294`
 
 ### Evidence functions
 
-- `telesave(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:4302-4344`
-- `helptelesave(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:4346-4350`
+- `telesave(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:775-814`
+- `helptelesave(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:816-820`
 
 ### Raw argument-related matches
 
@@ -6491,15 +5392,15 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4259-4294`
 
 #### `telesave(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4302-4344`
+Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:775-814`
 
 ```gsc
- 4304 | 	if(!isdefined(data[2]))
- 4306 | 		self helptelesave(data);
- 4309 | 	player = findplayerbydata(data[2]);
- 4340 | 	txt = data[1];
- 4341 | 	for(i = 2; i < data.size; i++)
- 4342 | 		txt += " " + data[i];
+  777 | 	if(!isdefined(data[2]))
+  779 | 		self helptelesave(data);
+  782 | 	player = self findtarget(data[2]);
+  810 | 	txt = data[1];
+  811 | 	for(i = 2; i < data.size; i++)
+  812 | 		txt += " " + data[i];
 ```
 
 </details>
@@ -6511,53 +5412,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4302-4344`
 - Hidden input: no
 - Current page usage: `!temppromote [player] [admin level 0 to caller-1]`
 - Current page summary: Temporarily sets a connected player's live admin level below the caller's level.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:30`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:33`
 - Handler: `temppromote(data)`
 - Help handler: `helptemppromote(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slots 1, 2
-- Positional arguments observed: `data[2]` (argument 1), `data[3]` (argument 2)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Promotes/demotes a player to a certain adminlevel`
-- `Usage: !promote [player] [adminlevel]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`, `data[3]`
+- References: none found
 - Case labels in data-referencing functions: none found
 - Quoted literals on raw matching lines: none found
-- Unresolved same-file functions called with data: none
+- Unresolved same-file functions called with data: `temppromote`, `helptemppromote`
 
 ### Evidence functions
 
-- `temppromote(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:4544-4572`
-- `helptemppromote(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:4574-4578`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 4 raw argument-related source lines</summary>
-
-#### `temppromote(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4544-4572`
-
-```gsc
- 4546 | 	if(!isdefined(data[2]) || !isdefined(data[3]))
- 4548 | 		self helptemppromote(data);
- 4551 | 	lvl = int(data[3]);
- 4552 | 	player = findplayerbydata(data[2]);
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !theme
 
@@ -6566,53 +5451,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:4544-4572`
 - Hidden input: no
 - Current page usage: `!theme [default/matrix/egz/custom/cycle]`
 - Current page summary: Selects, cycles, or lists an available HUD theme.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:95`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:92`
 - Handler: `theme(data)`
 - Help handler: `helptheme(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Allows you to switch theme`
-- `Usage: !theme [themename]`
-- `Use !theme cycle to cycle through the available themes`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: `theme`
-- Unresolved same-file functions called with data: none
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `theme`, `helptheme`
 
 ### Evidence functions
 
-- `theme(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:2533-2541`
-- `helptheme(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:2543-2558`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 3 raw argument-related source lines</summary>
-
-#### `theme(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2533-2541`
-
-```gsc
- 2535 | 	if(!isdefined(data[2]))
- 2537 | 		self helptheme(data);
- 2540 | 	self JumpMod\_settings::changesetting("theme", data[2]);
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !thirdperson
 
@@ -6621,52 +5490,117 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:2533-2541`
 - Hidden input: no
 - Current page usage: `!thirdperson [on/off]`
 - Current page summary: Enables or disables third-person view.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:97`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:94`
 - Handler: `thirdperson(data)`
 - Help handler: `helpthirdperson(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Enable/disable third person view`
-- `Usage: !thirdperson [on/off]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
-- Quoted literals on raw matching lines: `on`, `off`, `thirdperson`
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: `thirdperson`, `helpthirdperson`
+
+### Evidence functions
+
+
+
+### Raw argument-related matches
+
+No raw data references or pass-through calls found.
+
+## !tpcpn
+
+- Access: level 1
+- Aliases: none
+- Hidden input: yes
+- Current page usage: `!tpcpn`
+- Current page summary: Moves one checkpoint forward in the independent teleport path and marks the run as cheated.
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:118`
+- Handler: `tpcpn(data)`
+- Help handler: `helptpcpn(data)`
+
+### Review summary
+
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
+- Dynamic references: none found
+- Reads `data.size`: no
+- Reviewer focus: Confirm that the command intentionally takes no arguments and that its in-game help is complete.
+
+### In-game help strings collected by the existing sync
+
+- `Move one checkpoint forward in teleport navigation and mark the run as cheated. Usage: !tpcpn`
+
+### Mechanical argument findings
+
+- References: none found
+- Case labels in data-referencing functions: none found
+- Quoted literals on raw matching lines: none found
 - Unresolved same-file functions called with data: none
 
 ### Evidence functions
 
-- `thirdperson(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:987-995`
-- `helpthirdperson(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:997-1001`
+- `tpcpn(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:700-703`
+- `helptpcpn(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:705-708`
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 3 raw argument-related source lines</summary>
+No raw data references or pass-through calls found.
 
-#### `thirdperson(data)`
+## !tpcpp
 
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:987-995`
+- Access: level 1
+- Aliases: none
+- Hidden input: yes
+- Current page usage: `!tpcpp`
+- Current page summary: Moves one checkpoint backward in the independent teleport path (or to first spawn) and marks the run as cheated.
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:119`
+- Handler: `tpcpp(data)`
+- Help handler: `helptpcpp(data)`
 
-```gsc
-  989 | 	if(!isdefined(data[2]) || (data[2] != "on" && data[2] != "off"))
-  991 | 		self helpthirdperson(data);
-  994 | 	self JumpMod\_settings::changesetting("thirdperson", data[2] == "on");
-```
+### Review summary
 
-</details>
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
+- Dynamic references: none found
+- Reads `data.size`: no
+- Reviewer focus: Confirm that the command intentionally takes no arguments and that its in-game help is complete.
+
+### In-game help strings collected by the existing sync
+
+- `Move one checkpoint backward in teleport navigation, or to the first spawn, and mark the run as cheated. Usage: !tpcpp`
+
+### Mechanical argument findings
+
+- References: none found
+- Case labels in data-referencing functions: none found
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: none
+
+### Evidence functions
+
+- `tpcpp(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:710-713`
+- `helptpcpp(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:715-718`
+
+### Raw argument-related matches
+
+No raw data references or pass-through calls found.
 
 ## !unignore
 
@@ -6675,7 +5609,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:987-995`
 - Hidden input: no
 - Current page usage: `!unignore [player]`
 - Current page summary: Stops ignoring a connected player's chat for the current map session.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:6`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:7`
 - Handler: `unignore(data)`
 - Help handler: `helpunignore(data)`
 
@@ -6703,9 +5637,9 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:987-995`
 
 ### Evidence functions
 
-- `unignore(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:19-22`
-- `helpunignore(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:111-116`
-- `doignore(data, ignore, persist, help)` — called with data; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:80-102`
+- `unignore(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:20-23`
+- `helpunignore(data)` — help handler; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:103-108`
+- `doignore(data, ignore, persist, help)` — called with data; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:75-94`
 
 ### Raw argument-related matches
 
@@ -6714,20 +5648,20 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:987-995`
 
 #### `unignore(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:19-22`
+Source: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:20-23`
 
 ```gsc
-   21 | 	self doignore(data, false, false, ::helpunignore);
+   22 | 	self doignore(data, false, false, ::helpunignore);
 ```
 
 #### `doignore(data, ignore, persist, help)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:80-102`
+Source: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:75-94`
 
 ```gsc
-   82 | 	if(!isdefined(data[2]))
-   84 | 		self [[help]](data);
-   87 | 	player = JumpMod\_j4l_cmd::findplayerbydata(data[2]);
+   77 | 	if(!isdefined(data[2]))
+   79 | 		self [[help]](data);
+   82 | 	player = self JumpMod\_j4l_cmd::findtarget(data[2]);
 ```
 
 </details>
@@ -6739,52 +5673,37 @@ Source: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:80-102`
 - Hidden input: no
 - Current page usage: `!unmute [player]`
 - Current page summary: Removes a live mute when the caller has sufficient authority.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:32`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:35`
 - Handler: `unmute(data)`
 - Help handler: `helpunmute(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `This command unmutes a player`
-- `Usage: !unmute [player]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
 - Quoted literals on raw matching lines: none found
-- Unresolved same-file functions called with data: none
+- Unresolved same-file functions called with data: `unmute`, `helpunmute`
 
 ### Evidence functions
 
-- `unmute(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:5442-5476`
-- `helpunmute(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:5478-5482`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 3 raw argument-related source lines</summary>
-
-#### `unmute(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:5442-5476`
-
-```gsc
- 5444 | 	if(!isdefined(data[2]))
- 5446 | 		self helpunmute(data);
- 5449 | 	player = findplayerbydata(data[2]);
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !veto
 
@@ -6793,7 +5712,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:5442-5476`
 - Hidden input: no
 - Current page usage: `!veto`
 - Current page summary: Vetoes the active vote when caller and vote-starter policy permit it.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd_vote.gsc:8`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd_vote.gsc:9`
 - Handler: `veto(data)`
 - Help handler: `helpveto(data)`
 
@@ -6834,54 +5753,37 @@ No raw data references or pass-through calls found.
 - Hidden input: yes
 - Current page usage: `!viewrecords [map name]`
 - Current page summary: Opens the record leaderboard for a searched map.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:85`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:82`
 - Handler: `viewrecords(data)`
 - Help handler: `helpviewrecords(data)`
 
 ### Review summary
 
-- Review tier: **Deep review**
-- Evidence footprint: positional slot 1; dynamic argument scan; argument-count check
-- Positional arguments observed: `data[2]` (argument 1)
-- Dynamic references: `data[i]`
-- Reads `data.size`: yes
-- Reviewer focus: Trace each syntax branch and verify accepted values, defaults, required arguments, and examples.
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
+- Dynamic references: none found
+- Reads `data.size`: no
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `View maprecords for different maps`
-- `Usage: !viewrecords [mapname]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`, `data[i]`, `data.size`
+- References: none found
 - Case labels in data-referencing functions: none found
 - Quoted literals on raw matching lines: none found
-- Unresolved same-file functions called with data: none
+- Unresolved same-file functions called with data: `viewrecords`, `helpviewrecords`
 
 ### Evidence functions
 
-- `viewrecords(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:1517-1532`
-- `helpviewrecords(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:1541-1545`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 5 raw argument-related source lines</summary>
-
-#### `viewrecords(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1517-1532`
-
-```gsc
- 1519 | 	if(!isdefined(data[2]))
- 1521 | 		self helpviewrecords(data);
- 1525 | 	for(i = 2; i < data.size; i++)
- 1527 | 		mapname += stripstring(data[i]);
- 1528 | 		if(i != data.size - 1)
-```
-
-</details>
+No raw data references or pass-through calls found.
 
 ## !vignore
 
@@ -6890,7 +5792,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1517-1532`
 - Hidden input: no
 - Current page usage: `!vignore [player]`
 - Current page summary: Mutes a connected player's voice locally for the caller.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:7`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:8`
 - Handler: `vignore(data)`
 - Help handler: `helpvignore(data)`
 
@@ -6917,8 +5819,8 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1517-1532`
 
 ### Evidence functions
 
-- `vignore(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:34-49`
-- `helpvignore(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:51-55`
+- `vignore(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:35-47`
+- `helpvignore(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:49-53`
 
 ### Raw argument-related matches
 
@@ -6927,12 +5829,12 @@ Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1517-1532`
 
 #### `vignore(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:34-49`
+Source: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:35-47`
 
 ```gsc
-   36 | 	if(!isdefined(data[2]))
-   38 | 		self helpvignore(data);
-   41 | 	player = JumpMod\_j4l_cmd::findplayerbydata(data[2]);
+   37 | 	if(!isdefined(data[2]))
+   39 | 		self helpvignore(data);
+   42 | 	player = self JumpMod\_j4l_cmd::findtarget(data[2]);
 ```
 
 </details>
@@ -6944,7 +5846,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:34-49`
 - Hidden input: no
 - Current page usage: `!vote [map/addtime/mute/map_rotate/map_restart/disable/nades] [value]`
 - Current page summary: Starts a supported map, time, mute, restart, disable, or grenade vote.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd_vote.gsc:6`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd_vote.gsc:7`
 - Handler: `vote(data)`
 - Help handler: `helpvote(data)`
 
@@ -6988,25 +5890,26 @@ Source: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:34-49`
 
 ### Evidence functions
 
-- `vote(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_vote.gsc:41-167`
+- `vote(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_vote.gsc:42-167`
 - `helpvote(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd_vote.gsc:169-243`
 
 ### Raw argument-related matches
 
 <details>
-<summary>Show 52 raw argument-related source lines</summary>
+<summary>Show 53 raw argument-related source lines</summary>
 
 #### `vote(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd_vote.gsc:41-167`
+Source: `gsc/shared/jumpmod/_j4l_cmd_vote.gsc:42-167`
 
 ```gsc
-   43 | 	if(!isdefined(data[2]))
-   45 | 		self helpvote(data);
-   48 | 	switch(data[2])
-   50 | 		case "mute":
-   52 | 			if(data.size >= 4)
-   54 | 				player = JumpMod\_j4l_cmd::findplayerbydata(data[2]);
+   44 | 	if(!isdefined(data[2]))
+   46 | 		self helpvote(data);
+   49 | 	switch(data[2])
+   51 | 		case "mute":
+   53 | 			if(data.size >= 4)
+   55 | 				player = self JumpMod\_j4l_cmd::findtarget(data[3]);
+   66 | 			self helpvote(data);
    69 | 		case "map":
    71 | 			if(data.size == 4 && data[3] == "next")
    77 | 			for(i = 3; i < data.size; i++)
@@ -7071,7 +5974,7 @@ Source: `gsc/shared/jumpmod/_j4l_cmd_vote.gsc:169-243`
 - Hidden input: no
 - Current page usage: `!vunignore [player]`
 - Current page summary: Unmutes a connected player's voice locally for the caller.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:8`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:9`
 - Handler: `vunignore(data)`
 - Help handler: `helpvunignore(data)`
 
@@ -7098,8 +6001,8 @@ Source: `gsc/shared/jumpmod/_j4l_cmd_vote.gsc:169-243`
 
 ### Evidence functions
 
-- `vunignore(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:57-72`
-- `helpvunignore(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:74-78`
+- `vunignore(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:55-67`
+- `helpvunignore(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:69-73`
 
 ### Raw argument-related matches
 
@@ -7108,15 +6011,56 @@ Source: `gsc/shared/jumpmod/_j4l_cmd_vote.gsc:169-243`
 
 #### `vunignore(data)`
 
-Source: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:57-72`
+Source: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:55-67`
 
 ```gsc
-   59 | 	if(!isdefined(data[2]))
-   61 | 		self helpvunignore(data);
-   64 | 	player = JumpMod\_j4l_cmd::findplayerbydata(data[2]);
+   57 | 	if(!isdefined(data[2]))
+   59 | 		self helpvunignore(data);
+   62 | 	player = self JumpMod\_j4l_cmd::findtarget(data[2]);
 ```
 
 </details>
+
+## !wanted
+
+- Access: level 0
+- Aliases: none
+- Hidden input: no
+- Current page usage: `!wanted`
+- Current page summary: Shows the wanted maps: how many routes J4L has beaten JH on (nadejumps, 125 and 250 fps), this week's wanted routes with the JH #1 per fps (time [nades], Beaten, or - without a JH record), and the bounty.
+- Registration: `gsc/shared/jumpmod/_wanted.gsc:7`
+- Handler: `cmd_wanted(data)`
+- Help handler: `help_wanted(data)`
+
+### Review summary
+
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
+- Dynamic references: none found
+- Reads `data.size`: no
+- Reviewer focus: Confirm that the command intentionally takes no arguments and that its in-game help is complete.
+
+### In-game help strings collected by the existing sync
+
+- `Shows the wanted maps: routes where JH still holds the nadejumps record at 125 or 250 fps`
+- `Usage: !wanted`
+
+### Mechanical argument findings
+
+- References: none found
+- Case labels in data-referencing functions: none found
+- Quoted literals on raw matching lines: none found
+- Unresolved same-file functions called with data: none
+
+### Evidence functions
+
+- `cmd_wanted(data)` — handler; `gsc/shared/jumpmod/_wanted.gsc:231-252`
+- `help_wanted(data)` — help handler; `gsc/shared/jumpmod/_wanted.gsc:254-258`
+
+### Raw argument-related matches
+
+No raw data references or pass-through calls found.
 
 ## !xpmultiplier
 
@@ -7125,50 +6069,34 @@ Source: `gsc/shared/jumpmod/_j4l_cmd_chat.gsc:57-72`
 - Hidden input: no
 - Current page usage: `!xpmultiplier [off/1-10/1x-10x]`
 - Current page summary: Sets the server checkpoint XP multiplier from 1x through 10x; off means 1x.
-- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:47`
+- Registration: `gsc/shared/jumpmod/_j4l_cmd.gsc:50`
 - Handler: `xpmultiplier(data)`
 - Help handler: `helpxpmultiplier(data)`
 
 ### Review summary
 
-- Review tier: **Argument check**
-- Evidence footprint: positional slot 1
-- Positional arguments observed: `data[2]` (argument 1)
+- Review tier: **Confirm no arguments**
+- Evidence footprint: no direct argument references
+- Positional arguments observed: none found
 - Dynamic references: none found
 - Reads `data.size`: no
-- Reviewer focus: Verify the displayed usage against the observed positions, count checks, and accepted values.
+- Reviewer focus: Confirm that the command takes no arguments and add a concise help string if players need context.
 
 ### In-game help strings collected by the existing sync
 
-- `Sets server-wide XP multiplier`
-- `Usage: !xpmultiplier [1-10/off]`
+- None found by the command sync parser.
 
 ### Mechanical argument findings
 
-- References: `data[2]`
+- References: none found
 - Case labels in data-referencing functions: none found
 - Quoted literals on raw matching lines: none found
-- Unresolved same-file functions called with data: none
+- Unresolved same-file functions called with data: `xpmultiplier`, `helpxpmultiplier`
 
 ### Evidence functions
 
-- `xpmultiplier(data)` — handler; `gsc/shared/jumpmod/_j4l_cmd.gsc:1814-1839`
-- `helpxpmultiplier(data)` — help handler, called with data; `gsc/shared/jumpmod/_j4l_cmd.gsc:1881-1885`
+
 
 ### Raw argument-related matches
 
-<details>
-<summary>Show 4 raw argument-related source lines</summary>
-
-#### `xpmultiplier(data)`
-
-Source: `gsc/shared/jumpmod/_j4l_cmd.gsc:1814-1839`
-
-```gsc
- 1816 | 	if(!isdefined(data[2]))
- 1818 | 		self helpxpmultiplier(data);
- 1823 | 	value = tolower(data[2]);
- 1833 | 		self helpxpmultiplier(data);
-```
-
-</details>
+No raw data references or pass-through calls found.

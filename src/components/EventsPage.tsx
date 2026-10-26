@@ -23,7 +23,7 @@ const tabs: Array<[Tab, string]> = [
   ["current", "Current week"],
   ["history", "History"],
   ["seasons", "Seasons"],
-  ["wanted", "Wanted"],
+  ["wanted", "Weekly wanted maps"],
 ];
 const fpsOptions: Array<[number, string]> = [
   [125, "125"],
@@ -66,7 +66,7 @@ export function EventsPage() {
       <>
         <div className="section-heading">
           <div>
-            <p className="eyebrow">Weekly events</p>
+            <p className="eyebrow">Weekly Cup</p>
             <h2>History</h2>
           </div>
         </div>
@@ -86,10 +86,10 @@ export function EventsPage() {
   }
 
   return (
-    <section className="content-section events-page" aria-label="Weekly events">
-      <nav className="events-nav" aria-label="Events views">
+    <section className="content-section events-page" aria-label="Weekly Cup">
+      <nav className="events-nav" aria-label="Weekly Cup views">
         <Toggle
-          label="Events view"
+          label="Weekly Cup view"
           options={tabs}
           value={view.tab}
           onChange={(tab) => {
@@ -293,13 +293,13 @@ function SeasonList() {
 function WantedView() {
   const state = usePolling<Wanted | null>(null, fetchWanted, REFRESH_MS);
   const wanted = state.data;
-  if (!wanted) return <Notice state={state} notFound="No wanted maps yet" unavailable="Wanted maps are not available yet" />;
+  if (!wanted) return <Notice state={state} notFound="No weekly wanted maps yet" unavailable="Weekly wanted maps are not available yet" />;
 
   const { routes_in_scope: total, routes_beaten: beaten } = wanted.progress;
   const active = Boolean(wanted.wanted_week_id);
   let status: string;
   if (wanted.done) status = "JH is beaten on every map.";
-  else if (!active) status = "No wanted week right now. New wanted maps are picked when the next weekly event starts.";
+  else if (!active) status = "No wanted week right now. New wanted maps are picked when the next Weekly Cup starts.";
   else
     status = `First J4L player to beat the JH #1 of a wanted route at 125 or 250 fps gets ${wanted.bounty.coins.toLocaleString()} coins + ${wanted.bounty.xp.toLocaleString()} XP, paid instantly.`;
 
@@ -308,7 +308,7 @@ function WantedView() {
       <div className="section-heading">
         <div>
           <p className="eyebrow">J4L vs JumpersHeaven</p>
-          <h2>Wanted maps</h2>
+          <h2>Weekly wanted maps</h2>
         </div>
         {active && wanted.ends_at ? (
           <div className="section-meta">
@@ -360,7 +360,7 @@ function Countdown({ endsAt }: { endsAt: string }) {
 function Notice({
   state,
   notFound,
-  unavailable = "Weekly events are not available yet",
+  unavailable = "The Weekly Cup is not available yet",
 }: {
   state: LoadState<unknown>;
   notFound: string;
@@ -369,7 +369,7 @@ function Notice({
   // request() errors read "<status> <statusText>".
   const status = state.error?.slice(0, 3);
   if (state.error && status !== "404" && status !== "503") {
-    return <p className="inline-alert">Events API unavailable: {state.error}</p>;
+    return <p className="inline-alert">Weekly Cup API unavailable: {state.error}</p>;
   }
 
   const text = status === "503" ? unavailable : status === "404" ? notFound : "Loading…";

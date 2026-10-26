@@ -118,7 +118,7 @@ export function App() {
               aria-current={activeTab === "events" ? "page" : undefined}
             >
               <CalendarDays size={16} aria-hidden="true" />
-              Events
+              Weekly Cup
             </a>
           </nav>
         </div>

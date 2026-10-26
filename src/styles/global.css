@@ -3292,8 +3292,12 @@ a {
   }
 }
 
-/* Four event tabs fit a 390px screen without scrolling the control. */
+/* Weekly Cup tabs wrap to a second row on phones instead of scrolling the control. */
 @media (max-width: 560px) {
+  .events-nav .segmented-control {
+    flex-wrap: wrap;
+  }
+
   .events-nav .segmented-control button {
     padding: 0 10px;
   }

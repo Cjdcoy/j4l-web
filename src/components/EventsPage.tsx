@@ -301,7 +301,7 @@ function WantedView() {
   if (wanted.done) status = "JH is beaten on every map.";
   else if (!active) status = "No wanted week right now. New wanted maps are picked when the next weekly event starts.";
   else
-    status = `${wanted.bounty.coins.toLocaleString()} coins + ${wanted.bounty.xp.toLocaleString()} XP for the J4L top 1 of each wanted route and fps beaten this week, paid at the weekly close.`;
+    status = `First J4L player to beat the JH #1 of a wanted route at 125 or 250 fps gets ${wanted.bounty.coins.toLocaleString()} coins + ${wanted.bounty.xp.toLocaleString()} XP, paid instantly.`;
 
   return (
     <>

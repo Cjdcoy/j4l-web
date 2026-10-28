@@ -7,13 +7,14 @@ const cod2Colors: Record<string, string> = {
   "1": "#da0120",
   "2": "#00b906",
   "3": "#e8ff19",
-  "4": "#170bdb",
+  // ^4 and ^0 are lifted to OKLCH lightness 0.68 / 0.62 (same hue), as in cjs-web: game #170bdb and #000 vanish on dark panels.
+  "4": "#6991ff",
   "5": "#23c2c6",
   "6": "#e201db",
   "7": "#eee",
   "8": "#8080FE",
   "9": "#757575",
-  "0": "#000",
+  "0": "#868686",
 };
 
 export function ColoredPlayerName({ name = "Unknown Player", className }: Props) {

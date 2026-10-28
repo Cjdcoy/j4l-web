@@ -31,7 +31,25 @@ export function defaultFPS(boards: Array<{ fps: number; standings: unknown[] }>)
   return !has(125) && has(250) ? 250 : 125;
 }
 
+type NadeRecord = { nadejumps: number; time_ticks: number };
+const nades = (count: number) => `${count} ${count === 1 ? "nade" : "nades"}`;
+
 // A nadejumps record in leaderboard order (nades, then time): "12 nades · 0:40.60".
-export function formatRecord(record: { nadejumps: number; time_ticks: number }) {
-  return `${record.nadejumps} ${record.nadejumps === 1 ? "nade" : "nades"} · ${formatTicks(record.time_ticks)}`;
+export function formatRecord(record: NadeRecord) {
+  return `${nades(record.nadejumps)} · ${formatTicks(record.time_ticks)}`;
+}
+
+// Wanted head to head: fewer nades wins, then less time. A tie keeps the JH #1, so neither is ahead.
+export function compareWanted(jh: NadeRecord, j4l: NadeRecord | null): { ahead: "jh" | "j4l" | null; text: string } {
+  if (!j4l) return { ahead: "jh", text: "No J4L run yet" };
+  const nadeGap = j4l.nadejumps - jh.nadejumps;
+  const timeGap = j4l.time_ticks - jh.time_ticks;
+  if (nadeGap > 0) {
+    const need = `needs ${nadeGap} fewer ${nadeGap === 1 ? "nade" : "nades"}`;
+    return { ahead: "jh", text: timeGap < 0 ? `J4L is faster, but ${need}` : `J4L ${need}` };
+  }
+  if (nadeGap < 0) return { ahead: "j4l", text: `J4L ahead by ${nades(-nadeGap)}` };
+  if (timeGap > 0) return { ahead: "jh", text: `Same nades, J4L is ${formatTicks(timeGap)} slower` };
+  if (timeGap < 0) return { ahead: "j4l", text: `Same nades, J4L is ${formatTicks(-timeGap)} faster` };
+  return { ahead: null, text: "Tied, J4L needs a faster time" };
 }

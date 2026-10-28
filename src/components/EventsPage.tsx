@@ -1,7 +1,7 @@
 import { Fragment, useCallback, useEffect, useState, type CSSProperties, type ReactNode } from "react";
 import { Clock, Trophy } from "lucide-react";
 import { fetchEvent, fetchEventList, fetchSeason, fetchSeasonList, fetchWanted } from "../lib/api";
-import { defaultFPS, formatCountdown, formatRecord, formatTicks } from "../lib/eventFormat";
+import { compareWanted, defaultFPS, formatCountdown, formatRecord, formatTicks } from "../lib/eventFormat";
 import type {
   EventSummary,
   EventWinner,
@@ -153,7 +153,11 @@ function EventView({ eventID, full, setFull }: EventViewProps) {
       <EventTable
         label={`Standings at ${fps} fps`}
         head={["Rank", "Player", "Points", "Maps", "1st places", ...(finished ? ["XP", "Coins"] : [])]}
-        empty="No finishes yet."
+        empty={
+          finished
+            ? `Nobody finished a route at ${fps} fps this week.`
+            : `No finishes at ${fps} fps yet. Finish any route above at ${fps} fps to get on the board.`
+        }
         rows={(board?.standings ?? []).map((row) => ({
           key: row.player_id,
           rank: row.rank,
@@ -177,7 +181,7 @@ function EventView({ eventID, full, setFull }: EventViewProps) {
                 <EventTable
                   label={`${route?.mapname ?? map.cp_id} results at ${fps} fps`}
                   head={["Rank", "Player", "Time", "Nades", "Points", "Date"]}
-                  empty="No finishes yet."
+                  empty={`No finishes on this route at ${fps} fps.`}
                   rows={map.results.map((row) => ({
                     key: row.player_id,
                     rank: row.rank,
@@ -195,6 +199,18 @@ function EventView({ eventID, full, setFull }: EventViewProps) {
             );
           })
         : null}
+
+      {eventID ? null : (
+        <HowItWorks
+          items={[
+            "Five routes a week, from very easy to hard. A week runs from Monday 01:00 UTC to the next Monday 01:00 UTC.",
+            "125 and 250 fps have separate boards. Your best run on each route during the week counts, ranked by nades, then time.",
+            "Each route gives points by place: 100 for 1st, then 10% less per place (90, 81, …), never below 10.",
+            "When the week ends, every point pays 20 XP and 50 coins. The winner at each fps also gets 10,000 XP + 25,000 coins when at least 3 players took part.",
+            "A season is 12 weeks and counts your best 10 weeks. The season top 3 at each fps get 50,000 / 30,000 / 20,000 XP and 150,000 / 75,000 / 40,000 coins (at least 3 players).",
+          ]}
+        />
+      )}
     </>
   );
 }
@@ -297,11 +313,10 @@ function WantedView() {
 
   const { routes_in_scope: total, routes_beaten: beaten } = wanted.progress;
   const active = Boolean(wanted.wanted_week_id);
-  let status: string;
-  if (wanted.done) status = "JH is beaten on every map.";
-  else if (!active) status = "No wanted week right now. New wanted maps are picked when the next Weekly Cup starts.";
-  else
-    status = `First J4L player to beat the JH #1 of a wanted route at 125 or 250 fps gets ${wanted.bounty.coins.toLocaleString()} coins + ${wanted.bounty.xp.toLocaleString()} XP, paid instantly.`;
+  const bounty = `${wanted.bounty.coins.toLocaleString()} coins + ${wanted.bounty.xp.toLocaleString()} XP`;
+  // Each route x fps not beaten when the week started is one bounty; a beaten one is claimed or about to be.
+  const bounties = wanted.routes.flatMap((route) => route.fps).filter((item) => !item.beaten_at_start);
+  const claimed = bounties.filter((item) => item.bounty_player_id !== null || item.beaten).length;
 
   return (
     <>
@@ -318,30 +333,75 @@ function WantedView() {
         ) : null}
       </div>
 
-      <div className="compact-section wanted-summary">
-        <strong>
-          {beaten.toLocaleString()} of {total.toLocaleString()} routes beaten
-        </strong>
-        <progress value={beaten} max={total || 1} aria-label="Routes beaten" />
-        <p>{status}</p>
+      <HowItWorks
+        items={[
+          "Beat the JumpersHeaven #1 on a wanted route, at 125 or 250 fps, in normal mode.",
+          "Fewer nades wins. With the same nades, the faster time wins. A tie is not enough.",
+          `Each fps is its own bounty: ${bounty}. The first J4L player to beat it is paid automatically, right after the run is processed. Later, better runs pay nothing.`,
+          "A route and fps that J4L already led when the week started pays no bounty. JH records are refreshed daily.",
+        ]}
+      />
+
+      <div className="wanted-summary">
+        <div className="compact-section">
+          <p className="eyebrow">This week</p>
+          {active ? (
+            <>
+              <strong>
+                {bounties.length - claimed} of {bounties.length} bounties still open
+              </strong>
+              <p>
+                {claimed} claimed. Each pays {bounty}.
+              </p>
+            </>
+          ) : (
+            <p>
+              {wanted.done
+                ? "JH is beaten on every map."
+                : "No wanted week right now. New wanted maps are picked when the next Weekly Cup starts."}
+            </p>
+          )}
+        </div>
+        <div className="compact-section">
+          <p className="eyebrow">All-time</p>
+          <strong>
+            J4L holds the #1 on {beaten.toLocaleString()} of {total.toLocaleString()} routes
+          </strong>
+          <progress value={beaten} max={total || 1} aria-label="Routes where J4L holds the #1" />
+          <p>Out of all routes with a JH record. A route counts once J4L leads at both 125 and 250 fps.</p>
+        </div>
       </div>
 
       {active ? (
         <>
-          <h3>This week</h3>
+          <h3>This week's routes</h3>
           <EventTable
             label="Wanted routes"
             className="wanted-table"
-            head={["Tier", "Route", "125 fps", "250 fps"]}
+            nameCol={0}
+            head={["Route", "125 fps", "250 fps"]}
             empty="No wanted routes."
             rows={wanted.routes.map((route) => ({
               key: route.slot,
-              cells: [`Tier ${route.tier}`, twoLine(route.mapname, route.ender), wantedCell(route, 125), wantedCell(route, 250)],
+              cells: [twoLine(route.mapname, route.ender), wantedCell(route, 125, bounty), wantedCell(route, 250, bounty)],
             }))}
           />
         </>
       ) : null}
     </>
+  );
+}
+
+function HowItWorks({ items }: { items: string[] }) {
+  return (
+    <div className="compact-section event-rules">
+      <h3>How it works</h3>
+      <ul className="plain-list">
+        {items.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
@@ -384,12 +444,14 @@ function EventTable({
   rows,
   empty,
   className = "",
+  nameCol = 1,
 }: {
   label: string;
   head: string[];
   rows: Row[];
   empty: string;
   className?: string;
+  nameCol?: number;
 }) {
   return (
     <div
@@ -416,7 +478,7 @@ function EventTable({
               key={index}
               role="cell"
               data-label={head[index]}
-              className={index === 0 ? "rank-cell" : index === 1 ? "leaderboard-player" : undefined}
+              className={index === nameCol ? "leaderboard-player" : index < nameCol ? "rank-cell" : undefined}
             >
               {cell}
             </span>
@@ -440,9 +502,15 @@ function Toggle<T extends string | number | boolean>({
   onChange: (value: T) => void;
 }) {
   return (
-    <div className="segmented-control" aria-label={label}>
+    <div className="segmented-control" role="group" aria-label={label}>
       {options.map(([option, text]) => (
-        <button key={text} type="button" className={value === option ? "is-active" : ""} onClick={() => onChange(option)}>
+        <button
+          key={text}
+          type="button"
+          className={value === option ? "is-active" : ""}
+          aria-pressed={value === option}
+          onClick={() => onChange(option)}
+        >
           {text}
         </button>
       ))}
@@ -488,30 +556,61 @@ function winnerCell(winners: EventWinner[], fps: number, status: string) {
   );
 }
 
-function wantedCell(route: WantedRoute, fps: number) {
+function wantedCell(route: WantedRoute, fps: number, bounty: string) {
   const item = route.fps.find((entry) => entry.fps === fps);
   if (!item) return "-";
+  const verdict = item.jh ? compareWanted(item.jh, item.j4l) : null;
+
+  let state: ReactNode;
+  if (item.bounty_player_id !== null) {
+    const winner = item.j4l?.player_id === item.bounty_player_id ? item.j4l : null;
+    state = (
+      <>
+        <span className="type-badge is-beaten">Bounty claimed</span>
+        {winner ? (
+          <span>
+            by <ColoredPlayerName name={winner.player_name} />
+          </span>
+        ) : null}
+      </>
+    );
+  } else if (item.beaten_at_start) {
+    state = <span className="type-badge">{item.jh ? "Already beaten, no bounty" : "No JH record"}</span>;
+  } else if (item.beaten) {
+    state = <span className="type-badge is-beaten">Beaten, bounty paying out</span>;
+  } else {
+    state = (
+      <>
+        <span className="type-badge is-wanted">Wanted</span>
+        <span>{bounty}</span>
+      </>
+    );
+  }
+
   return (
     <span className="wanted-fps">
-      <span className={`type-badge ${item.beaten ? "is-beaten" : "is-wanted"}`}>{item.beaten ? "Beaten" : "Wanted"}</span>
-      {recordLine("JH", item.jh)}
-      {recordLine("J4L", item.j4l)}
+      <span className="wanted-state">{state}</span>
+      {recordLine("JH", item.jh, verdict?.ahead === "jh")}
+      {recordLine("J4L", item.j4l, verdict?.ahead === "j4l")}
+      {verdict ? <span className={`wanted-verdict ${verdict.ahead === "j4l" ? "is-ahead" : ""}`}>{verdict.text}</span> : null}
     </span>
   );
 }
 
-function recordLine(source: string, record: WantedRecord | null) {
+function recordLine(source: string, record: WantedRecord | null, ahead: boolean) {
   return (
-    <small>
-      <b>{source}</b>{" "}
+    <span className={`wanted-record ${ahead ? "is-ahead" : ""}`}>
+      {ahead ? <Trophy size={13} role="img" aria-label="Holds the #1" /> : <span />}
+      <b>{source}</b>
       {record ? (
         <>
-          <ColoredPlayerName name={record.player_name} /> · {formatRecord(record)}
+          <ColoredPlayerName className="wanted-name" name={record.player_name} />
+          <span>{formatRecord(record)}</span>
         </>
       ) : (
-        "no record"
+        <span className="wanted-name">No record</span>
       )}
-    </small>
+    </span>
   );
 }
 

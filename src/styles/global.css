@@ -3221,17 +3221,63 @@ a {
   .event-table .leaderboard-player::before {
     display: none;
   }
+
+  /* Rows become cards on phones, so the empty message gets the same card. */
+  .event-table .empty-state {
+    margin-top: 10px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    background: var(--panel);
+  }
 }
 
-/* Wanted tab: overall progress, then fps cells that stack a badge over the JH and J4L records. */
+/* "How it works" boxes on the Current week and Wanted tabs. */
+.event-rules {
+  margin-top: 28px;
+  padding: 20px 24px 8px;
+}
+
+.events-page .event-rules h3 {
+  margin: 0;
+}
+
+.event-rules .plain-list {
+  margin-top: 6px;
+}
+
+.event-rules .plain-list li {
+  padding: 8px 0 8px 22px;
+  border-bottom: 0;
+}
+
+.event-rules .plain-list li::before {
+  top: 16px;
+}
+
+/* Wanted tab: this week's bounties and the all-time progress, side by side when there is room. */
 .wanted-summary {
   display: grid;
-  gap: 12px;
-  margin-top: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.wanted-summary .compact-section {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+}
+
+.wanted-summary .eyebrow,
+.wanted-summary p {
+  margin: 0;
+}
+
+.wanted-summary strong {
+  font-size: 18px;
 }
 
 .wanted-summary p {
-  margin: 0;
   color: var(--muted);
 }
 
@@ -3257,23 +3303,85 @@ a {
   background: var(--accent);
 }
 
+/* Wanted routes: route name, then one cell per fps with the state, JH vs J4L records and a verdict. */
+@media (min-width: 681px) {
+  .wanted-table .leaderboard-row {
+    grid-template-columns: minmax(160px, 0.55fr) repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
+
 .wanted-table .leaderboard-row > :nth-child(n + 3) {
   text-align: left;
 }
 
 .wanted-fps {
   display: grid;
-  justify-items: start;
-  gap: 4px;
+  gap: 6px;
+  padding: 4px 0;
+  font-size: 13px;
 }
 
-.wanted-fps small {
+.wanted-state {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  margin-bottom: 2px;
   color: var(--muted);
-  overflow-wrap: anywhere;
 }
 
-.wanted-fps b {
+.wanted-fps .type-badge {
+  text-transform: none;
+}
+
+.wanted-record {
+  display: grid;
+  grid-template-columns: 13px 28px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  min-height: 28px;
+  padding: 0 10px 0 8px;
+  border-radius: var(--radius-sm);
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.wanted-record.is-ahead {
+  background: rgba(97, 214, 157, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(97, 214, 157, 0.18);
+  color: var(--text);
+}
+
+.wanted-record svg {
+  color: var(--accent);
+}
+
+.wanted-record b {
   color: var(--subtle);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+}
+
+.wanted-record.is-ahead b {
+  color: var(--accent-strong);
+}
+
+.wanted-name {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--text);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.wanted-verdict {
+  padding-left: 8px;
+  color: var(--muted);
+}
+
+.wanted-verdict.is-ahead {
+  color: var(--accent-strong);
 }
 
 .type-badge.is-beaten {
@@ -3287,8 +3395,12 @@ a {
 }
 
 @media (max-width: 680px) {
-  .wanted-table .leaderboard-row > :nth-child(n + 3) {
+  .wanted-table .leaderboard-row > [role="cell"] {
     grid-column: 1 / -1;
+  }
+
+  .event-rules {
+    padding: 18px 18px 6px;
   }
 }
 

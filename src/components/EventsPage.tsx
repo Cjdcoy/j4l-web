@@ -79,8 +79,7 @@ export function EventsPage() {
     content = (
       <>
         <SeasonView key={view.seasonID ?? "current"} seasonID={view.seasonID} />
-        <h3>{view.seasonID ? "Weeks" : "All seasons"}</h3>
-        {view.seasonID ? <WeekList key={view.seasonID} seasonID={view.seasonID} /> : <SeasonList />}
+        {view.seasonID ? <WeekList key={`weeks-${view.seasonID}`} seasonID={view.seasonID} /> : <SeasonList />}
       </>
     );
   }
@@ -180,7 +179,7 @@ function EventView({ eventID, full, setFull }: EventViewProps) {
                 <h3>{route ? `${bucketLabels[route.bucket] ?? route.bucket} · ${route.mapname}` : `Route ${map.cp_id}`}</h3>
                 <EventTable
                   label={`${route?.mapname ?? map.cp_id} results at ${fps} fps`}
-                  head={["Rank", "Player", "Time", "Nades", "Points", "Date"]}
+                  head={["Rank", "Player", "Time", "Nades", "Points", "Date (UTC)"]}
                   empty={`No finishes on this route at ${fps} fps.`}
                   rows={map.results.map((row) => ({
                     key: row.player_id,
@@ -218,23 +217,27 @@ function EventView({ eventID, full, setFull }: EventViewProps) {
 function WeekList({ seasonID }: { seasonID?: number }) {
   const loader = useCallback((signal: AbortSignal) => fetchEventList(seasonID, signal), [seasonID]);
   const state = usePolling<EventSummary[] | null>(null, loader, REFRESH_MS);
-  if (!state.data) return <Notice state={state} notFound="No event yet" />;
+  // Under a season view, which already shows loading, 404 and 503.
+  if (!state.data) return <Notice state={state} notFound="No event yet" quiet={seasonID !== undefined} />;
 
   return (
-    <EventTable
-      label="Weeks"
-      head={["Week", "Dates", "125 winner", "250 winner"]}
-      empty="No event yet"
-      rows={state.data.map((event) => ({
-        key: event.event_id,
-        cells: [
-          <a href={`#week-${event.event_id}`}>Week {event.week_no}</a>,
-          twoLine(dateRange(event.starts_at, event.ends_at), `Season ${event.season_id} · ${statusLabel(event.status)}`),
-          winnerCell(event.winners, 125, event.status),
-          winnerCell(event.winners, 250, event.status),
-        ],
-      }))}
-    />
+    <>
+      {seasonID === undefined ? null : <h3>Weeks</h3>}
+      <EventTable
+        label="Weeks"
+        head={["Week", "Dates", "125 winner", "250 winner"]}
+        empty="No event yet"
+        rows={state.data.map((event) => ({
+          key: event.event_id,
+          cells: [
+            <a href={`#week-${event.event_id}`}>Week {event.week_no}</a>,
+            twoLine(dateRange(event.starts_at, event.ends_at), `Season ${event.season_id} · ${statusLabel(event.status)}`),
+            winnerCell(event.winners, 125, event.status),
+            winnerCell(event.winners, 250, event.status),
+          ],
+        }))}
+      />
+    </>
   );
 }
 
@@ -286,23 +289,26 @@ function SeasonView({ seasonID }: { seasonID?: number }) {
 
 function SeasonList() {
   const state = usePolling<SeasonSummary[] | null>(null, fetchSeasonList, REFRESH_MS);
-  if (!state.data) return <Notice state={state} notFound="No season yet" />;
+  if (!state.data) return <Notice state={state} notFound="No season yet" quiet />;
 
   return (
-    <EventTable
-      label="Seasons"
-      head={["Season", "Dates", "125 winner", "250 winner"]}
-      empty="No season yet"
-      rows={state.data.map((season) => ({
-        key: season.season_id,
-        cells: [
-          <a href={`#season-${season.season_id}`}>Season {season.season_id}</a>,
-          twoLine(dateRange(season.starts_at, season.ends_at), `${season.weeks} weeks · ${statusLabel(season.status)}`),
-          winnerCell(season.winners, 125, season.status),
-          winnerCell(season.winners, 250, season.status),
-        ],
-      }))}
-    />
+    <>
+      <h3>All seasons</h3>
+      <EventTable
+        label="Seasons"
+        head={["Season", "Dates", "125 winner", "250 winner"]}
+        empty="No season yet"
+        rows={state.data.map((season) => ({
+          key: season.season_id,
+          cells: [
+            <a href={`#season-${season.season_id}`}>Season {season.season_id}</a>,
+            twoLine(dateRange(season.starts_at, season.ends_at), `${season.weeks} weeks · ${statusLabel(season.status)}`),
+            winnerCell(season.winners, 125, season.status),
+            winnerCell(season.winners, 250, season.status),
+          ],
+        }))}
+      />
+    </>
   );
 }
 
@@ -421,10 +427,12 @@ function Notice({
   state,
   notFound,
   unavailable = "The Weekly Cup is not available yet",
+  quiet = false,
 }: {
   state: LoadState<unknown>;
   notFound: string;
   unavailable?: string;
+  quiet?: boolean;
 }) {
   // request() errors read "<status> <statusText>".
   const status = state.error?.slice(0, 3);
@@ -432,6 +440,7 @@ function Notice({
     return <p className="inline-alert">Weekly Cup API unavailable: {state.error}</p>;
   }
 
+  if (quiet) return null;
   const text = status === "503" ? unavailable : status === "404" ? notFound : "Loading…";
   return <p className="compact-section">{text}</p>;
 }
@@ -485,7 +494,11 @@ function EventTable({
           ))}
         </div>
       ))}
-      {rows.length === 0 ? <div className="empty-state">{empty}</div> : null}
+      {rows.length === 0 ? (
+        <div role="row" className="empty-state">
+          <span role="cell">{empty}</span>
+        </div>
+      ) : null}
     </div>
   );
 }
@@ -614,11 +627,12 @@ function statusLabel(status: string) {
 }
 
 function dateRange(start: string, end: string | null) {
-  const day = (value: string) => new Date(value).toLocaleDateString(undefined, { month: "short", day: "numeric" });
-  return `${day(start)} – ${end ? day(end) : "ongoing"}`;
+  // Weeks run Monday 01:00 to Monday 01:00 UTC, so local dates could be off by a day.
+  const day = (value: string) => new Date(value).toLocaleDateString(undefined, { month: "short", day: "numeric", timeZone: "UTC" });
+  return `${day(start)} – ${end ? day(end) : "ongoing"} (UTC)`;
 }
 
 function formatDateTime(value: string | null) {
   if (!value) return "-";
-  return new Date(value).toLocaleString(undefined, { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" });
+  return new Date(value).toLocaleString(undefined, { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit", timeZone: "UTC" });
 }

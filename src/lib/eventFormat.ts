@@ -40,8 +40,9 @@ export function formatRecord(record: NadeRecord) {
 }
 
 // Wanted head to head: fewer nades wins, then less time. A tie keeps the JH #1, so neither is ahead.
-export function compareWanted(jh: NadeRecord, j4l: NadeRecord | null): { ahead: "jh" | "j4l" | null; text: string } {
-  if (!j4l) return { ahead: "jh", text: "No J4L run yet" };
+// No J4L run: JH leads, no verdict text (the J4L row already says so).
+export function compareWanted(jh: NadeRecord, j4l: NadeRecord | null): { ahead: "jh" | "j4l" | null; text: string | null } {
+  if (!j4l) return { ahead: "jh", text: null };
   const nadeGap = j4l.nadejumps - jh.nadejumps;
   const timeGap = j4l.time_ticks - jh.time_ticks;
   if (nadeGap > 0) {

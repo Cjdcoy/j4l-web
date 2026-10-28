@@ -38,6 +38,6 @@ assert.deepEqual(compareWanted(jh, rec(0, 1000)), { ahead: "j4l", text: "J4L ahe
 assert.deepEqual(compareWanted(jh, rec(2, 1594)), { ahead: "jh", text: "Same nades, J4L is 0:29.70 slower" });
 assert.deepEqual(compareWanted(jh, rec(2, 976)), { ahead: "j4l", text: "Same nades, J4L is 0:01.20 faster" });
 assert.deepEqual(compareWanted(jh, rec(2, 1000)), { ahead: null, text: "Tied, J4L needs a faster time" });
-assert.deepEqual(compareWanted(jh, null), { ahead: "jh", text: "No J4L run yet" });
+assert.deepEqual(compareWanted(jh, null), { ahead: "jh", text: null });
 
 console.log("event format checks passed");

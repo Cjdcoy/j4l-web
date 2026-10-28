@@ -3367,6 +3367,17 @@ a {
   color: var(--accent-strong);
 }
 
+/* JH holding the #1 is the "still wanted" case, so it takes the Wanted badge's amber, not the beaten green. */
+.wanted-record.is-ahead.is-jh {
+  background: rgba(212, 178, 103, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(212, 178, 103, 0.22);
+}
+
+.wanted-record.is-jh svg,
+.wanted-record.is-ahead.is-jh b {
+  color: var(--amber);
+}
+
 .wanted-name {
   min-width: 0;
   overflow: hidden;

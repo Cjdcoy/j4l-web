@@ -383,7 +383,7 @@ function WantedView() {
             empty="No wanted routes."
             rows={wanted.routes.map((route) => ({
               key: route.slot,
-              cells: [twoLine(route.mapname, route.ender), wantedCell(route, 125, bounty), wantedCell(route, 250, bounty)],
+              cells: [twoLine(route.mapname, route.ender), wantedCell(route, 125), wantedCell(route, 250)],
             }))}
           />
         </>
@@ -556,7 +556,7 @@ function winnerCell(winners: EventWinner[], fps: number, status: string) {
   );
 }
 
-function wantedCell(route: WantedRoute, fps: number, bounty: string) {
+function wantedCell(route: WantedRoute, fps: number) {
   const item = route.fps.find((entry) => entry.fps === fps);
   if (!item) return "-";
   const verdict = item.jh ? compareWanted(item.jh, item.j4l) : null;
@@ -579,12 +579,7 @@ function wantedCell(route: WantedRoute, fps: number, bounty: string) {
   } else if (item.beaten) {
     state = <span className="type-badge is-beaten">Beaten, bounty paying out</span>;
   } else {
-    state = (
-      <>
-        <span className="type-badge is-wanted">Wanted</span>
-        <span>{bounty}</span>
-      </>
-    );
+    state = <span className="type-badge is-wanted">Wanted</span>;
   }
 
   return (
@@ -592,14 +587,14 @@ function wantedCell(route: WantedRoute, fps: number, bounty: string) {
       <span className="wanted-state">{state}</span>
       {recordLine("JH", item.jh, verdict?.ahead === "jh")}
       {recordLine("J4L", item.j4l, verdict?.ahead === "j4l")}
-      {verdict ? <span className={`wanted-verdict ${verdict.ahead === "j4l" ? "is-ahead" : ""}`}>{verdict.text}</span> : null}
+      {verdict?.text ? <span className={`wanted-verdict ${verdict.ahead === "j4l" ? "is-ahead" : ""}`}>{verdict.text}</span> : null}
     </span>
   );
 }
 
 function recordLine(source: string, record: WantedRecord | null, ahead: boolean) {
   return (
-    <span className={`wanted-record ${ahead ? "is-ahead" : ""}`}>
+    <span className={`wanted-record ${ahead ? `is-ahead is-${source.toLowerCase()}` : ""}`}>
       {ahead ? <Trophy size={13} role="img" aria-label="Holds the #1" /> : <span />}
       <b>{source}</b>
       {record ? (

@@ -166,8 +166,14 @@ a {
   font-size: 12px;
 }
 
+.site-nav {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  min-width: 0;
+}
+
 .site-tabs {
-  justify-self: center;
   display: flex;
   align-items: center;
   gap: 2px;
@@ -178,7 +184,8 @@ a {
   box-shadow: var(--highlight);
 }
 
-.site-tabs a {
+.site-tabs a,
+.nav-cup {
   position: relative;
   min-height: 34px;
   display: inline-flex;
@@ -206,11 +213,47 @@ a {
   color: var(--text);
 }
 
-.site-tabs a.is-active {
+.site-tabs a.is-active,
+.nav-cup.is-active {
   background: var(--accent);
   color: #05140c;
   font-weight: 700;
   box-shadow: 0 6px 20px -8px rgba(97, 214, 157, 0.8);
+}
+
+/* Unselected Weekly Cup reads as a featured call to action, not as another tab. */
+.nav-cup:not(.is-active) {
+  border: 1px solid rgba(97, 214, 157, 0.55);
+  background: linear-gradient(135deg, rgba(97, 214, 157, 0.2), rgba(97, 214, 157, 0.06));
+  color: var(--accent-strong);
+  font-weight: 650;
+  box-shadow: var(--highlight), 0 0 22px -6px rgba(97, 214, 157, 0.55);
+}
+
+.nav-cup:not(.is-active):hover {
+  border-color: var(--accent);
+  background: rgba(97, 214, 157, 0.22);
+  color: var(--text);
+}
+
+.nav-cup-dot {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: nav-cup-pulse 2.4s ease-out infinite;
+}
+
+@keyframes nav-cup-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(97, 214, 157, 0.6);
+  }
+
+  70%,
+  100% {
+    box-shadow: 0 0 0 6px rgba(97, 214, 157, 0);
+  }
 }
 
 .app-main {
@@ -1970,7 +2013,6 @@ a {
 
 @media (max-width: 1180px) {
   .header-inner {
-    grid-template-columns: auto minmax(0, 1fr);
     padding: 12px 0;
   }
 
@@ -1986,13 +2028,16 @@ a {
   }
 
   .header-inner {
-    grid-template-columns: 1fr;
     gap: 12px;
   }
 
-  .site-tabs {
+  .site-nav {
     width: 100%;
-    justify-self: stretch;
+  }
+
+  .site-tabs {
+    flex: 1 1 auto;
+    min-width: 0;
     overflow-x: auto;
     scrollbar-width: none;
   }
@@ -2152,7 +2197,8 @@ a {
     white-space: normal;
   }
 
-  .site-tabs a {
+  .site-tabs a,
+  .nav-cup {
     padding: 0 10px;
   }
 

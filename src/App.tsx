@@ -41,7 +41,7 @@ export function App() {
   const [mapsError, setMapsError] = useState<string | null>(null);
   const discordURL = import.meta.env.VITE_DISCORD_URL || DISCORD_INVITE_URL;
   const [activeTab, setActiveTab] = useState<TabID>(initialTab);
-  const tabsRef = useRef<HTMLElement>(null);
+  const tabsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -92,33 +92,37 @@ export function App() {
             </span>
           </button>
 
-          <nav ref={tabsRef} className="site-tabs" aria-label="Primary navigation">
-            {tabs.map((tab) => {
-              const Icon = tab.icon;
-              return (
-                <a
-                  key={tab.id}
-                  href={`/#${tab.id}`}
-                  className={activeTab === tab.id ? "is-active" : ""}
-                  onClick={(event) => {
-                    if (activeTab === "events") return;
-                    event.preventDefault();
-                    selectTab(tab.id);
-                  }}
-                  aria-current={activeTab === tab.id ? "page" : undefined}
-                >
-                  <Icon size={16} aria-hidden="true" />
-                  {tab.label}
-                </a>
-              );
-            })}
+          <nav className="site-nav" aria-label="Primary navigation">
+            <div ref={tabsRef} className="site-tabs">
+              {tabs.map((tab) => {
+                const Icon = tab.icon;
+                return (
+                  <a
+                    key={tab.id}
+                    href={`/#${tab.id}`}
+                    className={activeTab === tab.id ? "is-active" : ""}
+                    onClick={(event) => {
+                      if (activeTab === "events") return;
+                      event.preventDefault();
+                      selectTab(tab.id);
+                    }}
+                    aria-current={activeTab === tab.id ? "page" : undefined}
+                  >
+                    <Icon size={16} aria-hidden="true" />
+                    {tab.label}
+                  </a>
+                );
+              })}
+            </div>
+            {/* Outside the scrolling strip so it stays on screen on phones. */}
             <a
               href="/events"
-              className={activeTab === "events" ? "is-active" : ""}
+              className={activeTab === "events" ? "nav-cup is-active" : "nav-cup"}
               aria-current={activeTab === "events" ? "page" : undefined}
             >
               <CalendarDays size={16} aria-hidden="true" />
               Weekly Cup
+              {activeTab === "events" ? null : <span className="nav-cup-dot" aria-hidden="true" />}
             </a>
           </nav>
         </div>

@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useState } from "react";
-import { BookOpen, Crown, Map, MessageSquare, Server, ShieldCheck, Terminal, Trophy, Wrench } from "lucide-react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { BookOpen, CalendarDays, Crown, Map, MessageSquare, Server, ShieldCheck, Terminal, Trophy, Wrench } from "lucide-react";
 import { fetchMaps, fetchServers } from "./lib/api";
 import { fallbackMaps, fallbackServerStatus } from "./lib/fallbackData";
 import { usePolling } from "./lib/usePolling";
@@ -11,8 +11,10 @@ import { MapExplorer } from "./components/MapExplorer";
 import { RulesSection } from "./components/RulesSection";
 import { StaticSection } from "./components/StaticSection";
 import { CommandDirectory } from "./components/CommandDirectory";
+import { EventsPage } from "./components/EventsPage";
 
-type TabID = "servers" | "maps" | "leaderboards" | "levels" | "commands" | "rules" | "start";
+// "events" is its own path (/events), not a hash tab.
+type TabID = "servers" | "maps" | "leaderboards" | "levels" | "commands" | "rules" | "start" | "events";
 
 const tabs: Array<{ id: TabID; label: string; icon: typeof Server }> = [
   { id: "servers", label: "Servers", icon: Server },
@@ -27,6 +29,7 @@ const tabs: Array<{ id: TabID; label: string; icon: typeof Server }> = [
 const DISCORD_INVITE_URL = "https://discord.com/invite/5zqvy25M9W";
 
 function initialTab(): TabID {
+  if (window.location.pathname.startsWith("/events")) return "events";
   const hash = window.location.hash.replace("#", "");
   return tabs.some((tab) => tab.id === hash) ? (hash as TabID) : "servers";
 }
@@ -38,6 +41,7 @@ export function App() {
   const [mapsError, setMapsError] = useState<string | null>(null);
   const discordURL = import.meta.env.VITE_DISCORD_URL || DISCORD_INVITE_URL;
   const [activeTab, setActiveTab] = useState<TabID>(initialTab);
+  const tabsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -66,6 +70,11 @@ export function App() {
     return () => window.removeEventListener("hashchange", onHashChange);
   }, []);
 
+  // The strip scrolls sideways on phones; the sticky header keeps it in view, so this never scrolls the page.
+  useEffect(() => {
+    tabsRef.current?.querySelector(".is-active")?.scrollIntoView({ block: "nearest", inline: "nearest" });
+  }, [activeTab]);
+
   function selectTab(tab: TabID) {
     setActiveTab(tab);
     window.history.replaceState(null, "", `#${tab}`);
@@ -75,7 +84,7 @@ export function App() {
     <div className="app-shell">
       <header className="site-header">
         <div className="header-inner">
-          <button className="brand" type="button" onClick={() => selectTab("servers")} aria-label="Jump4Life servers">
+          <button className="brand" type="button" onClick={() => (activeTab === "events" ? window.location.assign("/") : selectTab("servers"))} aria-label="Jump4Life servers">
             <span className="brand-mark">J4L</span>
             <span>
               <strong>Jump4Life</strong>
@@ -83,25 +92,38 @@ export function App() {
             </span>
           </button>
 
-          <nav className="site-tabs" aria-label="Primary navigation">
-            {tabs.map((tab) => {
-              const Icon = tab.icon;
-              return (
-                <a
-                  key={tab.id}
-                  href={`#${tab.id}`}
-                  className={activeTab === tab.id ? "is-active" : ""}
-                  onClick={(event) => {
-                    event.preventDefault();
-                    selectTab(tab.id);
-                  }}
-                  aria-current={activeTab === tab.id ? "page" : undefined}
-                >
-                  <Icon size={16} aria-hidden="true" />
-                  {tab.label}
-                </a>
-              );
-            })}
+          <nav className="site-nav" aria-label="Primary navigation">
+            <div ref={tabsRef} className="site-tabs">
+              {tabs.map((tab) => {
+                const Icon = tab.icon;
+                return (
+                  <a
+                    key={tab.id}
+                    href={`/#${tab.id}`}
+                    className={activeTab === tab.id ? "is-active" : ""}
+                    onClick={(event) => {
+                      if (activeTab === "events") return;
+                      event.preventDefault();
+                      selectTab(tab.id);
+                    }}
+                    aria-current={activeTab === tab.id ? "page" : undefined}
+                  >
+                    <Icon size={16} aria-hidden="true" />
+                    {tab.label}
+                  </a>
+                );
+              })}
+            </div>
+            {/* Outside the scrolling strip so it stays on screen on phones. */}
+            <a
+              href="/events"
+              className={activeTab === "events" ? "nav-cup is-active" : "nav-cup"}
+              aria-current={activeTab === "events" ? "page" : undefined}
+            >
+              <CalendarDays size={16} aria-hidden="true" />
+              Weekly Cup
+              {activeTab === "events" ? null : <span className="nav-cup-dot" aria-hidden="true" />}
+            </a>
           </nav>
         </div>
       </header>
@@ -115,6 +137,12 @@ export function App() {
             Share feedback
           </a>
         </aside>
+
+        {activeTab === "events" ? (
+          <div className="tab-view">
+            <EventsPage />
+          </div>
+        ) : null}
 
         {activeTab === "servers" ? (
           <div className="tab-view tab-servers">

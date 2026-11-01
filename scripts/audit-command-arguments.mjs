@@ -379,7 +379,8 @@ function render(commands, registrations) {
     `- Deep review: ${reviewCounts.get("Deep review")}\n` +
     `- Argument check: ${reviewCounts.get("Argument check")}\n` +
     `- Confirm no arguments: ${reviewCounts.get("Confirm no arguments")}\n` +
-    `- Source root used by the generator: ${inlineCode(path.relative(projectRoot, gameRoot) || ".")}\n` +
+    // Fixed like sync-commands' header so the committed doc does not depend on the checkout (J4L_GAME_REPO).
+    `- Source root used by the generator: ${inlineCode("../jump4life")}\n` +
     `- Regenerate: ${inlineCode("npm run audit:command-arguments")}\n` +
     `- Verify: ${inlineCode("npm run check:command-arguments")}\n\n` +
     `## How to use this audit\n\n` +

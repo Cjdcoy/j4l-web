@@ -85,3 +85,123 @@ export type LoadState<T> = {
   loading: boolean;
   error: string | null;
 };
+
+// Weekly events and seasons (J4L only). Field order follows the API contract.
+export type EventPlayer = {
+  player_id: number;
+  playername: string;
+  country: string;
+};
+
+export type EventStanding = EventPlayer & {
+  rank: number;
+  points: number;
+  maps_finished: number;
+  first_places: number;
+  xp_awarded: number;
+  coins_awarded: number;
+};
+
+export type EventResult = EventPlayer & {
+  rank: number;
+  run_id: number;
+  nadejumps: number;
+  time_played: number;
+  time_created: string | null;
+  points: number;
+};
+
+export type EventRoute = {
+  slot: number;
+  bucket: string;
+  mapid: number;
+  mapname: string;
+  cp_id: number;
+  ender: string | null;
+  difficulty: number;
+};
+
+export type EventBoard = {
+  fps: number;
+  standings: EventStanding[];
+  maps: Array<{ cp_id: number; results: EventResult[] }>;
+};
+
+export type WeeklyEvent = {
+  event_id: number;
+  season_id: number;
+  week_no: number;
+  starts_at: string;
+  ends_at: string;
+  status: "active" | "finished";
+  routes: EventRoute[];
+  boards: EventBoard[];
+};
+
+export type EventWinner = EventPlayer & {
+  fps: number;
+  points: number;
+};
+
+export type EventSummary = Omit<WeeklyEvent, "routes" | "boards"> & {
+  winners: EventWinner[];
+};
+
+export type SeasonStanding = EventPlayer & {
+  rank: number;
+  points: number;
+  weeks_played: number;
+  weekly_wins: number;
+  xp_awarded: number;
+  coins_awarded: number;
+};
+
+export type Season = {
+  season_id: number;
+  starts_at: string;
+  ends_at: string | null;
+  status: "active" | "finished";
+  weeks: number;
+  boards: Array<{ fps: number; standings: SeasonStanding[] }>;
+};
+
+export type SeasonSummary = Omit<Season, "boards"> & {
+  winners: EventWinner[];
+};
+
+// Wanted maps (J4L only): routes where J4L chases the JH nadejumps rank 1 at 125 and 250 fps.
+export type WantedRecord = {
+  player_name: string;
+  nadejumps: number;
+  time_ticks: number;
+};
+
+export type WantedFPS = {
+  fps: number;
+  jh: WantedRecord | null;
+  j4l: (WantedRecord & { player_id: number; run_id: number }) | null;
+  beaten: boolean;
+  beaten_at_start: boolean;
+  bounty_player_id: number | null;
+};
+
+export type WantedRoute = {
+  slot: number;
+  mapid: number;
+  mapname: string;
+  cp_id: number;
+  ender: string | null;
+  tier: number;
+  fps: WantedFPS[];
+};
+
+export type Wanted = {
+  wanted_week_id: number | null;
+  event_id: number | null;
+  starts_at: string | null;
+  ends_at: string | null;
+  done: boolean;
+  progress: { routes_in_scope: number; routes_beaten: number };
+  bounty: { coins: number; xp: number };
+  routes: WantedRoute[];
+};
